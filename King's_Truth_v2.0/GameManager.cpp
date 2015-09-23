@@ -31,6 +31,9 @@ GameManager::GameManager()
 	_frameInterval = DEFAULT_FPS;	// Set default fps
 	GameObjects.clear();			// Clear vector of GameObjects
 
+	// Set tile manager pointer to NULL
+	_tileManager = NULL;
+
 	lvlPtr = &Level1;				// Set default level to Level1
 }
 
