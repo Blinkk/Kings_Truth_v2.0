@@ -1,1 +1,0 @@
-TestPlayer.bmp 255 255 255

@@ -67,7 +67,7 @@
     <Filter Include="Game\Resource Files\Textures">
       <UniqueIdentifier>{88c7b3a1-2439-47a4-9ede-e44b954af63f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Resource Files\Textures\Maps">
+    <Filter Include="Game\Resource Files\Maps">
       <UniqueIdentifier>{2526b231-b055-4a39-a4e4-c5d7b1457398}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -220,22 +220,22 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\hedge_maze.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\ice_bricks.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\lightblue_bricks.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\purple_bricks.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\stone_bricks.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\stone_walls.png">
-      <Filter>Game\Resource Files\Textures\Maps</Filter>
+      <Filter>Game\Resource Files\Maps</Filter>
     </Image>
   </ItemGroup>
 </Project>
