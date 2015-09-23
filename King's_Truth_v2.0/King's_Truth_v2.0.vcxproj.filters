@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{a34967d0-5624-47d3-a9f0-3d848e699a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{bb226f00-665a-44ad-8296-3ed5897ecfc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Game\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Framework\Global">
+      <UniqueIdentifier>{e7bd4a21-d988-4d64-b9fd-3a100d32a12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Windows">
+      <UniqueIdentifier>{8683eb9a-631b-4c85-891f-d46c87b250be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\DirectX">
+      <UniqueIdentifier>{15dee395-d4b0-4117-bd57-dec36f8c0154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Event System">
+      <UniqueIdentifier>{56cc7643-e3c5-47f6-835e-f517ebb35712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Input/Output">
+      <UniqueIdentifier>{d5526023-df34-4f2d-83c5-e2ad9366c5bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Input/Output\Input Devices">
+      <UniqueIdentifier>{15107d80-7cdb-45c3-bd6c-a5c9eedd1dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\UI">
+      <UniqueIdentifier>{20679725-429f-437d-8add-1de938ee97a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\Game Manager">
+      <UniqueIdentifier>{d42d5579-4cbd-4321-a022-0151913d6d67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\Game Manager">
+      <UniqueIdentifier>{b740d87e-ca3f-4605-b7e1-ea2593d4d25d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\Utilities">
+      <UniqueIdentifier>{7aa6ca4a-9d69-475c-9ba7-494a53028a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\Graphics">
+      <UniqueIdentifier>{1186a228-3680-474c-9d39-8aa85308e162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\Graphics">
+      <UniqueIdentifier>{bff891a4-0d69-483e-a0b5-110dc4ae3adf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\Entities">
+      <UniqueIdentifier>{5ef4cd6e-289e-4c5b-a37b-b628c8144986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\Entities">
+      <UniqueIdentifier>{46d0fc26-48d6-4216-9e78-6813dee5dc80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\Utilities">
+      <UniqueIdentifier>{67a27e5e-986a-4bac-8de6-080d3d19dfdf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.cpp">
+      <Filter>Framework\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Camera.cpp">
+      <Filter>Framework\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Direct3D.cpp">
+      <Filter>Framework\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Engine_Core.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\EventManager.cpp">
+      <Filter>Framework\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Factory.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Font.cpp">
+      <Filter>Framework\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\UIManager.cpp">
+      <Filter>Framework\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\InputManager.cpp">
+      <Filter>Framework\Input/Output</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Keyboard.cpp">
+      <Filter>Framework\Input/Output\Input Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\LogFile.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Timer.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Vector.cpp">
+      <Filter>Framework\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Windows.cpp">
+      <Filter>Framework\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.cpp">
+      <Filter>Framework\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.cpp">
+      <Filter>Game\Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.cpp">
+      <Filter>Game\Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\GameManager.cpp">
+      <Filter>Game\Source Files\Game Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TileManager.cpp">
+      <Filter>Game\Source Files\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
+      <Filter>Framework\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Camera.h">
+      <Filter>Framework\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Delegate.h">
+      <Filter>Framework\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Direct3D.h">
+      <Filter>Framework\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Engine_Core.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Event.h">
+      <Filter>Framework\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\EventManager.h">
+      <Filter>Framework\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Factory.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Font.h">
+      <Filter>Framework\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\UIManager.h">
+      <Filter>Framework\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IInputDevice.h">
+      <Filter>Framework\Input/Output\Input Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\InputManager.h">
+      <Filter>Framework\Input/Output</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Keyboard.h">
+      <Filter>Framework\Input/Output\Input Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IGameObject.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IRenderableObject.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\LogFile.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\stdafx.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Timer.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Vector.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.h">
+      <Filter>Framework\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.h">
+      <Filter>Game\Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.h">
+      <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IEntity.h">
+      <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\GameManager.h">
+      <Filter>Game\Header Files\Game Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TileManager.h">
+      <Filter>Game\Header Files\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textureList.txt">
+      <Filter>Game\Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
