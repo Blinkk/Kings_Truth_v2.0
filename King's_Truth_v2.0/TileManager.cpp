@@ -36,8 +36,14 @@ TileManager::~TileManager()
 void TileManager::TileMap(std::string mapName)
 {
 	// Load the image into the _sourceSurface
-	D3DXLoadSurfaceFromFile(_sourceSurface, NULL, NULL, mapName.c_str(),
+	HRESULT result = D3DXLoadSurfaceFromFile(_sourceSurface, NULL, NULL, mapName.c_str(),
 		NULL, D3DX_DEFAULT, D3DCOLOR_XRGB(255, 255, 255), sourceImageInfo);
+
+	if (result != D3D_OK)
+	{
+		debug << "Error loading map surface in TileMap()" << std::endl;
+		return;
+	}
 
 
 	/*
@@ -50,3 +56,16 @@ void TileManager::TileMap(std::string mapName)
 	*/
 	
 }
+
+
+/////////////////////
+// Draw map function
+/////////////////////
+void TileManager::DrawMap()
+{
+	// Stretct the _mapSurface onto the back buffer
+	//g_Engine->GetDevice()->StretchRect(_mapSurface, NULL, g_Engine->GetBackBuffer(), NULL, D3DTEXF_NONE);
+
+	g_Engine->GetDevice()->StretchRect(_sourceSurface, NULL, g_Engine->GetBackBuffer(), NULL, D3DTEXF_NONE);
+}
+

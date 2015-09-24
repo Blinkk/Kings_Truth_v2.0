@@ -80,6 +80,13 @@ public:
 	*/
 	void TileMap(std::string fileName);
 
+	/*
+		This function will simply draw the map to the screen
+
+		Note: This should be called in the main Render()
+	*/
+	void DrawMap();
+
 };
 
 #endif

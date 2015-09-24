@@ -16,7 +16,7 @@ Player::Player()
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
 
 	// Initialize player rendering information
-	Renderer.Initialize(1, 1, 100, 100, 1, 0, 0, 0, 0, 0, 150, 150, "TestPlayer.bmp");
+	//Renderer.Initialize(1, 1, 100, 100, 1, 0, 0, 0, 0, 0, 150, 150, "TestPlayer.bmp");
 
 	// Initialize hitbox
 	hitBox.Initialize(Renderer.GetPos().GetX(), Renderer.GetPos().GetY(), 

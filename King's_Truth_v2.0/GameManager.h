@@ -77,6 +77,7 @@ public:
 	//////////////////////////////
 	// Accessor/Mutator Functions
 	//////////////////////////////
+	TileManager* GetTileManager() { return _tileManager; }
 	const unsigned int GetFrameInterval() { return _frameInterval; }
 	void SetFrameInterval(unsigned int newFrameInterval) { _frameInterval = newFrameInterval; }
 };

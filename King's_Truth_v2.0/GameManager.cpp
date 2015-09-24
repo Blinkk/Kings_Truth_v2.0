@@ -18,6 +18,13 @@ void Level1()
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
 
+	/*
+		Not able to find the file...
+
+		TODO: Fix this
+	*/
+	//g_Manager->GetTileManager()->TileMap("./bin/SourceMaps/purple_bricks.png");
+
 	// Set the game objects for the level
 	g_Manager->SetGameObjects(gameObjects);
 }
@@ -138,6 +145,9 @@ void GameManager::Game_Render()
 	g_Engine->ClearScene();								// Clear the backbuffer for rendering
 	if (g_Engine->GetDevice()->BeginScene() == D3D_OK)	// Begin scene
 	{
+		// Render the map
+		_tileManager->DrawMap();
+
 		//////////////////////////////
 		// Begin Spritebatch for 2D
 		g_Engine->GetSpriteObj()->Begin(D3DXSPRITE_ALPHABLEND);
