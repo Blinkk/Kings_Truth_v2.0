@@ -1,0 +1,17 @@
+Engine initilization started...
+	Unable to get image info
+	Input initialized.
+Engine initialized successfully!
+	Failed to retrieve texture, name: bin/TestPlayer.bmp
+Engine shutting down...
+TextureManager shutting down...
+	Failed to release a texture, name: bin/TestPlayer.bmp
+TextureManager shutdown.
+	Input shutting down...
+	Input core shutdown with 0 bugs.
+	Error releasing D3Dcontext
+	Error releasing D3Ddevice
+	Direct3D shutting down...
+		Direct3D shutdown with 0 bugs.
+Main engine core shutdown with 2 bugs.
+Engine shutdown complete.
