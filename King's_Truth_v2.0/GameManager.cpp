@@ -23,7 +23,7 @@ void Level1()
 
 		TODO: Fix this
 	*/
-	//g_Manager->GetTileManager()->TileMap("./bin/SourceMaps/purple_bricks.png");
+	g_Manager->GetTileManager()->TileMap("./bin/Source Maps/purple_bricks.png");
 
 	// Set the game objects for the level
 	g_Manager->SetGameObjects(gameObjects);

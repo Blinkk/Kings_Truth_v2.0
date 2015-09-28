@@ -29,6 +29,11 @@ enum Tile_Types
 	LONG_WALL_Y
 };
 
+namespace MAPS
+{
+	unsigned int LEVEL_ONE = 10;
+}
+
 class TileManager
 {
 private:
@@ -72,13 +77,12 @@ public:
 
 	/*
 		This function takes in the name of a specific map as a 
-		parameter and loads that map from the corresponding 
-		text file into the map array.
+		parameter and loads that map into the map surface
 
 		Note: This should only be called at the beginning
 		of a new level and never within any updates
 	*/
-	void TileMap(std::string fileName);
+	void TileMap(std::string fileName, unsigned int levelID);
 
 	/*
 		This function will simply draw the map to the screen
