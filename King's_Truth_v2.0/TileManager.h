@@ -1,38 +1,18 @@
 #ifndef TILEMANAGER_H
 #define TILEMANAGER_H
 #include <iostream>
+#include "Tile.h"
 #include "stdafx.h"
 using namespace Smoke;
 
-// Tile Size
-#define TILE_SIZE_X 16
-#define TILE_SIZE_Y 16
-
 // Source map size
-#define SOURCE_MAP_X 128
-#define SOURCE_MAP_Y 128
+#define SOURCE_MAP_X 512
+#define SOURCE_MAP_Y 512
 
-// Tile types
-enum Tile_Types
+enum MAPS
 {
-	PATH = 0,
-	PATH_2,
-	SINGLE_WALL_1,
-	SINGLE_WALL_2,
-	SINGLE_WALL_3,
-	SINGLE_WALL_4,
-	SINGLE_WALL_5,
-	DOUBLE_WALL_1,
-	DOUBLE_WALL_2,
-	DOUBLE_WALL_3,
-	LONG_WALL_X,
-	LONG_WALL_Y
+	LEVEL_ONE_MAP = 0
 };
-
-namespace MAPS
-{
-	unsigned int LEVEL_ONE = 10;
-}
 
 class TileManager
 {
@@ -57,6 +37,14 @@ private:
 		reloaded at the beginning of a new level / screen.
 	*/
 	LPDIRECT3DSURFACE9 _mapSurface;
+
+	/*
+		These variables will keep track of the number of rows
+		and columns that the map should have based on the size of
+		the game screen and the size of each tile (64x64)
+	*/
+	unsigned int _rows;
+	unsigned int _columns;
 
 	TileManager();
 
@@ -90,7 +78,6 @@ public:
 		Note: This should be called in the main Render()
 	*/
 	void DrawMap();
-
 };
 
 #endif

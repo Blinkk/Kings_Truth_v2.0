@@ -14,6 +14,8 @@ namespace Smoke
 	class Factory
 	{
 	private:
+		unsigned int _objectID;
+
 		Factory();
 
 	public:
@@ -34,6 +36,12 @@ namespace Smoke
 		/////////////////////////////////
 		template <class T>
 		inline T* CreateObject();
+
+		/////////////////////////////////
+		// Accessors / Mutators
+		/////////////////////////////////
+		void ResetObjectID();
+
 	};	// End of class
 
 	
@@ -50,6 +58,14 @@ namespace Smoke
 
 		if (!pTemp)
 			pTemp = new T();
+
+		// Assign new object an ID
+		IGameObject* pTempObj = static_cast<IGameObject*>(pTemp);
+		if (pTempObj)
+		{
+			pTempObj->ID = _objectID;
+			_objectID++;
+		}
 
 		return pTemp;
 	}

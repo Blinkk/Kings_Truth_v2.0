@@ -10,7 +10,7 @@ using namespace std;
 using namespace Smoke;
 
 // Declare engine object pointer and game manager pointer
-auto_ptr<Smoke::Engine_Core> g_Engine(new Smoke::Engine_Core);
+auto_ptr<Engine_Core> g_Engine(new Engine_Core);
 auto_ptr<GameManager> g_Manager(new GameManager);
 
 

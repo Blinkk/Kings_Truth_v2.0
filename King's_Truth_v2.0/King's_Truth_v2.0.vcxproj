@@ -95,6 +95,7 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\LogFile.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Tile.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TileManager.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Timer.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\UIManager.cpp" />
@@ -124,6 +125,7 @@
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\stdafx.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Tile.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TileManager.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Timer.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\UIManager.h" />

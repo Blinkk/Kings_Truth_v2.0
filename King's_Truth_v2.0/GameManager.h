@@ -3,7 +3,8 @@
 *  DirectX 9 Game Engine
 *  Date Created: 06/02/2015
 ***********************************/
-#pragma once
+#ifndef GAMEMANAGER_H
+#define GAMEMANAGER_H
 #include "Engine_Core.h"
 #include "Keyboard.h"
 #include "TileManager.h"
@@ -81,7 +82,7 @@ public:
 	const unsigned int GetFrameInterval() { return _frameInterval; }
 	void SetFrameInterval(unsigned int newFrameInterval) { _frameInterval = newFrameInterval; }
 };
-
+#endif
 
 extern std::auto_ptr<GameManager> g_Manager;	// Global GameManager object
 
