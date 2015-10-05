@@ -39,8 +39,8 @@ SingleTile::SingleTile()
 PathTile::PathTile()
 {
 	// Create a rect
-	sourceRect.left = 64;
+	sourceRect.left = 32;
 	sourceRect.right = sourceRect.left + TILE_SIZE_X;
-	sourceRect.top = 256;
+	sourceRect.top = 128;
 	sourceRect.bottom = sourceRect.top + TILE_SIZE_Y;
 }

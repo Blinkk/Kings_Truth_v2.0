@@ -54,8 +54,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 // Screen parameters
 #define SCREEN_DEPTH 1000.0f
 #define SCREEN_NEAR 0.1f
-#define SCREENW 1024
-#define SCREENH 768
+#define SCREENW 800
+#define SCREENH 608
 
 // Default FPS
 #define DEFAULT_FPS 60

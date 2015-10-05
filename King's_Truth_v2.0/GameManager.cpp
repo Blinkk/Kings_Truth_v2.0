@@ -19,7 +19,7 @@ void Level1()
 	gameObjects.push_back(pTemp);
 
 	// Load in the map for this level
-	g_Manager->GetTileManager()->TileMap("./bin/Source Maps/purple_bricks.png", MAPS::LEVEL_ONE_MAP);
+	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
 
 	// Set the game objects for the level
 	g_Manager->SetGameObjects(gameObjects);

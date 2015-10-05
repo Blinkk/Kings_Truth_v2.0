@@ -6,8 +6,8 @@
 using namespace Smoke;
 
 // Source map size
-#define SOURCE_MAP_X 512
-#define SOURCE_MAP_Y 512
+#define SOURCE_MAP_X 256
+#define SOURCE_MAP_Y 256
 
 enum MAPS
 {
@@ -48,6 +48,15 @@ private:
 
 	TileManager();
 
+	/*
+		These functions are used within the TileMap()
+		function and are predefined to create a specific
+		tiled map setup. New maps must be created manually,
+		and their ID must be added to the MAPS enum.
+	*/
+	void Level_One();
+
+
 public:
 	static TileManager &GetInstance()
 	{
@@ -67,10 +76,10 @@ public:
 		This function takes in the name of a specific map as a 
 		parameter and loads that map into the map surface
 
-		Note: This should only be called at the beginning
+		Note: This should ONLY be called at the beginning
 		of a new level and never within any updates
 	*/
-	void TileMap(std::string fileName, unsigned int levelID);
+	void TileMap(unsigned int levelID);
 
 	/*
 		This function will simply draw the map to the screen
