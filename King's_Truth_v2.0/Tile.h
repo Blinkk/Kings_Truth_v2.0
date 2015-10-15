@@ -1,5 +1,6 @@
 #ifndef TILE_H
 #define TILE_H
+#include "Collider.h"
 #include "stdafx.h"
 
 // Tile Size
@@ -40,6 +41,7 @@ class SingleTile : public Tile
 {
 public:
 	SingleTile();
+	Collider hitBox;
 };
 
 
