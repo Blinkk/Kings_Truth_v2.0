@@ -107,7 +107,6 @@ namespace Smoke
 		D3DXMATRIX mat;
 		D3DXMatrixIdentity(&mat);
 		g_Engine->GetSpriteObj()->SetTransform(&mat);
-
 	}
 
 

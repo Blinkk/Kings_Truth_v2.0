@@ -11,12 +11,14 @@ Player::Player()
 	facingUp = true;
 	facingLeft = false;
 
-	// Get ID and register with event system
-	ID = g_Engine->GenerateObjectID();
+	// Register with event system
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
 
 	// Initialize player rendering information
-	//Renderer.Initialize(1, 1, 100, 100, 1, 0, 0, 0, 0, 0, 150, 150, "TestPlayer.bmp");
+	Renderer.Initialize(1, 1, 16, 16, 16, 0, 0, 1, 1, 0, 256, 256, "player.png");
+	Renderer.SetAnimateFlag(true);
+	Renderer.SetScaleX(2);
+	Renderer.SetScaleY(2);
 
 	// Initialize hitbox
 	hitBox.Initialize(Renderer.GetPos().GetX(), Renderer.GetPos().GetY(), 

@@ -55,7 +55,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 #define SCREEN_DEPTH 1000.0f
 #define SCREEN_NEAR 0.1f
 #define SCREENW 800
-#define SCREENH 608
+#define SCREENH 600
 
 // Default FPS
 #define DEFAULT_FPS 60
@@ -74,10 +74,6 @@ namespace Smoke
 		bool _showDebug;										// Flag to show debugger
 		int _coreFrameCount;									// Frame count
 
-		////////////////////////
-		// Game Object ID
-		////////////////////////
-		unsigned int _ID;
 
 		////////////////////////
 		// Managers / Handlers
@@ -107,7 +103,6 @@ namespace Smoke
 		///////////////////////////////
 		// Utility functions 
 		///////////////////////////////
-		unsigned int GenerateObjectID();						// Return _ID incremented by 1
 		void ResetObjectID();									// Reset _ID to 0 (for new level)
 		void ResetFrameCounter();								// Reset current frame count to 0
 		void IncrementFrameCount();								// Increment the frame count by 1
@@ -122,7 +117,7 @@ namespace Smoke
 		InputManager* GetInputManager() { return _inputManager; }		// Return pointer to Input Manager
 		UIManager* GetUIManager() { return _uiManager; }				// Return pointer to UI Manager
 		TextureManager* GetTextureManager() { return _textureManager; }	// Return a pointer to texture manager
-		Factory* GetFactory() { return _factory; }				// Return a pointer to factory
+		Factory* GetFactory() { return _factory; }						// Return a pointer to factory
 		Debug* GetDebugger() { return _debugger; }						// Return pointer to Debugger
 		Timer* GetCoreTimer() { return _coreTimer; }					// Return pointer to Core Timer
 

@@ -15,6 +15,12 @@ namespace Smoke
 	}
 
 
+	unsigned int Factory::GenerateObjectID()
+	{
+		return _objectID++;
+	}
+
+
 	void Factory::ResetObjectID()
 	{
 		if (_objectID > 0)

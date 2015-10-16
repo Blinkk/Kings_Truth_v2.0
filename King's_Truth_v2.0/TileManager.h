@@ -6,8 +6,8 @@
 using namespace Smoke;
 
 // Source map size
-#define SOURCE_MAP_X 256
-#define SOURCE_MAP_Y 256
+#define SOURCE_MAP_X 128
+#define SOURCE_MAP_Y 128
 
 enum MAPS
 {

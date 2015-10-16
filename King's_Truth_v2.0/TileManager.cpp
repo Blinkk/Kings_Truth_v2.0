@@ -37,10 +37,10 @@ void TileManager::Level_One()
 
 
 	/*
-	Note: This section uses std::unique_ptr to create new
-	instances of different tile types. This ensure that
-	the pointers will be released (deallocated)
-	as soon as they goes out of scope.
+		Note: This section uses std::unique_ptr to create new
+		instances of different tile types. This ensure that
+		the pointers will be released (deallocated)
+		as soon as they goes out of scope.
 	*/
 	// Tile each row
 	for (int r = 0; r < _rows; ++r)
@@ -51,10 +51,11 @@ void TileManager::Level_One()
 			// If in first or last row
 			if (r == 0 || r == _rows - 1)
 			{
-				// Set up source rect
+				// Set up source rect and hitbox
 				std::unique_ptr<SingleTile> pTempTile(new SingleTile());
+				pTempTile->hitBox.Initialize(destPoint.x, destPoint.y, TILE_SIZE_X, TILE_SIZE_Y);
 				sourceRect = pTempTile->GetSourceRect();
-
+			
 				// Copy from source to map
 				result = g_Engine->GetDevice()->UpdateSurface(_sourceSurface, &sourceRect, _mapSurface, &destPoint);
 				if (result != D3D_OK)
@@ -69,8 +70,9 @@ void TileManager::Level_One()
 				// If in first or last column
 				if (c == 0 || c == _columns - 1)
 				{
-					// Set up source rect
+					// Set up source rect and hitbox
 					std::unique_ptr<SingleTile> pTempTile(new SingleTile());
+					pTempTile->hitBox.Initialize(destPoint.x, destPoint.y, TILE_SIZE_X, TILE_SIZE_Y);
 					sourceRect = pTempTile->GetSourceRect();
 
 					// Copy from source to map

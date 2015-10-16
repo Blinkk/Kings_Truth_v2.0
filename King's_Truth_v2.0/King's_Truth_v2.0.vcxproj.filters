@@ -75,9 +75,6 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.cpp">
       <Filter>Framework\DirectX</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Camera.cpp">
-      <Filter>Framework\DirectX</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.cpp">
       <Filter>Framework\Global</Filter>
     </ClCompile>
@@ -135,12 +132,12 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Tile.cpp">
       <Filter>Game\Source Files\Utilities</Filter>
     </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>Framework\DirectX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
-      <Filter>Framework\DirectX</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Camera.h">
       <Filter>Framework\DirectX</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.h">
@@ -217,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Tile.h">
       <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>Framework\DirectX</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

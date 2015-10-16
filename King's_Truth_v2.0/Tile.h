@@ -4,8 +4,8 @@
 #include "stdafx.h"
 
 // Tile Size
-#define TILE_SIZE_X 32
-#define TILE_SIZE_Y 32
+#define TILE_SIZE_X 16
+#define TILE_SIZE_Y 16
 
 // Tile types
 enum Tile_Types

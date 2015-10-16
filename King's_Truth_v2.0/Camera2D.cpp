@@ -8,16 +8,15 @@
 		Multi-Threaded Game Engine Design
 		Copyright 2010 by Jonathan Harbour
 **/
-#include "Camera.h"
+#include "Camera2D.h"
 
 namespace Smoke
 {
-	Camera::Camera()
+	Camera2D::Camera2D()
 	{
 		// Default position
 		_positionX = 0.0f;
 		_positionY = 0.0f;
-		_positionZ = 0.0f;
 
 		// Default rotation
 		_rotationX = 0.0f;
@@ -26,10 +25,10 @@ namespace Smoke
 	}
 
 
-	Camera::~Camera() {}
+	Camera2D::~Camera2D() {}
 
 
-	void Camera::Render()
+	void Camera2D::Render()
 	{
 		D3DXVECTOR3 up, position, lookAt;
 		float yaw, pitch, roll;
@@ -38,19 +37,16 @@ namespace Smoke
 		// Setup the vector that points upwards
 		up.x = 0.0f;
 		up.y = 1.0f;
-		up.z = 0.0f;
 
 		// Setup the position of the camera
 		position.x = _positionX;
 		position.y = _positionY;
-		position.z = _positionZ;
 
 		// Setup where the camera is looking
 		lookAt.x = 0.0f;
 		lookAt.y = 0.0f;
-		lookAt.z = 1.0f;
 
-		// Set the yaw (Y axis), pitch (X axis), and roll (Z axis) rotations in radians
+		// Set the yaw (Y axis), pitch (X axis), rotations in radians
 		pitch = _rotationX * 0.0174532925f;
 		yaw = _rotationY * 0.0174532925f;
 		roll = _rotationZ * 0.0174532925f;
@@ -70,15 +66,14 @@ namespace Smoke
 	}
 
 
-	void Camera::SetPosition(float x, float y, float z)
+	void Camera2D::SetPosition(float x, float y)
 	{
 		_positionX = x;
 		_positionY = y;
-		_positionZ = z;
 	}
 
 
-	void Camera::SetRotation(float x, float y, float z)
+	void Camera2D::SetRotation(float x, float y, float z)
 	{
 		_rotationX = x;
 		_rotationY = y;

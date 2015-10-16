@@ -14,7 +14,22 @@ namespace Smoke
 	class Factory
 	{
 	private:
+		/*
+			This is the ID that will be assigned to each
+			new GameObject created by the factory. This will
+			correspond with their position in the main 
+			GameObject vector for each level.
+		*/
 		unsigned int _objectID;
+
+		/*
+			This function generates a new objectID
+			and assigns it to newly created GameObjects.
+
+			Note: This function should only be used within
+			this class and therefore should remain private.
+		*/
+		unsigned int GenerateObjectID();
 
 		Factory();
 
@@ -60,11 +75,10 @@ namespace Smoke
 			pTemp = new T();
 
 		// Assign new object an ID
-		IGameObject* pTempObj = static_cast<IGameObject*>(pTemp);
+		IGameObject* pTempObj = dynamic_cast<IGameObject*>(pTemp);
 		if (pTempObj)
 		{
-			pTempObj->ID = _objectID;
-			_objectID++;
+			pTempObj->ID = GenerateObjectID();
 		}
 
 		return pTemp;

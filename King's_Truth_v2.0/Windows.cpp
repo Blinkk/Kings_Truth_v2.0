@@ -82,7 +82,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 
 	
 	//////////////////////////////
-	// Main Program Loop
+	// Main Game Loop
 	//////////////////////////////
 	MSG msg = { 0 };
 	while (!g_Manager->endProgram)

@@ -18,9 +18,6 @@ namespace Smoke
 		_coreFrameCount = 0;
 		_coreTimer = new Timer();
 
-		// Initialize to -1 so GenerateObjectID() returns 0 for first object
-		_ID = -1;
-
 		// Initialize window and Direct3D pointers
 		_window = new HWND();
 		_d3dDevice = new LPDIRECT3DDEVICE9();
@@ -222,19 +219,6 @@ namespace Smoke
 	///////////////////////////
 	// Utility Functions
 	///////////////////////////
-	unsigned int Engine_Core::GenerateObjectID()
-	{
-		_ID++;
-		return _ID;
-	}
-
-
-	void Engine_Core::ResetObjectID()
-	{
-		_ID = -1;	// Reset to -1 so next ID returned is 0
-	}
-
-
 	void Engine_Core::ResetFrameCounter()
 	{
 		_coreFrameCount = 0;
