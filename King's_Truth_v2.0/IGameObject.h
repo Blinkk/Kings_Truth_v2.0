@@ -12,14 +12,13 @@
 // Interface that all Game Objects should inherit from.
 // 
 // Contains the means for objects to update internal logic, identify themselves,
-// and receive events that they choose to listen to.
+// and receive events that they are registered to listen to.
 /////////////////////////////////////////////////////////////////////////////////
 namespace Smoke
 {
 	class IGameObject
 	{
 	public:
-
 		// Identification number used for event system
 		unsigned int ID;
 
@@ -28,8 +27,6 @@ namespace Smoke
 
 		/////////////////////////////////////////////////////////
 		// Function in which any object logic should be placed.
-		// 
-		// >>> DO NOT PUT ANY KIND OF RENDERING CALLS HERE <<<
 		// 
 		// Called only when the Game::Update function is called.
 		/////////////////////////////////////////////////////////
