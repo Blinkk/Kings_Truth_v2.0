@@ -19,6 +19,8 @@ namespace Smoke
 			new GameObject created by the factory. This will
 			correspond with their position in the main 
 			GameObject vector for each level.
+
+			This number is also used in the event system
 		*/
 		unsigned int _objectID;
 
