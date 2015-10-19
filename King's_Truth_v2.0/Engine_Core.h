@@ -55,7 +55,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 #define SCREEN_DEPTH 1000.0f
 #define SCREEN_NEAR 0.1f
 #define SCREENW 800
-#define SCREENH 600
+#define SCREENH 608
 
 // Default FPS
 #define DEFAULT_FPS 60
@@ -73,7 +73,6 @@ namespace Smoke
 		Timer *_coreTimer;										// Main engine timer
 		bool _showDebug;										// Flag to show debugger
 		int _coreFrameCount;									// Frame count
-
 
 		////////////////////////
 		// Managers / Handlers
@@ -103,7 +102,6 @@ namespace Smoke
 		///////////////////////////////
 		// Utility functions 
 		///////////////////////////////
-		void ResetObjectID();									// Reset _ID to 0 (for new level)
 		void ResetFrameCounter();								// Reset current frame count to 0
 		void IncrementFrameCount();								// Increment the frame count by 1
 		void ClearScene();										// Clear the scene for rendering
