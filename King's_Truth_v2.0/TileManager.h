@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Tile.h"
 #include "stdafx.h"
+#include <vector>
 using namespace Smoke;
 
 // Source map size
@@ -20,28 +21,13 @@ private:
 	// Info variable for source images
 	D3DXIMAGE_INFO *sourceImageInfo;
 
-	/*
-		This surface will hold the source surface for each map.
-		Portions will be copied from this surface to the mapSurface
-		to create the desired map layout.
-
-		Note: This surface will be loaded from a file in TileMap()
-	*/
-	LPDIRECT3DSURFACE9 _sourceSurface;
-
-	/*
-		This surface will hold the entirety of the tile map and should
-		be drawn the screen in the main render function.
-		
-		Note: It will be loaded within the TileMap() function and only be
-		reloaded at the beginning of a new level / screen.
-	*/
-	LPDIRECT3DSURFACE9 _mapSurface;
+	// Vector of tiles
+	std::vector<Tile*> _tileVect;
 
 	/*
 		These variables will keep track of the number of rows
 		and columns that the map should have based on the size of
-		the game screen and the size of each tile (64x64)
+		the game screen and the size of each tile (16x16)
 	*/
 	unsigned int _rows;
 	unsigned int _columns;
@@ -84,7 +70,7 @@ public:
 	/*
 		This function will simply draw the map to the screen
 
-		Note: This should be called in the main Render()
+		Note: This should ONLY be called in the main Render()
 	*/
 	void DrawMap();
 };

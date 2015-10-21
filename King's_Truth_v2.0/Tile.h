@@ -1,7 +1,11 @@
 #ifndef TILE_H
 #define TILE_H
+#include <iostream>
 #include "Collider.h"
 #include "stdafx.h"
+#include "2DRenderManager.h"
+#include "IRenderableObject.h"
+using namespace Smoke;
 
 // Tile Size
 #define TILE_SIZE_X 16
@@ -24,31 +28,32 @@ enum Tile_Types
 	LONG_WALL_Y = 11
 };
 
-class Tile
+class Tile : public IRenderableObject
 {
-protected:
-	RECT sourceRect;
-
 public:
 	Tile();
 	virtual ~Tile();
 
-	RECT GetSourceRect();
+	// Overridden Render()
+	void Render() override;
+
+	// Each tile has a renderer
+	TwoDRenderManager Renderer;
 };
 
 
-class SingleTile : public Tile
+class SingleWallTile : public Tile
 {
 public:
-	SingleTile();
+	SingleWallTile(float posX, float posY, std::string textureToUse);
 	Collider hitBox;
 };
 
 
-class PathTile : public Tile
+class SinglePathTile : public Tile
 {
 public:
-	PathTile();
+	SinglePathTile(float posX, float posY, std::string textureToUse);
 };
 
 #endif

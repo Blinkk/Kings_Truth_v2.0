@@ -39,6 +39,7 @@
 #include "TextureManager.h"
 #include "Factory.h"
 #include "Direct3D.h"
+#include "Camera2D.h"
 #include "Vector.h"
 #include "Timer.h"
 #include "Debug.h"

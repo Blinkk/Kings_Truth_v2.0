@@ -102,7 +102,6 @@ namespace Smoke
 		// Draw to screen
 		g_Engine->GetSpriteObj()->Draw(_texture, &rect, NULL, NULL, D3DCOLOR_XRGB(255, 255, 255));
 
-
 		// Reset transform to identity matrix
 		D3DXMATRIX mat;
 		D3DXMatrixIdentity(&mat);

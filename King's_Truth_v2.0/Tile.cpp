@@ -5,8 +5,12 @@
 ////////////////
 Tile::Tile()
 {
-	// Create an empty rect
-	sourceRect = { 0, 0, 0, 0 };
+
+}
+
+void Tile::Render()
+{
+	Renderer.Render();
 }
 
 Tile::~Tile()
@@ -14,33 +18,25 @@ Tile::~Tile()
 	// Nothing to deallocate
 }
 
-RECT Tile::GetSourceRect()
-{
-	return sourceRect;
-}
-
 
 ////////////////
 // Single Tile
 ////////////////
-SingleTile::SingleTile()
+SingleWallTile::SingleWallTile(float posX, float posY, std::string textureToUse)
 {
-	// Create a rect
-	sourceRect.left = 0;
-	sourceRect.right = sourceRect.left + TILE_SIZE_X;
-	sourceRect.top = 0;
-	sourceRect.bottom = sourceRect.top + TILE_SIZE_Y;
+	// Initialize Renderer
+	Renderer.Initialize(1.0f, 1.0f, TILE_SIZE_X, TILE_SIZE_Y, 1, 0, 0, 0, 0, 0.0f, posX, posY, textureToUse);
+
+	// Initialize hitBox
+	hitBox.Initialize(posX, posY, TILE_SIZE_X, TILE_SIZE_Y);
 }
 
 
 ////////////////
 // Path Tile
 ////////////////
-PathTile::PathTile()
+SinglePathTile::SinglePathTile(float posX, float posY, std::string textureToUse)
 {
-	// Create a rect
-	sourceRect.left = 32;
-	sourceRect.right = sourceRect.left + TILE_SIZE_X;
-	sourceRect.top = 128;
-	sourceRect.bottom = sourceRect.top + TILE_SIZE_Y;
+	// Initialize Renderer
+	Renderer.Initialize(1.0f, 1.0f, TILE_SIZE_X, TILE_SIZE_Y, 8, 33, 33, 0, 0, 0.0f, posX, posY, textureToUse);
 }

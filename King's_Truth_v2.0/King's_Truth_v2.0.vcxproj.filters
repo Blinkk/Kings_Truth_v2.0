@@ -225,22 +225,22 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\hedge_maze.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\hedge_maze.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\ice_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\ice_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\lightblue_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\lightblue_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\purple_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\purple_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\stone_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\Source Maps\stone_walls.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_walls.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
   </ItemGroup>

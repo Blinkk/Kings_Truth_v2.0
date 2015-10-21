@@ -20,6 +20,7 @@ private:
 	std::vector<IGameObject*>GameObjects;
 	std::vector<IGameObject*>::iterator goIt;
 	TileManager *_tileManager;
+	Camera2D *_camera;
 
 	/*
 		Keeps track of the currently active level, so that we can go back into

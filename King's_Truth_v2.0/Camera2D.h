@@ -19,23 +19,23 @@ namespace Smoke
 	private:
 		float _positionX, _positionY, _rotationZ;
 		float _rotationX, _rotationY;
-		D3DXMATRIX _viewMatrix;
+		D3DXMATRIX _projMatrix;
 
 	public:
 		Camera2D();
 		~Camera2D();
 
 		/*
-			This function generates a View Matrix that 
-			is then used to determine the camera's
-			viewport. This is updated every frame.
+			This function generates a projection 
+			matrix for 2D rendering. This is updated
+			every time the main Render() call is made
 		*/
 		void Render();
 
 		//////////////////////////////
 		// Accessor/Mutator functions
 		//////////////////////////////
-		void GetViewMatrix(D3DXMATRIX &viewMatrix) { viewMatrix = _viewMatrix; }
+		void GetProjMatrix(D3DXMATRIX &projMatrix) { projMatrix = _projMatrix; }
 		void SetPosition(float x, float y);		
 		void SetRotation(float x, float y, float z);		
 

@@ -36,6 +36,7 @@ GameManager::GameManager()
 
 	// Set tile manager pointer to NULL
 	_tileManager = NULL;
+	_camera = NULL;
 
 	lvlPtr = &Level1;				// Set default level to Level1
 }
@@ -66,6 +67,16 @@ bool GameManager::Game_Init()
 	if (!_tileManager)
 	{
 		debug << "\tFailed to create tile manager in Game_Init()" << std::endl;
+		return false;
+	}
+
+	/////////////////////////
+	// Create a camera
+	/////////////////////////
+	_camera = new Camera2D();
+	if (_camera == NULL)
+	{
+		debug << "\tFailed to create camera in Game_Init()" << std::endl;
 		return false;
 	}
 
@@ -141,12 +152,15 @@ void GameManager::Game_Render()
 	g_Engine->ClearScene();								// Clear the backbuffer for rendering
 	if (g_Engine->GetDevice()->BeginScene() == D3D_OK)	// Begin scene
 	{
-		// Render the map
-		_tileManager->DrawMap();
+		// Create a projection matrix
+		_camera->Render();
 
 		//////////////////////////////
 		// Begin Spritebatch for 2D
-		g_Engine->GetSpriteObj()->Begin(D3DXSPRITE_ALPHABLEND);
+		g_Engine->GetSpriteObj()->Begin(D3DXSPRITE_ALPHABLEND | D3DXSPRITE_OBJECTSPACE);
+
+		// Render the map
+		_tileManager->DrawMap();
 
 		// Render the renderable game objects
 		IRenderableObject *pTemp = NULL;
