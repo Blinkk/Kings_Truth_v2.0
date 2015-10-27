@@ -18,7 +18,7 @@ protected:
 	unsigned int _health;
 
 	// Animation
-	bool hasMoved;
+	bool isMoving;
 	bool isAttacking;
 	unsigned int depth;
 

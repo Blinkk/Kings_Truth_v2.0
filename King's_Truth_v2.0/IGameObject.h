@@ -22,6 +22,13 @@ namespace Smoke
 		// Identification number used for event system
 		unsigned int ID;
 
+		/*
+			This variable will hold a string value
+			that will be used to identify objects in
+			specific parts of the code.
+		*/
+		std::string tag;
+
 		// Determines how the object uses information received from events
 		virtual void HandleEvent(IEvent*) = 0;
 

@@ -11,15 +11,26 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 #include "stdafx.h"
+#include "Player.h"
 
 namespace Smoke
 {
 	class Camera2D
 	{
 	private:
-		float _positionX, _positionY, _rotationZ;
-		float _rotationX, _rotationY;
+		Vector2 _position;
+		float _rotationX, _rotationY, _rotationZ;
+		float _zoomFactor;
 		D3DXMATRIX _projMatrix;
+
+		/*
+			This is a pointer to a player.
+			If the camera is meant to follow an
+			object, this value must not be NULL.
+
+			Note: Only one of these can be active
+		*/
+		Player *_pFollow;
 
 	public:
 		Camera2D();
@@ -35,9 +46,9 @@ namespace Smoke
 		//////////////////////////////
 		// Accessor/Mutator functions
 		//////////////////////////////
-		void GetProjMatrix(D3DXMATRIX &projMatrix) { projMatrix = _projMatrix; }
-		void SetPosition(float x, float y);		
-		void SetRotation(float x, float y, float z);		
+		void GetProjMatrix(D3DXMATRIX &projMatrix) { projMatrix = _projMatrix; }	
+		void SetRotation(float x, float y, float z);	
+		void SetPlayerFollow(Player &player);
 
 	};	// End of class
 }	// End of namespace

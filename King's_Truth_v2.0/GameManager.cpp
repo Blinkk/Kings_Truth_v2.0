@@ -15,16 +15,25 @@ void Level1()
 	// Load all objects for Level1
 	std::vector<IGameObject*> gameObjects;
 
+	/////////////////////
+	// Create a player
+	/////////////////////
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
 
+	// Set this player as the object to follow
+	g_Manager->GetCamera()->SetPlayerFollow(*pTemp);
+
+	//////////////////////////////////
 	// Load in the map for this level
+	//////////////////////////////////
 	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
 
+	//////////////////////////////////////
 	// Set the game objects for the level
+	//////////////////////////////////////
 	g_Manager->SetGameObjects(gameObjects);
 }
-
 
 
 GameManager::GameManager()

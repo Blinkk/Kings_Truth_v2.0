@@ -92,6 +92,8 @@ namespace Smoke
 		void SetY(float value) { _posVector.y = value; }
 		void SetScaleX(float value) { _scaleX = value; }
 		void SetScaleY(float value) { _scaleY = value; }
+		void SetStartFrame(unsigned int value) { _startFrame = value; }
+		void SetEndFrame(unsigned int value) { _endFrame = value; }
 		void SetFrameWidth(float value) { _frameW = value; }
 		void SetFrameHeight(float value) { _frameH = value; }
 		void SetDelay(unsigned int value) { _delay = value; }

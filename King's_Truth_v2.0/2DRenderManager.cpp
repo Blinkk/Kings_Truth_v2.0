@@ -55,9 +55,9 @@ namespace Smoke
 	}
 
 
-	//////////////////////////////
+	///////////////////////////////
 	// Set new animation variables
-	//////////////////////////////
+	///////////////////////////////
 	void TwoDRenderManager::Initialize(unsigned int newFrameWidth, unsigned int newFrameHeight,
 		unsigned int newStartFrame, unsigned int newEndFrame, unsigned int newDelay)
 	{

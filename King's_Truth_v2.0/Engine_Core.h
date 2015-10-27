@@ -53,8 +53,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 	WPARAM wParam, LPARAM lParam);
 
 // Screen parameters
-#define SCREEN_DEPTH 1000.0f
-#define SCREEN_NEAR 0.1f
+#define SCREEN_DEPTH 1.0f
+#define SCREEN_NEAR 0.0f
 #define SCREENW 800
 #define SCREENH 608
 
