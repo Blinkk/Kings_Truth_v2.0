@@ -16,6 +16,7 @@ Player::Player()
 	facingLeft = false;
 	tag = "Player";
 	_speed = 2.0f;
+	_animState = IDLE;
 
 	// Register with event system
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
@@ -64,9 +65,13 @@ void Player::HandleEvent(IEvent *e)
 					_goLeft = false;
 
 					// Set animation frames
-					Renderer.SetCurrentFrame(2);
-					Renderer.SetStartFrame(2);
-					Renderer.SetEndFrame(3);
+					if (_animState != WALKING_UP)
+					{
+						Renderer.SetCurrentFrame(2);
+						Renderer.SetStartFrame(2);
+						Renderer.SetEndFrame(3);
+						_animState = WALKING_UP;
+					}
 				}
 				else if (pTemp->down)
 				{
@@ -81,9 +86,13 @@ void Player::HandleEvent(IEvent *e)
 					_goLeft = false;
 
 					// Set animation frames
-					Renderer.SetCurrentFrame(0);
-					Renderer.SetStartFrame(0);
-					Renderer.SetEndFrame(1);
+					if (_animState != WALKING_DOWN)
+					{
+						Renderer.SetCurrentFrame(0);
+						Renderer.SetStartFrame(0);
+						Renderer.SetEndFrame(1);
+						_animState = WALKING_DOWN;
+					}
 				}
 				else if (pTemp->left)
 				{
@@ -98,14 +107,18 @@ void Player::HandleEvent(IEvent *e)
 					_goRight = false;
 
 					// Set animation frames
-					Renderer.SetCurrentFrame(6);
-					Renderer.SetStartFrame(6);
-					Renderer.SetEndFrame(7);
+					if (_animState != WALKING_LEFT)
+					{
+						Renderer.SetCurrentFrame(6);
+						Renderer.SetStartFrame(6);
+						Renderer.SetEndFrame(7);
+						_animState = WALKING_LEFT;
+					}
 				}
 				else if (pTemp->right)
 				{
 					_moveStartPos = GetCurrentPos();
-					
+
 					// Set movement flags
 					facingLeft = false;
 					isMoving = true;
@@ -115,9 +128,13 @@ void Player::HandleEvent(IEvent *e)
 					_goRight = true;
 
 					// Set animation frames
-					Renderer.SetCurrentFrame(4);
-					Renderer.SetStartFrame(4);
-					Renderer.SetEndFrame(5);
+					if (_animState != WALKING_RIGHT)
+					{
+						Renderer.SetCurrentFrame(4);
+						Renderer.SetStartFrame(4);
+						Renderer.SetEndFrame(5);
+						_animState = WALKING_RIGHT;
+					}
 				}
 			}
 		}
@@ -184,24 +201,28 @@ void Player::Update(float deltaTime)
 			Renderer.SetCurrentFrame(2);
 			Renderer.SetStartFrame(2);
 			Renderer.SetEndFrame(2);
+			_animState = IDLE;
 		}
 		else if (_goDown)
 		{
 			Renderer.SetCurrentFrame(0);
 			Renderer.SetStartFrame(0);
 			Renderer.SetEndFrame(0);
+			_animState = IDLE;
 		}
 		else if (_goLeft)
 		{
 			Renderer.SetCurrentFrame(6);
 			Renderer.SetStartFrame(6);
 			Renderer.SetEndFrame(6);
+			_animState = IDLE;
 		}
 		else if (_goRight)
 		{
 			Renderer.SetCurrentFrame(4);
 			Renderer.SetStartFrame(4);
 			Renderer.SetEndFrame(4);
+			_animState = IDLE;
 		}
 	}
 	Renderer.Update();

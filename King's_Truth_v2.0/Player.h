@@ -4,11 +4,21 @@
 #include "Vector.h"
 using namespace Smoke;
 
+enum Player_Animation_States
+{
+	IDLE = 0,
+	WALKING_LEFT,
+	WALKING_RIGHT,
+	WALKING_UP,
+	WALKING_DOWN
+};
+
 class Player : public IEntity
 {
 private:
 	Vector2 _moveStartPos;
 	Vector2 _currentPos;
+	unsigned int _animState;
 	bool _goLeft;
 	bool _goRight;
 	bool _goUp;
@@ -28,6 +38,7 @@ public:
 
 	// Accessors
 	Vector2 GetCurrentPos() { return _currentPos; }
+	RECT GetHitbox() { return Renderer.GetBoundingBox(); }
 };
 
 #endif

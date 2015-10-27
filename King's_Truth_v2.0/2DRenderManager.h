@@ -82,6 +82,7 @@ namespace Smoke
 		const float GetAdjustedWidth() { return _frameW * _scaleX; }
 		const float GetAdjustedHeight() { return _frameH * _scaleY; }
 		const unsigned int GetCurrentFrame() { return _curFrame; }
+		const unsigned int GetStartFrame() { return _startFrame; }
 		const unsigned int GetEndFrame() { return _endFrame; }
 		const float GetRotation() { return _rotation; }		
 		const float GetScaleX() { return _scaleX; }

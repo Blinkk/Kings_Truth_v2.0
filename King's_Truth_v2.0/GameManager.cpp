@@ -21,7 +21,10 @@ void Level1()
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
 
-	// Set this player as the object to follow
+	// Get a global reference to the player
+	g_Engine->SetPlayer(pTemp);
+
+	// Set the player as the object for camera to follow
 	g_Manager->GetCamera()->SetPlayerFollow(*pTemp);
 
 	//////////////////////////////////

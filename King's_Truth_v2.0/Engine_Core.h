@@ -74,6 +74,7 @@ namespace Smoke
 		Timer *_coreTimer;										// Main engine timer
 		bool _showDebug;										// Flag to show debugger
 		int _coreFrameCount;									// Frame count
+		Player *_player;										// Keep a reference to player object
 
 		////////////////////////
 		// Managers / Handlers
@@ -119,6 +120,7 @@ namespace Smoke
 		Factory* GetFactory() { return _factory; }						// Return a pointer to factory
 		Debug* GetDebugger() { return _debugger; }						// Return pointer to Debugger
 		Timer* GetCoreTimer() { return _coreTimer; }					// Return pointer to Core Timer
+		Player* GetPlayer();											// Return a pointer to the player object
 
 		// Return addresses
 		HWND& GetWindowHandle() { return (*_window); }					// Return address of window
@@ -136,6 +138,7 @@ namespace Smoke
 		// Mutator functions
 		//////////////////////////////
 		void SetShowDebug(bool value) { _showDebug = value; }			// Set status of debugger (on/off)
+		void SetPlayer(Player *pPlayer);								// Set the player object
 
 	};	// End of class
 }	// End of namespace

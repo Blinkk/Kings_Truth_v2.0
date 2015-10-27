@@ -18,8 +18,9 @@ namespace Smoke
 	namespace Events
 	{
 		const unsigned int PLAYER_INPUT = 0;
-		const unsigned int ENDLEVEL = 1;
-		const unsigned int ENDPROGRAM = 2;
+		const unsigned int PLAYER_COLLISION = 1;
+		const unsigned int ENDLEVEL = 2;
+		const unsigned int ENDPROGRAM = 3;
 
 		const unsigned int MAX = ENDPROGRAM;
 	}
@@ -57,7 +58,6 @@ namespace Smoke
 	class PlayerInputEvent : public IEvent
 	{
 	public:
-
 		bool up;
 		bool left;
 		bool right;
@@ -77,8 +77,15 @@ namespace Smoke
 		}
 	};
 
-	
 
+	class PlayerCollisionEvent : public IEvent
+	{
+	public:
+		PlayerCollisionEvent()
+		{
+			Event_Type = Events::PLAYER_COLLISION;
+		}
+	};
 }	// End of namespace
 
 #endif

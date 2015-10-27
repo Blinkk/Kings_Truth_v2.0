@@ -15,6 +15,7 @@ namespace Smoke
 		_textureManager = NULL;
 		_factory = NULL;
 		_debugger = NULL;
+		_player = NULL;
 		_coreFrameCount = 0;
 		_coreTimer = new Timer();
 
@@ -250,4 +251,18 @@ namespace Smoke
 	}
 
 
+	Player* Engine_Core::GetPlayer()
+	{
+		if (_player != NULL)
+			return _player;
+		else
+			return NULL;
+	}
+
+
+	void Engine_Core::SetPlayer(Player *pPlayer)
+	{
+		if (pPlayer != NULL)
+			_player = pPlayer;
+	}
 }	// End of namespace
