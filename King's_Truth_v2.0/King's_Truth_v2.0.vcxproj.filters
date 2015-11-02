@@ -243,5 +243,8 @@
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_walls.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\player.png">
+      <Filter>Game\Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

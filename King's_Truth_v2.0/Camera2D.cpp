@@ -18,7 +18,7 @@ namespace Smoke
 		_rotationZ = 0.0f;
 
 		// Zoom
-		_zoomFactor = 0.35f;
+		_zoomFactor = 0.3f;
 	}
 
 
@@ -28,7 +28,14 @@ namespace Smoke
 	void Camera2D::Render()
 	{
 		// Update position
-		_position = _pFollow->GetCurrentPos();
+		if (_pFollow != NULL)
+		{
+			_position = _pFollow->GetCurrentPos();
+			_position.x += 8;	// Move to center of player
+			_position.y += 8;	// Move to center of player
+		}
+		else
+			_position = Vector2(SCREENW / 2, SCREENH / 2);
 
 		// Set up view Matrix
 		D3DXMATRIX viewMatrix = D3DXMATRIX(

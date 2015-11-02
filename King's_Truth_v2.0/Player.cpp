@@ -11,6 +11,10 @@ Player::Player()
 	_goRight = false;
 	_goUp = false;
 	_goDown = false;
+	_canGoLeft = true;
+	_canGoRight = true;
+	_canGoUp = true;
+	_canGoDown = true;
 	depth = 0;
 	facingUp = true;
 	facingLeft = false;
@@ -57,12 +61,15 @@ void Player::HandleEvent(IEvent *e)
 					_moveStartPos = GetCurrentPos();
 
 					// Set movement flags
-					facingUp = true;
-					isMoving = true;
-					_goUp = true;
-					_goDown = false;
-					_goRight = false;
-					_goLeft = false;
+					if (_canGoUp)
+					{
+						facingUp = true;
+						isMoving = true;
+						_goUp = true;
+						_goDown = false;
+						_goRight = false;
+						_goLeft = false;
+					}
 
 					// Set animation frames
 					if (_animState != WALKING_UP)
@@ -72,18 +79,24 @@ void Player::HandleEvent(IEvent *e)
 						Renderer.SetEndFrame(3);
 						_animState = WALKING_UP;
 					}
+
+					// Set keypress value
+					_lastKeyPress = UP;
 				}
 				else if (pTemp->down)
 				{
 					_moveStartPos = GetCurrentPos();
 
 					// Set movement flags
-					facingUp = false;
-					isMoving = true;
-					_goUp = false;
-					_goDown = true;
-					_goRight = false;
-					_goLeft = false;
+					if (_canGoDown)
+					{
+						facingUp = false;
+						isMoving = true;
+						_goUp = false;
+						_goDown = true;
+						_goRight = false;
+						_goLeft = false;
+					}
 
 					// Set animation frames
 					if (_animState != WALKING_DOWN)
@@ -93,18 +106,24 @@ void Player::HandleEvent(IEvent *e)
 						Renderer.SetEndFrame(1);
 						_animState = WALKING_DOWN;
 					}
+
+					// Set keypress value
+					_lastKeyPress = DOWN;
 				}
 				else if (pTemp->left)
 				{
 					_moveStartPos = GetCurrentPos();
 					
 					// Set movement flags
-					facingLeft = true;
-					isMoving = true;
-					_goUp = false;
-					_goDown = false;
-					_goLeft = true;
-					_goRight = false;
+					if (_canGoLeft)
+					{
+						facingLeft = true;
+						isMoving = true;
+						_goUp = false;
+						_goDown = false;
+						_goLeft = true;
+						_goRight = false;
+					}
 
 					// Set animation frames
 					if (_animState != WALKING_LEFT)
@@ -114,18 +133,24 @@ void Player::HandleEvent(IEvent *e)
 						Renderer.SetEndFrame(7);
 						_animState = WALKING_LEFT;
 					}
+
+					// Set keypress value
+					_lastKeyPress = LEFT;
 				}
 				else if (pTemp->right)
 				{
 					_moveStartPos = GetCurrentPos();
 
 					// Set movement flags
-					facingLeft = false;
-					isMoving = true;
-					_goUp = false;
-					_goDown = false;
-					_goLeft = false;
-					_goRight = true;
+					if (_canGoRight)
+					{
+						facingLeft = false;
+						isMoving = true;
+						_goUp = false;
+						_goDown = false;
+						_goLeft = false;
+						_goRight = true;
+					}
 
 					// Set animation frames
 					if (_animState != WALKING_RIGHT)
@@ -135,6 +160,9 @@ void Player::HandleEvent(IEvent *e)
 						Renderer.SetEndFrame(5);
 						_animState = WALKING_RIGHT;
 					}
+
+					// Set keypress value
+					_lastKeyPress = RIGHT;
 				}
 			}
 		}
@@ -196,33 +224,40 @@ void Player::Update(float deltaTime)
 		/////////////////////////////////////////
 		// Set frame to idle in current position
 		/////////////////////////////////////////
-		if (_goUp)
+		switch (_lastKeyPress)
 		{
+		case UP:
 			Renderer.SetCurrentFrame(2);
 			Renderer.SetStartFrame(2);
 			Renderer.SetEndFrame(2);
 			_animState = IDLE;
-		}
-		else if (_goDown)
-		{
+			break;
+
+		case DOWN:
 			Renderer.SetCurrentFrame(0);
 			Renderer.SetStartFrame(0);
 			Renderer.SetEndFrame(0);
 			_animState = IDLE;
-		}
-		else if (_goLeft)
-		{
+			break;
+
+		case LEFT:
 			Renderer.SetCurrentFrame(6);
 			Renderer.SetStartFrame(6);
 			Renderer.SetEndFrame(6);
 			_animState = IDLE;
-		}
-		else if (_goRight)
-		{
+			break;
+
+		case RIGHT:
 			Renderer.SetCurrentFrame(4);
 			Renderer.SetStartFrame(4);
 			Renderer.SetEndFrame(4);
 			_animState = IDLE;
+			break;
+
+		default:
+			debug << "\t_lastPress value out of range. Value = " <<
+				_lastKeyPress << ", acceptable range is 0-3" << std::endl;
+			break;
 		}
 	}
 	Renderer.Update();
@@ -279,4 +314,15 @@ void Player::KeepInBounds()
 		// Prevent the player from moving off the bottom of the screen
 		Renderer.ModifyY(-(hitBox.GetBoundingBox().bottom - SCREENH));
 	}
+}
+
+//////////////////////
+// Set movement flags
+//////////////////////
+void Player::SetMovementFlags(bool left, bool right, bool up, bool down)
+{
+	_canGoLeft = left;
+	_canGoRight = right;
+	_canGoUp = up;
+	_canGoDown = down;
 }

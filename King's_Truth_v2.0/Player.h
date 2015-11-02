@@ -13,16 +13,26 @@ enum Player_Animation_States
 	WALKING_DOWN
 };
 
+enum Key_Press
+{
+	UP = 0,	DOWN, LEFT, RIGHT
+};
+
 class Player : public IEntity
 {
 private:
 	Vector2 _moveStartPos;
 	Vector2 _currentPos;
 	unsigned int _animState;
+	unsigned int _lastKeyPress;
 	bool _goLeft;
 	bool _goRight;
 	bool _goUp;
 	bool _goDown;
+	bool _canGoLeft;
+	bool _canGoRight;
+	bool _canGoUp;
+	bool _canGoDown;
 	float _speed;
 
 public:
@@ -39,6 +49,9 @@ public:
 	// Accessors
 	Vector2 GetCurrentPos() { return _currentPos; }
 	RECT GetHitbox() { return Renderer.GetBoundingBox(); }
+
+	// Mutators
+	void SetMovementFlags(bool left, bool right, bool up, bool down);
 };
 
 #endif

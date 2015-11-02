@@ -11,6 +11,12 @@ using namespace Smoke;
 #define TILE_SIZE_X 16
 #define TILE_SIZE_Y 16
 
+namespace TileTypes
+{
+	const char SINGLE_PATH = '0';
+	const char SINGLE_WALL = '1';
+};
+
 class Tile : public IRenderableObject
 {
 public:
@@ -22,6 +28,9 @@ public:
 
 	// Each tile has a renderer
 	TwoDRenderManager Renderer;
+
+	// Each tile is either collidable or not
+	bool isCollidable;
 };
 
 
@@ -29,7 +38,6 @@ class SingleWallTile : public Tile
 {
 public:
 	SingleWallTile(float posX, float posY, std::string textureToUse);
-	Collider hitBox;
 };
 
 

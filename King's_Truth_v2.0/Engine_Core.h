@@ -59,7 +59,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 #define SCREENH 608
 
 // Default FPS
-#define DEFAULT_FPS 60
+#define DEFAULT_FPS 70
 
 
 ////////////////////////////////////////

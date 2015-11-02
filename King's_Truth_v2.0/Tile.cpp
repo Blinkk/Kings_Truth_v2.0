@@ -27,8 +27,7 @@ SingleWallTile::SingleWallTile(float posX, float posY, std::string textureToUse)
 	// Initialize Renderer
 	Renderer.Initialize(1.0f, 1.0f, TILE_SIZE_X, TILE_SIZE_Y, 1, 0, 0, 0, 0, 0.0f, posX, posY, textureToUse);
 
-	// Initialize hitBox
-	hitBox.Initialize(posX, posY, TILE_SIZE_X, TILE_SIZE_Y);
+	isCollidable = true;
 }
 
 
@@ -39,4 +38,6 @@ SinglePathTile::SinglePathTile(float posX, float posY, std::string textureToUse)
 {
 	// Initialize Renderer
 	Renderer.Initialize(1.0f, 1.0f, TILE_SIZE_X, TILE_SIZE_Y, 8, 33, 33, 0, 0, 0.0f, posX, posY, textureToUse);
+
+	isCollidable = false;
 }

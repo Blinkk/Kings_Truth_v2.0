@@ -30,7 +30,7 @@ void Level1()
 	//////////////////////////////////
 	// Load in the map for this level
 	//////////////////////////////////
-	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
+	g_Manager->GetTileManager()->TileMap(LEVEL_ONE_MAP);
 
 	//////////////////////////////////////
 	// Set the game objects for the level
@@ -152,6 +152,9 @@ void GameManager::Update(float deltaTime)
 	{
 		(*goIt)->Update(deltaTime);
 	}
+
+	// Update player movement flags
+	_tileManager->UpdatePlayerFlags();
 }
 
 

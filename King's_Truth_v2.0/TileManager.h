@@ -1,9 +1,10 @@
 #ifndef TILEMANAGER_H
 #define TILEMANAGER_H
 #include <iostream>
+#include <fstream>
+#include <map>
 #include "Tile.h"
 #include "stdafx.h"
-#include <vector>
 using namespace Smoke;
 
 // Source map size
@@ -15,14 +16,17 @@ enum MAPS
 	LEVEL_ONE_MAP = 0
 };
 
+//////////////////////////
+// Typedef a row of Tiles
+// as a map of Tile*
+//////////////////////////
+typedef std::map<unsigned int, Tile*> TileRow;
+
 class TileManager
 {
 private:
-	// Info variable for source images
-	D3DXIMAGE_INFO *sourceImageInfo;
-
-	// Vector of tiles
-	std::vector<Tile*> _tileVect;
+	// Map of maps of tiles
+	std::map<unsigned int, TileRow> _tileMap;
 
 	/*
 		These variables will keep track of the number of rows
@@ -73,6 +77,11 @@ public:
 		Note: This should ONLY be called in the main Render()
 	*/
 	void DrawMap();
+
+	/*
+		Testing this function	
+	*/
+	void UpdatePlayerFlags();
 };
 
 #endif
