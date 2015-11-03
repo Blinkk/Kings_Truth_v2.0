@@ -9,6 +9,8 @@
 using namespace std;
 using namespace Smoke;
 
+#define APPTITLE "King's Truth"
+
 // Declare engine object pointer and game manager pointer
 auto_ptr<Engine_Core> g_Engine(new Engine_Core);
 auto_ptr<GameManager> g_Manager(new GameManager);
@@ -31,7 +33,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 	wndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wndClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
 	wndClass.lpszMenuName = NULL;
-	wndClass.lpszClassName = "Smoke Engine Framework";
+	wndClass.lpszClassName = APPTITLE;
 	if (!RegisterClassEx(&wndClass))
 	{
 		debug << "\tFailed to register window class" << std::endl;
@@ -41,7 +43,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 	RECT rc = { 0, 0, SCREENW, SCREENH };
 	AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
 
-	g_Engine->GetWindowHandle() = CreateWindowA("Smoke Engine Framework", "Smoke Engine", WS_OVERLAPPEDWINDOW,
+	g_Engine->GetWindowHandle() = CreateWindowA(APPTITLE, APPTITLE, WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top,
 		NULL, NULL, hInstance, NULL);
 	if (!g_Engine->GetWindowHandle())
