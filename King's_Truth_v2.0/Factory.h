@@ -1,14 +1,6 @@
 #ifndef FACTORY_H
 #define FACTORY_H
 
-/*
-	Note: Had to include this to use NULL... not sure why since
-	not a single other file had a problem.
-
-	TODO: Fix this (find out why this is happeneing)
-*/
-#include <stdlib.h>
-
 namespace Smoke
 {
 	class Factory
