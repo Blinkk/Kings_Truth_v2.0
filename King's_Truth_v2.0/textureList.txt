@@ -1,2 +1,3 @@
 player.png 255 255 255
 SourceMaps/purple_bricks.png 255 255 255
+SourceMaps/hedge_maze.png 255 255 255

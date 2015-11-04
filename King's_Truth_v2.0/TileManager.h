@@ -13,7 +13,8 @@ using namespace Smoke;
 
 enum MAPS
 {
-	LEVEL_ONE_MAP = 0
+	PROTOTYPE_MAP = 0,
+	LEVEL_ONE_MAP
 };
 
 //////////////////////////

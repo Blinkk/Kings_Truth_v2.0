@@ -9,59 +9,6 @@ TileManager::TileManager()
 }
 
 
-//////////////////////////////
-// Individual Map functions
-//////////////////////////////
-void TileManager::Level_One()
-{
-	// Position variables
-	float posX = 0.0f;
-	float posY = 0.0f;
-
-	// Stream variables
-	std::ifstream inStream;
-	char currentChar;
-
-	// Open the layout file
-	inStream.open("./bin/MapLayouts/Level_One.txt");
-
-	// Get each char and create a tile
-	Tile* pTemp = NULL;
-	for (int r = 0; r < _rows; ++r)
-	{
-		for (int c = 0; c < _columns; ++c)
-		{
-			inStream >> currentChar;
-			switch (currentChar)
-			{
-			// Single path
-			case TileTypes::SINGLE_PATH:
-				pTemp = new SinglePathTile(posX, posY, "SourceMaps/purple_bricks.png");
-				_tileMap[r][c] = pTemp;
-				posX += TILE_SIZE_X;
-				break;
-
-			// Single wall
-			case TileTypes::SINGLE_WALL:
-				pTemp = new SingleWallTile(posX, posY, "SourceMaps/purple_bricks.png");
-				_tileMap[r][c] = pTemp;
-				posX += TILE_SIZE_X;
-				break;
-
-			default:
-				debug << "\tFailed to create a tile for Level_One" << std::endl;
-				break;
-			}
-		}
-
-		// Increment position
-		posY += TILE_SIZE_Y;
-		posX = 0.0f;
-	}
-
-	inStream.close();
-}
-
 TileManager::~TileManager()
 {
 	// Empty the map of maps of tiles
@@ -92,15 +39,150 @@ TileManager::~TileManager()
 ///////////////////////
 void TileManager::TileMap(unsigned int levelID)
 {
+	// Map files
+	std::string textureFile = "";
+	std::string layoutFile = "";
+
+	// Determine which files to use
 	switch (levelID)
 	{
-	case LEVEL_ONE_MAP:
-		Level_One();
+	case PROTOTYPE_MAP:
+		textureFile = "SourceMaps/purple_bricks.png";
+		layoutFile = "./bin/MapLayouts/Prototype_Level.txt";
 		break;
+
+	case LEVEL_ONE_MAP:
+		textureFile = "SourceMaps/hedge_maze.png";
+		layoutFile = "./bin/MapLayouts/Level_One.txt";
+		break;
+
 	default:
 		debug << "\tFailed to find a map with ID = " << levelID << std::endl;
 		break;
 	}
+
+	
+	// Position variables
+	float posX = 0.0f;
+	float posY = 0.0f;
+
+	// Stream variables
+	std::ifstream inStream;
+	char currentChar;
+
+	// Open the layout file
+	inStream.open(layoutFile);
+
+	// Get each char and create a tile
+	Tile* pTemp = NULL;
+	for (int r = 0; r < _rows; ++r)
+	{
+		for (int c = 0; c < _columns; ++c)
+		{
+			inStream >> currentChar;
+			switch (currentChar)
+			{
+				// Single path
+			case TileTypes::SINGLE_PATH:
+				pTemp = new SinglePathTile(posX, posY, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Alt Single path 
+			case TileTypes::SINGLE_PATH_ALT:
+				pTemp = new SinglePathTileAlt(posX, posY, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Corner path
+			case TileTypes::SNGLE_PATH_CORNER:
+				pTemp = new CornerPathTile(posX, posY, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Single wall
+			case TileTypes::SINGLE_WALL:
+				pTemp = new SingleWallTile(posX, posY, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+
+				////////////////
+				// Wide Wall 
+				////////////////
+				// Piece 1
+			case TileTypes::WIDE_WALL_1:
+				pTemp = new WideWallTilePiece(posX, posY, FIRST, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Piece 2
+			case TileTypes::WIDE_WALL_2:
+				pTemp = new WideWallTilePiece(posX, posY, SECOND, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Piece 3
+			case TileTypes::WIDE_WALL_3:
+				pTemp = new WideWallTilePiece(posX, posY, LAST, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				////////////////
+				// Long Wall 
+				////////////////
+				// Piece 1
+			case TileTypes::LONG_WALL_1:
+				pTemp = new LongWallTilePiece(posX, posY, FIRST, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Piece 2
+			case TileTypes::LONG_WALL_2:
+				pTemp = new LongWallTilePiece(posX, posY, SECOND, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+				// Piece 3
+			case TileTypes::LONG_WALL_3:
+				pTemp = new LongWallTilePiece(posX, posY, LAST, textureFile);
+				if (_tileMap[r][c] == NULL)
+					_tileMap[r][c] = pTemp;
+				posX += TILE_SIZE_X;
+				break;
+
+			default:
+				//if (_tileMap[r][c] != NULL)
+				//	_tileMap[r][c] = new BlankTile();
+				posX += TILE_SIZE_X;
+				break;
+			}
+		}
+
+		// Increment position
+		posY += TILE_SIZE_Y;
+		posX = 0.0f;
+	}
+
+	inStream.close();
 }
 
 
