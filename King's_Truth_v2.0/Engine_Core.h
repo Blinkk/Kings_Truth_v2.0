@@ -46,11 +46,9 @@
 
 
 ////////////////////////////////////////
-// Global Definitions
+// Global Defines
 ////////////////////////////////////////
 #define WIN32_LEAN_AND_MEAN
-LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
-	WPARAM wParam, LPARAM lParam);
 
 // Screen parameters
 #define SCREEN_DEPTH 1.0f
@@ -59,7 +57,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 #define SCREENH 608
 
 // Default FPS
-#define DEFAULT_FPS 70
+#define DEFAULT_FPS 60
 
 
 ////////////////////////////////////////

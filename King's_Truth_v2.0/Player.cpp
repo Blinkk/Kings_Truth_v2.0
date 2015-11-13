@@ -275,7 +275,8 @@ void Player::Update(float deltaTime)
 
 void Player::Render()
 {
-	Renderer.Render();
+	if (Renderer.GetInitSuccess())
+		Renderer.Render();
 }
 
 

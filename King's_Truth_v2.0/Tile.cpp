@@ -10,7 +10,8 @@ Tile::Tile()
 
 void Tile::Render()
 {
-	Renderer.Render();
+	if (Renderer.GetInitSuccess())
+		Renderer.Render();
 }
 
 Tile::~Tile()

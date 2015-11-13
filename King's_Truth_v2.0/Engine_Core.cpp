@@ -64,11 +64,11 @@ namespace Smoke
 		//////////////////////////
 		// Initialize UI object
 		//////////////////////////
-		if (!_uiManager->Initialize("Calibri", 24))
-		{
-			debug << "\tFailed to initialize UI" << std::endl;
-			return false;
-		}
+		//if (!_uiManager->Initialize("Calibri", 24))
+		//{
+		//	debug << "\tFailed to initialize UI" << std::endl;
+		//	return false;
+		//}
 
 		/////////////////////////////
 		// Initialize input manager

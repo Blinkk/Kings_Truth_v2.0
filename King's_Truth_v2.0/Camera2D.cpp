@@ -18,7 +18,7 @@ namespace Smoke
 		_rotationZ = 0.0f;
 
 		// Zoom
-		_zoomFactor = 0.3f;
+		_zoomFactor = 1.0f;
 	}
 
 

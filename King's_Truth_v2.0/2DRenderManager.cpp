@@ -19,6 +19,7 @@ namespace Smoke
 		_direction = 1;
 		_rotation = 0;
 		_animate = false;
+		_initSuccess = false;
 	}
 
 	
@@ -52,6 +53,9 @@ namespace Smoke
 		_texture = g_Engine->GetTextureManager()->RetrieveTexture(textureToUse);
 
 		_curFrame = _startFrame;	// Set current frame to the start frame
+
+		if (_texture != NULL)
+			_initSuccess = true;
 	}
 
 

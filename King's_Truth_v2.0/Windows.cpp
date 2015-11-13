@@ -9,6 +9,9 @@
 using namespace std;
 using namespace Smoke;
 
+LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
+	WPARAM wParam, LPARAM lParam);
+
 #define APPTITLE "King's Truth"
 
 // Declare engine object pointer and game manager pointer
@@ -103,13 +106,13 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 				DispatchMessage(&msg);
 			}
 
-			// Update and Draw if frame interval is ready (default: 60fps)
+			// Update if frame interval is ready (default: 60fps)
 			double t = g_Engine->GetGameTime();
 			if (t >= prevTime + ((float)1 / g_Manager->GetFrameInterval()) * 1000.0f)
 			{
 				float dt = (float)(t - prevTime) * 0.001f;	// Calculate deltaTime (time between frames)
 				g_Manager->Update(dt);						// Update game (calls Engine_Core::Update())
-				prevTime = g_Engine->GetGameTime();			// Reset prevTime
+				prevTime = t;								// Reset prevTime
 			}
 
 			g_Manager->Game_Render();				// Render game (Renders EVERYTHING in one scene)

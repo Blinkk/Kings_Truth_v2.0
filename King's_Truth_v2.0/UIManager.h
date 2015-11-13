@@ -5,16 +5,26 @@
 ***********************************/
 #ifndef UI_H
 #define UI_H
-#include "Font.h"
+#include "IGameObject.h"
+#include "IRenderableObject.h"
+#include <vector>
+
+// UI_Object headers
+#include "Label.h"
+
+enum UI_Levels
+{
+	LEVEL_ONE_UI = 0
+};
 
 namespace Smoke
 {
-	class UIManager
+	class UIManager : public IGameObject, IRenderableObject
 	{
 	private:
-		Font _fontObject;		// Main font object for UI
-
 		UIManager();
+		std::vector<IUI_Object*> _uiObjects;
+		std::vector<IUI_Object*>::iterator _uiIt;
 
 	public:
 		static UIManager& GetInstance()
@@ -30,14 +40,23 @@ namespace Smoke
 		}
 
 		~UIManager();
-		bool Initialize(std::string fontName, int fontSize);
-		void Render();
+		void LoadUI(unsigned int levelID);
+		void HandleEvent(IEvent*) override;
+		void Update(float deltaTime) override;
+		void Render() override;
 		void Shutdown();
+
+		/*
+			This function that this function pointer points to
+			will be called in the LoadLevel function
+		*/
+		void(*uiLvlPtr)();
 
 		//////////////////////
 		// Utility Functions
 		//////////////////////
 		void DrawDebug();
+		void SetUIObjects(std::vector<IUI_Object*> uiObjects) { _uiObjects = uiObjects; }
 	};
 }
 
