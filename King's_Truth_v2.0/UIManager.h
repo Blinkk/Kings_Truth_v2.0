@@ -14,7 +14,7 @@
 
 enum UI_Levels
 {
-	LEVEL_ONE_UI = 0
+	STANDARD_GAMEPLAY_UI = 0
 };
 
 namespace Smoke
@@ -25,6 +25,12 @@ namespace Smoke
 		UIManager();
 		std::vector<IUI_Object*> _uiObjects;
 		std::vector<IUI_Object*>::iterator _uiIt;
+
+		///////////////////////
+		// UI Setup Functions
+		///////////////////////
+		// Note: Called internally only, use LoadUI()
+		void Standard_Gameplay_UI();
 
 	public:
 		static UIManager& GetInstance()
@@ -40,17 +46,28 @@ namespace Smoke
 		}
 
 		~UIManager();
-		void LoadUI(unsigned int levelID);
-		void HandleEvent(IEvent*) override;
-		void Update(float deltaTime) override;
-		void Render() override;
-		void Shutdown();
 
 		/*
-			This function that this function pointer points to
-			will be called in the LoadLevel function
+			This function is dependent on there being an
+			active camera set in the global g_Engine reference.
+			Make sure to set this prior to calling this function,
+			otherwise no UIObjects will be created.
 		*/
-		void(*uiLvlPtr)();
+		void LoadUI(unsigned int levelID);
+
+		/*
+			This function calls the render function for
+			each UIObject in the vector.
+
+			Note: UI elements will not render if there is no
+			active camera set in the global reference. (g_Engine->SetActiveCamera(...))
+		*/
+		void Render() override;
+
+		void HandleEvent(IEvent*) override;
+		void Update(float deltaTime) override;
+		void Shutdown();
+		
 
 		//////////////////////
 		// Utility Functions

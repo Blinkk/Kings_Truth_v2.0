@@ -18,7 +18,7 @@ namespace Smoke
 		_rotationZ = 0.0f;
 
 		// Zoom
-		_zoomFactor = 1.0f;
+		_zoomFactor = 0.3f;
 	}
 
 
@@ -28,11 +28,11 @@ namespace Smoke
 	void Camera2D::Render()
 	{
 		// Update position
-		if (_pFollow != NULL)
+		if (g_Engine->GetPlayer() != NULL)
 		{
-			_position = _pFollow->GetCurrentPos();
-			_position.x += 8;	// Move to center of player
-			_position.y += 8;	// Move to center of player
+			_position = g_Engine->GetPlayer()->GetCurrentPos();
+			//_position.x += 8;	// Move to center of player
+			//_position.y += 8;	// Move to center of player
 		}
 		else
 			_position = Vector2(SCREENW / 2, SCREENH / 2);
@@ -61,17 +61,5 @@ namespace Smoke
 		_rotationX = x;
 		_rotationY = y;
 		_rotationZ = z;
-	}
-
-
-	void Camera2D::SetPlayerFollow(Player &player)
-	{
-		_pFollow = &player;
-
-		if (_pFollow == NULL)
-		{
-			debug << "\tFailed to set player to follow" << std::endl;
-			return;
-		}
 	}
 }

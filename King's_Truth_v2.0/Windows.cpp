@@ -106,7 +106,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 				DispatchMessage(&msg);
 			}
 
-			// Update if frame interval is ready (default: 60fps)
+			// Update if frame interval is ready (default: 60-70fps)
 			double t = g_Engine->GetGameTime();
 			if (t >= prevTime + ((float)1 / g_Manager->GetFrameInterval()) * 1000.0f)
 			{

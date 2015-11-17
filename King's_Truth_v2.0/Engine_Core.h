@@ -57,7 +57,7 @@
 #define SCREENH 608
 
 // Default FPS
-#define DEFAULT_FPS 60
+#define DEFAULT_FPS 70
 
 
 ////////////////////////////////////////
@@ -68,64 +68,67 @@ namespace Smoke
 	class Engine_Core
 	{
 	private:
-		HWND *_window;											// Main game window
-		Timer *_coreTimer;										// Main engine timer
-		bool _showDebug;										// Flag to show debugger
-		int _coreFrameCount;									// Frame count
-		Player *_player;										// Keep a reference to player object
+		HWND *_window;								// Main game window
+		Timer *_coreTimer;							// Main engine timer
+		bool _showDebug;							// Flag to show debugger
+		int _coreFrameCount;						// Frame count
+		Player *_player;							// Keep a reference to player object
+		Camera2D *_camera;							// Keep a global reference to active camera
 
 		////////////////////////
 		// Managers / Handlers
 		////////////////////////
-		EventManager *_eventManager;							// Event manager pointer
-		InputManager *_inputManager;							// Input core pointer
-		UIManager *_uiManager;									// UI object pointer
-		TextureManager *_textureManager;						// Texture manager pointer
-		Factory *_factory;										// Factory pointer
-		Debug *_debugger;										// In-Game debugger
+		EventManager *_eventManager;				// Event manager pointer
+		InputManager *_inputManager;				// Input core pointer
+		UIManager *_uiManager;						// UI object pointer
+		TextureManager *_textureManager;			// Texture manager pointer
+		Factory *_factory;							// Factory pointer
+		Debug *_debugger;							// In-Game debugger
 		
 		/////////////////////
 		// DirectX variables
 		/////////////////////
-		Direct3D *_directX;										// DirectX wrapper object
-		LPDIRECT3DDEVICE9 *_d3dDevice;							// DirectX device
-		LPDIRECT3D9 *_d3dContext;								// DirectX context
-		LPD3DXSPRITE *_spriteObj;								// Sprite object
-		LPDIRECT3DSURFACE9 *_backBuffer;						// Backbuffer pointer
+		Direct3D *_directX;							// DirectX wrapper object
+		LPDIRECT3DDEVICE9 *_d3dDevice;				// DirectX device
+		LPDIRECT3D9 *_d3dContext;					// DirectX context
+		LPD3DXSPRITE *_spriteObj;					// Sprite object
+		LPDIRECT3DSURFACE9 *_backBuffer;			// Backbuffer pointer
 
 	public:
-		Engine_Core();											// Construct an engine object
-		~Engine_Core();											// Deconstruct engine object
-		bool Initialize(HINSTANCE hInstance, bool fullScrn);	// Initialize all engine cores
-		void Shutdown();										// Shutdown engine
+		Engine_Core();								// Construct an engine object
+		~Engine_Core();								// Deconstruct engine object
+		bool Initialize(HINSTANCE hInstance, 
+			bool fullScrn);							// Initialize all engine cores
+		void Shutdown();							// Shutdown engine
 
 		///////////////////////////////
 		// Utility functions 
 		///////////////////////////////
-		void ResetFrameCounter();								// Reset current frame count to 0
-		void IncrementFrameCount();								// Increment the frame count by 1
-		void ClearScene();										// Clear the scene for rendering
-		void EndScene();										// End scene and present
+		void ResetFrameCounter();					// Reset current frame count to 0
+		void IncrementFrameCount();					// Increment the frame count by 1
+		void ClearScene();							// Clear the scene for rendering
+		void EndScene();							// End scene and present
 
 		//////////////////////////////
 		// Accessor functions
 		//////////////////////////////
 		// Return pointers to objects
-		EventManager* GetEventManager() { return _eventManager; }		// Return pointer to Event Manager
-		InputManager* GetInputManager() { return _inputManager; }		// Return pointer to Input Manager
-		UIManager* GetUIManager() { return _uiManager; }				// Return pointer to UI Manager
-		TextureManager* GetTextureManager() { return _textureManager; }	// Return a pointer to texture manager
-		Factory* GetFactory() { return _factory; }						// Return a pointer to factory
-		Debug* GetDebugger() { return _debugger; }						// Return pointer to Debugger
-		Timer* GetCoreTimer() { return _coreTimer; }					// Return pointer to Core Timer
-		Player* GetPlayer();											// Return a pointer to the player object
+		EventManager* GetEventManager(); 			// Return pointer to Event Manager
+		InputManager* GetInputManager();			// Return pointer to Input Manager
+		UIManager* GetUIManager();					// Return pointer to UI Manager
+		TextureManager* GetTextureManager();		// Return a pointer to texture manager
+		Factory* GetFactory();						// Return a pointer to factory
+		Debug* GetDebugger();						// Return pointer to Debugger
+		Timer* GetCoreTimer();						// Return pointer to Core Timer
+		Player* GetPlayer();						// Return a pointer to the player 
+		Camera2D* GetActiveCamera();				// Return a pointer to the camera
 
 		// Return addresses
-		HWND& GetWindowHandle() { return (*_window); }					// Return address of window
-		LPDIRECT3DDEVICE9& GetDevice() { return (*_d3dDevice); }		// Return address of d3dDevice
-		LPDIRECT3D9& GetContext() { return (*_d3dContext); }			// Return address of d3dContext
-		LPD3DXSPRITE& GetSpriteObj() { return (*_spriteObj); }			// Return address of spriteObj
-		LPDIRECT3DSURFACE9& GetBackBuffer() { return (*_backBuffer); }	// Return address of backbuffer		
+		HWND& GetWindowHandle();					// Return address of window
+		LPDIRECT3DDEVICE9& GetDevice();				// Return address of d3dDevice
+		LPDIRECT3D9& GetContext();					// Return address of d3dContext
+		LPD3DXSPRITE& GetSpriteObj();				// Return address of spriteObj
+		LPDIRECT3DSURFACE9& GetBackBuffer();		// Return address of backbuffer		
 	
 		// Return values
 		bool ShowDebug() { return _showDebug; }							// Return status of debugger (on/off)
@@ -136,7 +139,8 @@ namespace Smoke
 		// Mutator functions
 		//////////////////////////////
 		void SetShowDebug(bool value) { _showDebug = value; }			// Set status of debugger (on/off)
-		void SetPlayer(Player *pPlayer);								// Set the player object
+		void SetPlayer(Player *pPlayer);								// Set the global player pointer
+		void SetActiveCamera(Camera2D *pCamera);	// Set the global camera pointer
 
 	};	// End of class
 }	// End of namespace

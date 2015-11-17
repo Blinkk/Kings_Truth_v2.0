@@ -170,8 +170,6 @@ void TileManager::TileMap(unsigned int levelID)
 				break;
 
 			default:
-				//if (_tileMap[r][c] != NULL)
-				//	_tileMap[r][c] = new BlankTile();
 				posX += TILE_SIZE_X;
 				break;
 			}
@@ -219,8 +217,10 @@ void TileManager::DrawMap()
 void TileManager::UpdatePlayerFlags()
 {
 	// Get a reference to the player and store position
+	Vector2 playerPos;
 	Player *pTemp = g_Engine->GetPlayer();
-	Vector2 playerPos = pTemp->GetCurrentPos();
+	if (pTemp)
+		playerPos = pTemp->GetCurrentPos();
 
 	// Determine what tile player is on
 	unsigned int currentCol = playerPos.GetX() / TILE_SIZE_X;

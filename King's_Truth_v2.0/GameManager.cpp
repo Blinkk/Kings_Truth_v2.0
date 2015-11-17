@@ -24,9 +24,6 @@ void Level1()
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);
 
-	// Set the player as the object for camera to follow
-	g_Manager->GetCamera()->SetPlayerFollow(*pTemp);
-
 	//////////////////////////////////
 	// Load in the map for this level
 	//////////////////////////////////
@@ -35,7 +32,7 @@ void Level1()
 	//////////////////////////////////
 	// Load in the UI for this level
 	//////////////////////////////////
-	g_Engine->GetUIManager()->LoadUI(LEVEL_ONE_UI);
+	g_Engine->GetUIManager()->LoadUI(STANDARD_GAMEPLAY_UI);
 
 	//////////////////////////////////////
 	// Set the game objects for the level
@@ -96,6 +93,7 @@ bool GameManager::Game_Init()
 		debug << "\tFailed to create camera in Game_Init()" << std::endl;
 		return false;
 	}
+	g_Engine->SetActiveCamera(_camera);		// Set global camera pointer
 
 	///////////////////////
 	// Setup Input devices
@@ -146,8 +144,8 @@ void GameManager::Update(float deltaTime)
 	/////////////////////////////////
 	// Updates various managers
 	/////////////////////////////////
-	g_Engine->IncrementFrameCount();
 	g_Engine->GetInputManager()->Update(deltaTime);
+	g_Engine->GetUIManager()->Update(deltaTime);
 	g_Engine->GetDebugger()->Update(deltaTime);
 
 	///////////////////////////////
@@ -160,6 +158,9 @@ void GameManager::Update(float deltaTime)
 
 	// Update player movement flags
 	_tileManager->UpdatePlayerFlags();
+
+	// Increment frame count
+	g_Engine->IncrementFrameCount();
 }
 
 

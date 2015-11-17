@@ -23,15 +23,6 @@ namespace Smoke
 		float _zoomFactor;
 		D3DXMATRIX _projMatrix;
 
-		/*
-			This is a pointer to a player.
-			If the camera is meant to follow an
-			object, this value must not be NULL.
-
-			Note: Only one of these can be active
-		*/
-		Player *_pFollow;
-
 	public:
 		Camera2D();
 		~Camera2D();
@@ -46,9 +37,10 @@ namespace Smoke
 		//////////////////////////////
 		// Accessor/Mutator functions
 		//////////////////////////////
+		Vector2 GetCurrentPos() { return _position; }
+		float GetZoomFactor() { return _zoomFactor; }
 		void GetProjMatrix(D3DXMATRIX &projMatrix) { projMatrix = _projMatrix; }	
 		void SetRotation(float x, float y, float z);	
-		void SetPlayerFollow(Player &player);
 
 	};	// End of class
 }	// End of namespace

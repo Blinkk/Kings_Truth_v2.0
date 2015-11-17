@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Tile.h"
 #include "Engine_Core.h"
 
 
@@ -178,10 +179,10 @@ void Player::Update(float deltaTime)
 		{
 			Renderer.ModifyY(-_speed);
 
-			if (_moveStartPos.y - _currentPos.y >= 16)
+			if (_moveStartPos.y - _currentPos.y >= TILE_SIZE_Y)
 			{
 				// Ensure that it stopped at the correct spot
-				Renderer.SetY(_moveStartPos.y - 16);
+				Renderer.SetY(_moveStartPos.y - TILE_SIZE_Y);
 				isMoving = false;
 			}
 		}
@@ -189,10 +190,10 @@ void Player::Update(float deltaTime)
 		{
 			Renderer.ModifyY(_speed);
 
-			if (_currentPos.y - _moveStartPos.y >= 16)
+			if (_currentPos.y - _moveStartPos.y >= TILE_SIZE_Y)
 			{
 				// Ensure that it stopped at the correct spot
-				Renderer.SetY(_moveStartPos.y + 16);
+				Renderer.SetY(_moveStartPos.y + TILE_SIZE_Y);
 				isMoving = false;
 			}
 		}
@@ -200,10 +201,10 @@ void Player::Update(float deltaTime)
 		{
 			Renderer.ModifyX(-_speed);
 
-			if (_moveStartPos.x - _currentPos.x >= 16)
+			if (_moveStartPos.x - _currentPos.x >= TILE_SIZE_X)
 			{
 				// Ensure that it stopped at the correct spot
-				Renderer.SetX(_moveStartPos.x - 16);
+				Renderer.SetX(_moveStartPos.x - TILE_SIZE_X);
 				isMoving = false;
 			}
 		}
@@ -211,10 +212,10 @@ void Player::Update(float deltaTime)
 		{
 			Renderer.ModifyX(_speed);
 
-			if (_currentPos.x - _moveStartPos.x >= 16)
+			if (_currentPos.x - _moveStartPos.x >= TILE_SIZE_X)
 			{
 				// Ensure that it stopped at the correct spot
-				Renderer.SetX(_moveStartPos.x + 16);
+				Renderer.SetX(_moveStartPos.x + TILE_SIZE_X);
 				isMoving = false;
 			}
 		}

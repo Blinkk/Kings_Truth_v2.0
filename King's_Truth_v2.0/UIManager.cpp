@@ -10,14 +10,29 @@ namespace Smoke
 	//////////////////////////////
 	// Level load Functions - UI
 	//////////////////////////////
-	void Level1()
+	void UIManager::Standard_Gameplay_UI()
 	{
 		std::vector<IUI_Object*> uiObjects;
-		Label *testLabel = new Label();
-		if (testLabel)
-			testLabel->InitializeUIObject("Calibri", 24, SCREENW / 2, SCREENH / 2, "TESTING", D3DCOLOR_XRGB(255, 255, 255));
 
-		uiObjects.push_back(testLabel);
+		/////////////////////////////////////////////////////////////
+		// Create UI objects for this setup (STANDARD_GAMEPLAY_UI)
+		//
+		// Note: This requires that there be an active camera set in
+		// the g_Engine global reference.
+		//////////////////////////////////////////////////////////////
+		Camera2D *pTemp = g_Engine->GetActiveCamera();
+		if (pTemp != NULL)
+		{
+			// Create a test label and initialize it, then add to vector
+			Label *testLabel = new Label();
+			if (testLabel)
+			{
+				testLabel->InitializeUIObject("Calibri", 24, 0, 0, -((SCREENW / 2) - 5) * pTemp->GetZoomFactor(),
+					-((SCREENH / 2)) * pTemp->GetZoomFactor(), "TESTING", D3DCOLOR_XRGB(255, 255, 255));
+			}
+
+			uiObjects.push_back(testLabel);
+		}
 
 		// Set the UI Objects
 		g_Engine->GetUIManager()->SetUIObjects(uiObjects);
@@ -47,11 +62,12 @@ namespace Smoke
 		// Determine which load function to use
 		switch (levelID)
 		{
-		case LEVEL_ONE_UI:
-			uiLvlPtr = &Level1;
+		case STANDARD_GAMEPLAY_UI:
+			Standard_Gameplay_UI();
+			break;
+		default:
+			break;
 		}
-		// Call the function that the pointer points to
-		uiLvlPtr();
 	}
 
 
@@ -63,6 +79,11 @@ namespace Smoke
 
 	void UIManager::Update(float deltaTime)
 	{
+		/*
+			Currently no UI objects use their update function, as their positions are
+			determined in the render function instead. However, just in case it is added
+			in the future, their update functions are called each frame.
+		*/
 		// Call update for all UI_Objects
 		for (_uiIt = _uiObjects.begin(); _uiIt != _uiObjects.end(); ++_uiIt)
 		{
