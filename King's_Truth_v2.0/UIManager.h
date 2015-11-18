@@ -30,8 +30,8 @@ enum UI_LEVELS
 */
 enum GAME_LEVELS
 {
-	LEVEL_MAIN_MENU = 0,
-	LEVEL_ONE = 1,
+	GAME_LEVEL_MAIN_MENU = 0,
+	GAME_LEVEL_ONE = 1,
 };
 
 namespace Smoke

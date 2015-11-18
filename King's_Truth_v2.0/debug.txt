@@ -1,92 +1,37 @@
 Engine initilization started...
 	Input initialized.
 Engine initialized successfully!
-	Failed to get pointer to Player from g_Engine at: 42
-	Failed to get pointer to Player from g_Engine at: 83
-	Failed to get pointer to Player from g_Engine at: 85
-	Failed to get pointer to Player from g_Engine at: 86
-	Failed to get pointer to Player from g_Engine at: 87
-	Failed to get pointer to Player from g_Engine at: 88
-	Failed to get pointer to Player from g_Engine at: 90
-	Failed to get pointer to Player from g_Engine at: 91
-	Failed to get pointer to Player from g_Engine at: 93
-	Failed to get pointer to Player from g_Engine at: 94
-	Failed to get pointer to Player from g_Engine at: 95
-	Failed to get pointer to Player from g_Engine at: 96
-	Failed to get pointer to Player from g_Engine at: 97
-	Failed to get pointer to Player from g_Engine at: 98
-	Failed to get pointer to Player from g_Engine at: 99
-	Failed to get pointer to Player from g_Engine at: 100
-	Failed to get pointer to Player from g_Engine at: 101
-	Failed to get pointer to Player from g_Engine at: 102
-	Failed to get pointer to Player from g_Engine at: 103
-	Failed to get pointer to Player from g_Engine at: 104
-	Failed to get pointer to Player from g_Engine at: 105
-	Failed to get pointer to Player from g_Engine at: 106
-	Failed to get pointer to Player from g_Engine at: 108
-	Failed to get pointer to Player from g_Engine at: 109
-	Failed to get pointer to Player from g_Engine at: 110
-	Failed to get pointer to Player from g_Engine at: 111
-	Failed to get pointer to Player from g_Engine at: 112
 	Failed to get pointer to Player from g_Engine at: 113
-	Failed to get pointer to Player from g_Engine at: 114
-	Failed to get pointer to Player from g_Engine at: 115
-	Failed to get pointer to Player from g_Engine at: 116
-	Failed to get pointer to Player from g_Engine at: 117
-	Failed to get pointer to Player from g_Engine at: 118
-	Failed to get pointer to Player from g_Engine at: 119
-	Failed to get pointer to Player from g_Engine at: 120
-	Failed to get pointer to Player from g_Engine at: 121
-	Failed to get pointer to Player from g_Engine at: 122
-	Failed to get pointer to Player from g_Engine at: 125
-	Failed to get pointer to Player from g_Engine at: 126
-	Failed to get pointer to Player from g_Engine at: 127
-	Failed to get pointer to Player from g_Engine at: 128
-	Failed to get pointer to Player from g_Engine at: 129
-	Failed to get pointer to Player from g_Engine at: 130
-	Failed to get pointer to Player from g_Engine at: 131
-	Failed to get pointer to Player from g_Engine at: 132
-	Failed to get pointer to Player from g_Engine at: 133
-	Failed to get pointer to Player from g_Engine at: 134
-	Failed to get pointer to Player from g_Engine at: 135
-	Failed to get pointer to Player from g_Engine at: 136
-	Failed to get pointer to Player from g_Engine at: 137
-	Failed to get pointer to Player from g_Engine at: 138
-	Failed to get pointer to Player from g_Engine at: 139
-	Failed to get pointer to Player from g_Engine at: 141
-	Failed to get pointer to Player from g_Engine at: 143
-	Failed to get pointer to Player from g_Engine at: 144
-	Failed to get pointer to Player from g_Engine at: 145
 	Failed to get pointer to Player from g_Engine at: 146
-	Failed to get pointer to Player from g_Engine at: 147
 	Failed to get pointer to Player from g_Engine at: 148
 	Failed to get pointer to Player from g_Engine at: 149
 	Failed to get pointer to Player from g_Engine at: 150
-	Failed to get pointer to Player from g_Engine at: 151
 	Failed to get pointer to Player from g_Engine at: 152
 	Failed to get pointer to Player from g_Engine at: 153
+	Failed to get pointer to Player from g_Engine at: 154
 	Failed to get pointer to Player from g_Engine at: 155
 	Failed to get pointer to Player from g_Engine at: 156
 	Failed to get pointer to Player from g_Engine at: 157
-	Failed to get pointer to Player from g_Engine at: 159
+	Failed to get pointer to Player from g_Engine at: 157
+	Failed to get pointer to Player from g_Engine at: 158
 	Failed to get pointer to Player from g_Engine at: 160
-	Failed to get pointer to Player from g_Engine at: 161
 	Failed to get pointer to Player from g_Engine at: 162
-	Failed to get pointer to Player from g_Engine at: 163
 	Failed to get pointer to Player from g_Engine at: 164
 	Failed to get pointer to Player from g_Engine at: 165
 	Failed to get pointer to Player from g_Engine at: 166
 	Failed to get pointer to Player from g_Engine at: 167
 	Failed to get pointer to Player from g_Engine at: 168
 	Failed to get pointer to Player from g_Engine at: 169
+	Failed to get pointer to Player from g_Engine at: 170
 	Failed to get pointer to Player from g_Engine at: 171
 	Failed to get pointer to Player from g_Engine at: 172
 	Failed to get pointer to Player from g_Engine at: 173
+	Failed to get pointer to Player from g_Engine at: 174
+	Failed to get pointer to Player from g_Engine at: 175
 	Failed to get pointer to Player from g_Engine at: 176
 	Failed to get pointer to Player from g_Engine at: 177
 	Failed to get pointer to Player from g_Engine at: 178
 	Failed to get pointer to Player from g_Engine at: 179
-	Failed to get pointer to Player from g_Engine at: 180
 	Failed to get pointer to Player from g_Engine at: 181
 	Failed to get pointer to Player from g_Engine at: 182
 	Failed to get pointer to Player from g_Engine at: 183
@@ -96,40 +41,43 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 187
 	Failed to get pointer to Player from g_Engine at: 188
 	Failed to get pointer to Player from g_Engine at: 189
+	Failed to get pointer to Player from g_Engine at: 190
+	Failed to get pointer to Player from g_Engine at: 191
 	Failed to get pointer to Player from g_Engine at: 192
 	Failed to get pointer to Player from g_Engine at: 193
-	Failed to get pointer to Player from g_Engine at: 195
 	Failed to get pointer to Player from g_Engine at: 195
 	Failed to get pointer to Player from g_Engine at: 196
 	Failed to get pointer to Player from g_Engine at: 198
 	Failed to get pointer to Player from g_Engine at: 199
-	Failed to get pointer to Player from g_Engine at: 200
 	Failed to get pointer to Player from g_Engine at: 200
 	Failed to get pointer to Player from g_Engine at: 201
 	Failed to get pointer to Player from g_Engine at: 202
 	Failed to get pointer to Player from g_Engine at: 203
 	Failed to get pointer to Player from g_Engine at: 204
 	Failed to get pointer to Player from g_Engine at: 205
+	Failed to get pointer to Player from g_Engine at: 205
+	Failed to get pointer to Player from g_Engine at: 206
+	Failed to get pointer to Player from g_Engine at: 207
 	Failed to get pointer to Player from g_Engine at: 208
+	Failed to get pointer to Player from g_Engine at: 209
 	Failed to get pointer to Player from g_Engine at: 210
 	Failed to get pointer to Player from g_Engine at: 211
-	Failed to get pointer to Player from g_Engine at: 212
-	Failed to get pointer to Player from g_Engine at: 212
-	Failed to get pointer to Player from g_Engine at: 213
 	Failed to get pointer to Player from g_Engine at: 214
 	Failed to get pointer to Player from g_Engine at: 215
 	Failed to get pointer to Player from g_Engine at: 216
 	Failed to get pointer to Player from g_Engine at: 217
 	Failed to get pointer to Player from g_Engine at: 218
 	Failed to get pointer to Player from g_Engine at: 219
+	Failed to get pointer to Player from g_Engine at: 220
 	Failed to get pointer to Player from g_Engine at: 221
 	Failed to get pointer to Player from g_Engine at: 222
+	Failed to get pointer to Player from g_Engine at: 223
 	Failed to get pointer to Player from g_Engine at: 224
 	Failed to get pointer to Player from g_Engine at: 225
+	Failed to get pointer to Player from g_Engine at: 226
 	Failed to get pointer to Player from g_Engine at: 227
 	Failed to get pointer to Player from g_Engine at: 228
 	Failed to get pointer to Player from g_Engine at: 229
-	Failed to get pointer to Player from g_Engine at: 230
 	Failed to get pointer to Player from g_Engine at: 231
 	Failed to get pointer to Player from g_Engine at: 232
 	Failed to get pointer to Player from g_Engine at: 233
@@ -139,27 +87,28 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 237
 	Failed to get pointer to Player from g_Engine at: 238
 	Failed to get pointer to Player from g_Engine at: 239
+	Failed to get pointer to Player from g_Engine at: 240
 	Failed to get pointer to Player from g_Engine at: 241
+	Failed to get pointer to Player from g_Engine at: 242
 	Failed to get pointer to Player from g_Engine at: 243
 	Failed to get pointer to Player from g_Engine at: 244
 	Failed to get pointer to Player from g_Engine at: 245
-	Failed to get pointer to Player from g_Engine at: 246
-	Failed to get pointer to Player from g_Engine at: 247
 	Failed to get pointer to Player from g_Engine at: 248
 	Failed to get pointer to Player from g_Engine at: 249
 	Failed to get pointer to Player from g_Engine at: 250
 	Failed to get pointer to Player from g_Engine at: 251
-	Failed to get pointer to Player from g_Engine at: 251
 	Failed to get pointer to Player from g_Engine at: 252
+	Failed to get pointer to Player from g_Engine at: 253
 	Failed to get pointer to Player from g_Engine at: 254
+	Failed to get pointer to Player from g_Engine at: 255
 	Failed to get pointer to Player from g_Engine at: 256
 	Failed to get pointer to Player from g_Engine at: 257
+	Failed to get pointer to Player from g_Engine at: 257
+	Failed to get pointer to Player from g_Engine at: 258
 	Failed to get pointer to Player from g_Engine at: 259
-	Failed to get pointer to Player from g_Engine at: 260
 	Failed to get pointer to Player from g_Engine at: 261
 	Failed to get pointer to Player from g_Engine at: 262
 	Failed to get pointer to Player from g_Engine at: 263
-	Failed to get pointer to Player from g_Engine at: 264
 	Failed to get pointer to Player from g_Engine at: 265
 	Failed to get pointer to Player from g_Engine at: 266
 	Failed to get pointer to Player from g_Engine at: 267
@@ -168,32 +117,35 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 270
 	Failed to get pointer to Player from g_Engine at: 271
 	Failed to get pointer to Player from g_Engine at: 272
+	Failed to get pointer to Player from g_Engine at: 273
+	Failed to get pointer to Player from g_Engine at: 273
 	Failed to get pointer to Player from g_Engine at: 274
-	Failed to get pointer to Player from g_Engine at: 276
+	Failed to get pointer to Player from g_Engine at: 275
 	Failed to get pointer to Player from g_Engine at: 277
 	Failed to get pointer to Player from g_Engine at: 278
 	Failed to get pointer to Player from g_Engine at: 279
-	Failed to get pointer to Player from g_Engine at: 280
 	Failed to get pointer to Player from g_Engine at: 281
 	Failed to get pointer to Player from g_Engine at: 282
 	Failed to get pointer to Player from g_Engine at: 283
 	Failed to get pointer to Player from g_Engine at: 284
 	Failed to get pointer to Player from g_Engine at: 285
+	Failed to get pointer to Player from g_Engine at: 286
 	Failed to get pointer to Player from g_Engine at: 287
 	Failed to get pointer to Player from g_Engine at: 288
 	Failed to get pointer to Player from g_Engine at: 289
+	Failed to get pointer to Player from g_Engine at: 290
 	Failed to get pointer to Player from g_Engine at: 291
+	Failed to get pointer to Player from g_Engine at: 292
 	Failed to get pointer to Player from g_Engine at: 293
 	Failed to get pointer to Player from g_Engine at: 294
 	Failed to get pointer to Player from g_Engine at: 295
-	Failed to get pointer to Player from g_Engine at: 296
 	Failed to get pointer to Player from g_Engine at: 297
-	Failed to get pointer to Player from g_Engine at: 297
-	Failed to get pointer to Player from g_Engine at: 298
 	Failed to get pointer to Player from g_Engine at: 299
+	Failed to get pointer to Player from g_Engine at: 300
 	Failed to get pointer to Player from g_Engine at: 300
 	Failed to get pointer to Player from g_Engine at: 301
 	Failed to get pointer to Player from g_Engine at: 302
+	Failed to get pointer to Player from g_Engine at: 303
 	Failed to get pointer to Player from g_Engine at: 304
 	Failed to get pointer to Player from g_Engine at: 305
 	Failed to get pointer to Player from g_Engine at: 306
@@ -201,25 +153,25 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 308
 	Failed to get pointer to Player from g_Engine at: 309
 	Failed to get pointer to Player from g_Engine at: 310
-	Failed to get pointer to Player from g_Engine at: 310
 	Failed to get pointer to Player from g_Engine at: 311
 	Failed to get pointer to Player from g_Engine at: 312
 	Failed to get pointer to Player from g_Engine at: 313
 	Failed to get pointer to Player from g_Engine at: 314
 	Failed to get pointer to Player from g_Engine at: 315
+	Failed to get pointer to Player from g_Engine at: 316
 	Failed to get pointer to Player from g_Engine at: 317
 	Failed to get pointer to Player from g_Engine at: 318
-	Failed to get pointer to Player from g_Engine at: 318
 	Failed to get pointer to Player from g_Engine at: 319
+	Failed to get pointer to Player from g_Engine at: 320
 	Failed to get pointer to Player from g_Engine at: 321
 	Failed to get pointer to Player from g_Engine at: 322
 	Failed to get pointer to Player from g_Engine at: 323
-	Failed to get pointer to Player from g_Engine at: 323
 	Failed to get pointer to Player from g_Engine at: 324
 	Failed to get pointer to Player from g_Engine at: 325
-	Failed to get pointer to Player from g_Engine at: 326
+	Failed to get pointer to Player from g_Engine at: 325
 	Failed to get pointer to Player from g_Engine at: 327
 	Failed to get pointer to Player from g_Engine at: 328
+	Failed to get pointer to Player from g_Engine at: 329
 	Failed to get pointer to Player from g_Engine at: 329
 	Failed to get pointer to Player from g_Engine at: 330
 	Failed to get pointer to Player from g_Engine at: 331
@@ -232,6 +184,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 338
 	Failed to get pointer to Player from g_Engine at: 339
 	Failed to get pointer to Player from g_Engine at: 340
+	Failed to get pointer to Player from g_Engine at: 340
 	Failed to get pointer to Player from g_Engine at: 341
 	Failed to get pointer to Player from g_Engine at: 342
 	Failed to get pointer to Player from g_Engine at: 343
@@ -243,20 +196,19 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 349
 	Failed to get pointer to Player from g_Engine at: 350
 	Failed to get pointer to Player from g_Engine at: 351
-	Failed to get pointer to Player from g_Engine at: 352
 	Failed to get pointer to Player from g_Engine at: 353
 	Failed to get pointer to Player from g_Engine at: 354
 	Failed to get pointer to Player from g_Engine at: 355
 	Failed to get pointer to Player from g_Engine at: 356
 	Failed to get pointer to Player from g_Engine at: 357
+	Failed to get pointer to Player from g_Engine at: 357
 	Failed to get pointer to Player from g_Engine at: 358
-	Failed to get pointer to Player from g_Engine at: 359
 	Failed to get pointer to Player from g_Engine at: 360
+	Failed to get pointer to Player from g_Engine at: 361
 	Failed to get pointer to Player from g_Engine at: 361
 	Failed to get pointer to Player from g_Engine at: 362
 	Failed to get pointer to Player from g_Engine at: 363
 	Failed to get pointer to Player from g_Engine at: 364
-	Failed to get pointer to Player from g_Engine at: 365
 	Failed to get pointer to Player from g_Engine at: 366
 	Failed to get pointer to Player from g_Engine at: 367
 	Failed to get pointer to Player from g_Engine at: 368
@@ -282,10 +234,11 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 388
 	Failed to get pointer to Player from g_Engine at: 389
 	Failed to get pointer to Player from g_Engine at: 390
+	Failed to get pointer to Player from g_Engine at: 390
 	Failed to get pointer to Player from g_Engine at: 391
 	Failed to get pointer to Player from g_Engine at: 392
-	Failed to get pointer to Player from g_Engine at: 393
 	Failed to get pointer to Player from g_Engine at: 394
+	Failed to get pointer to Player from g_Engine at: 395
 	Failed to get pointer to Player from g_Engine at: 395
 	Failed to get pointer to Player from g_Engine at: 396
 	Failed to get pointer to Player from g_Engine at: 397
@@ -300,7 +253,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 406
 	Failed to get pointer to Player from g_Engine at: 407
 	Failed to get pointer to Player from g_Engine at: 408
-	Failed to get pointer to Player from g_Engine at: 409
+	Failed to get pointer to Player from g_Engine at: 408
 	Failed to get pointer to Player from g_Engine at: 410
 	Failed to get pointer to Player from g_Engine at: 411
 	Failed to get pointer to Player from g_Engine at: 412
@@ -344,6 +297,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 450
 	Failed to get pointer to Player from g_Engine at: 451
 	Failed to get pointer to Player from g_Engine at: 452
+	Failed to get pointer to Player from g_Engine at: 453
 	Failed to get pointer to Player from g_Engine at: 454
 	Failed to get pointer to Player from g_Engine at: 455
 	Failed to get pointer to Player from g_Engine at: 456
@@ -351,7 +305,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 458
 	Failed to get pointer to Player from g_Engine at: 459
 	Failed to get pointer to Player from g_Engine at: 460
-	Failed to get pointer to Player from g_Engine at: 460
+	Failed to get pointer to Player from g_Engine at: 461
 	Failed to get pointer to Player from g_Engine at: 461
 	Failed to get pointer to Player from g_Engine at: 462
 	Failed to get pointer to Player from g_Engine at: 463
@@ -359,6 +313,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 465
 	Failed to get pointer to Player from g_Engine at: 466
 	Failed to get pointer to Player from g_Engine at: 467
+	Failed to get pointer to Player from g_Engine at: 468
 	Failed to get pointer to Player from g_Engine at: 468
 	Failed to get pointer to Player from g_Engine at: 469
 	Failed to get pointer to Player from g_Engine at: 470
@@ -372,12 +327,15 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 478
 	Failed to get pointer to Player from g_Engine at: 479
 	Failed to get pointer to Player from g_Engine at: 480
+	Failed to get pointer to Player from g_Engine at: 480
 	Failed to get pointer to Player from g_Engine at: 481
 	Failed to get pointer to Player from g_Engine at: 482
 	Failed to get pointer to Player from g_Engine at: 483
 	Failed to get pointer to Player from g_Engine at: 484
 	Failed to get pointer to Player from g_Engine at: 485
+	Failed to get pointer to Player from g_Engine at: 486
 	Failed to get pointer to Player from g_Engine at: 487
+	Failed to get pointer to Player from g_Engine at: 488
 	Failed to get pointer to Player from g_Engine at: 488
 	Failed to get pointer to Player from g_Engine at: 489
 	Failed to get pointer to Player from g_Engine at: 490
@@ -394,6 +352,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 500
 	Failed to get pointer to Player from g_Engine at: 501
 	Failed to get pointer to Player from g_Engine at: 502
+	Failed to get pointer to Player from g_Engine at: 503
 	Failed to get pointer to Player from g_Engine at: 504
 	Failed to get pointer to Player from g_Engine at: 505
 	Failed to get pointer to Player from g_Engine at: 506
@@ -406,11 +365,13 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 513
 	Failed to get pointer to Player from g_Engine at: 514
 	Failed to get pointer to Player from g_Engine at: 515
+	Failed to get pointer to Player from g_Engine at: 515
 	Failed to get pointer to Player from g_Engine at: 516
 	Failed to get pointer to Player from g_Engine at: 517
 	Failed to get pointer to Player from g_Engine at: 518
 	Failed to get pointer to Player from g_Engine at: 519
 	Failed to get pointer to Player from g_Engine at: 520
+	Failed to get pointer to Player from g_Engine at: 521
 	Failed to get pointer to Player from g_Engine at: 521
 	Failed to get pointer to Player from g_Engine at: 522
 	Failed to get pointer to Player from g_Engine at: 523
@@ -424,8 +385,10 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 531
 	Failed to get pointer to Player from g_Engine at: 532
 	Failed to get pointer to Player from g_Engine at: 533
+	Failed to get pointer to Player from g_Engine at: 533
 	Failed to get pointer to Player from g_Engine at: 534
 	Failed to get pointer to Player from g_Engine at: 535
+	Failed to get pointer to Player from g_Engine at: 536
 	Failed to get pointer to Player from g_Engine at: 537
 	Failed to get pointer to Player from g_Engine at: 538
 	Failed to get pointer to Player from g_Engine at: 539
@@ -438,9 +401,12 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 546
 	Failed to get pointer to Player from g_Engine at: 547
 	Failed to get pointer to Player from g_Engine at: 548
+	Failed to get pointer to Player from g_Engine at: 549
+	Failed to get pointer to Player from g_Engine at: 550
 	Failed to get pointer to Player from g_Engine at: 550
 	Failed to get pointer to Player from g_Engine at: 551
 	Failed to get pointer to Player from g_Engine at: 552
+	Failed to get pointer to Player from g_Engine at: 553
 	Failed to get pointer to Player from g_Engine at: 554
 	Failed to get pointer to Player from g_Engine at: 555
 	Failed to get pointer to Player from g_Engine at: 556
@@ -448,18 +414,20 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 558
 	Failed to get pointer to Player from g_Engine at: 559
 	Failed to get pointer to Player from g_Engine at: 560
-	Failed to get pointer to Player from g_Engine at: 560
 	Failed to get pointer to Player from g_Engine at: 561
 	Failed to get pointer to Player from g_Engine at: 562
 	Failed to get pointer to Player from g_Engine at: 563
 	Failed to get pointer to Player from g_Engine at: 564
 	Failed to get pointer to Player from g_Engine at: 565
 	Failed to get pointer to Player from g_Engine at: 566
+	Failed to get pointer to Player from g_Engine at: 566
 	Failed to get pointer to Player from g_Engine at: 567
 	Failed to get pointer to Player from g_Engine at: 568
 	Failed to get pointer to Player from g_Engine at: 569
+	Failed to get pointer to Player from g_Engine at: 570
 	Failed to get pointer to Player from g_Engine at: 571
 	Failed to get pointer to Player from g_Engine at: 572
+	Failed to get pointer to Player from g_Engine at: 573
 	Failed to get pointer to Player from g_Engine at: 573
 	Failed to get pointer to Player from g_Engine at: 574
 	Failed to get pointer to Player from g_Engine at: 575
@@ -467,12 +435,12 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 577
 	Failed to get pointer to Player from g_Engine at: 578
 	Failed to get pointer to Player from g_Engine at: 579
-	Failed to get pointer to Player from g_Engine at: 579
 	Failed to get pointer to Player from g_Engine at: 580
 	Failed to get pointer to Player from g_Engine at: 581
 	Failed to get pointer to Player from g_Engine at: 582
 	Failed to get pointer to Player from g_Engine at: 583
 	Failed to get pointer to Player from g_Engine at: 584
+	Failed to get pointer to Player from g_Engine at: 585
 	Failed to get pointer to Player from g_Engine at: 585
 	Failed to get pointer to Player from g_Engine at: 586
 	Failed to get pointer to Player from g_Engine at: 587
@@ -480,9 +448,9 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 589
 	Failed to get pointer to Player from g_Engine at: 590
 	Failed to get pointer to Player from g_Engine at: 591
+	Failed to get pointer to Player from g_Engine at: 591
 	Failed to get pointer to Player from g_Engine at: 592
 	Failed to get pointer to Player from g_Engine at: 593
-	Failed to get pointer to Player from g_Engine at: 594
 	Failed to get pointer to Player from g_Engine at: 595
 	Failed to get pointer to Player from g_Engine at: 596
 	Failed to get pointer to Player from g_Engine at: 597
@@ -491,6 +459,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 600
 	Failed to get pointer to Player from g_Engine at: 601
 	Failed to get pointer to Player from g_Engine at: 602
+	Failed to get pointer to Player from g_Engine at: 603
 	Failed to get pointer to Player from g_Engine at: 604
 	Failed to get pointer to Player from g_Engine at: 605
 	Failed to get pointer to Player from g_Engine at: 606
@@ -507,6 +476,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 617
 	Failed to get pointer to Player from g_Engine at: 618
 	Failed to get pointer to Player from g_Engine at: 619
+	Failed to get pointer to Player from g_Engine at: 619
 	Failed to get pointer to Player from g_Engine at: 620
 	Failed to get pointer to Player from g_Engine at: 621
 	Failed to get pointer to Player from g_Engine at: 622
@@ -515,6 +485,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 625
 	Failed to get pointer to Player from g_Engine at: 626
 	Failed to get pointer to Player from g_Engine at: 627
+	Failed to get pointer to Player from g_Engine at: 628
 	Failed to get pointer to Player from g_Engine at: 628
 	Failed to get pointer to Player from g_Engine at: 629
 	Failed to get pointer to Player from g_Engine at: 630
@@ -525,6 +496,8 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 635
 	Failed to get pointer to Player from g_Engine at: 636
 	Failed to get pointer to Player from g_Engine at: 637
+	Failed to get pointer to Player from g_Engine at: 637
+	Failed to get pointer to Player from g_Engine at: 638
 	Failed to get pointer to Player from g_Engine at: 639
 	Failed to get pointer to Player from g_Engine at: 640
 	Failed to get pointer to Player from g_Engine at: 641
@@ -532,7 +505,6 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 643
 	Failed to get pointer to Player from g_Engine at: 644
 	Failed to get pointer to Player from g_Engine at: 645
-	Failed to get pointer to Player from g_Engine at: 646
 	Failed to get pointer to Player from g_Engine at: 646
 	Failed to get pointer to Player from g_Engine at: 647
 	Failed to get pointer to Player from g_Engine at: 648
@@ -546,8 +518,9 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 656
 	Failed to get pointer to Player from g_Engine at: 657
 	Failed to get pointer to Player from g_Engine at: 658
-	Failed to get pointer to Player from g_Engine at: 659
+	Failed to get pointer to Player from g_Engine at: 658
 	Failed to get pointer to Player from g_Engine at: 660
+	Failed to get pointer to Player from g_Engine at: 661
 	Failed to get pointer to Player from g_Engine at: 661
 	Failed to get pointer to Player from g_Engine at: 662
 	Failed to get pointer to Player from g_Engine at: 663
@@ -587,6 +560,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 697
 	Failed to get pointer to Player from g_Engine at: 698
 	Failed to get pointer to Player from g_Engine at: 699
+	Failed to get pointer to Player from g_Engine at: 699
 	Failed to get pointer to Player from g_Engine at: 700
 	Failed to get pointer to Player from g_Engine at: 701
 	Failed to get pointer to Player from g_Engine at: 702
@@ -598,6 +572,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 708
 	Failed to get pointer to Player from g_Engine at: 709
 	Failed to get pointer to Player from g_Engine at: 710
+	Failed to get pointer to Player from g_Engine at: 710
 	Failed to get pointer to Player from g_Engine at: 711
 	Failed to get pointer to Player from g_Engine at: 712
 	Failed to get pointer to Player from g_Engine at: 713
@@ -607,6 +582,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 717
 	Failed to get pointer to Player from g_Engine at: 718
 	Failed to get pointer to Player from g_Engine at: 719
+	Failed to get pointer to Player from g_Engine at: 720
 	Failed to get pointer to Player from g_Engine at: 720
 	Failed to get pointer to Player from g_Engine at: 721
 	Failed to get pointer to Player from g_Engine at: 722
@@ -621,6 +597,8 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 731
 	Failed to get pointer to Player from g_Engine at: 732
 	Failed to get pointer to Player from g_Engine at: 733
+	Failed to get pointer to Player from g_Engine at: 734
+	Failed to get pointer to Player from g_Engine at: 735
 	Failed to get pointer to Player from g_Engine at: 735
 	Failed to get pointer to Player from g_Engine at: 736
 	Failed to get pointer to Player from g_Engine at: 737
@@ -633,6 +611,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 744
 	Failed to get pointer to Player from g_Engine at: 745
 	Failed to get pointer to Player from g_Engine at: 746
+	Failed to get pointer to Player from g_Engine at: 746
 	Failed to get pointer to Player from g_Engine at: 747
 	Failed to get pointer to Player from g_Engine at: 748
 	Failed to get pointer to Player from g_Engine at: 749
@@ -643,6 +622,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 754
 	Failed to get pointer to Player from g_Engine at: 755
 	Failed to get pointer to Player from g_Engine at: 756
+	Failed to get pointer to Player from g_Engine at: 756
 	Failed to get pointer to Player from g_Engine at: 757
 	Failed to get pointer to Player from g_Engine at: 758
 	Failed to get pointer to Player from g_Engine at: 759
@@ -650,12 +630,13 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 761
 	Failed to get pointer to Player from g_Engine at: 762
 	Failed to get pointer to Player from g_Engine at: 763
-	Failed to get pointer to Player from g_Engine at: 763
+	Failed to get pointer to Player from g_Engine at: 764
 	Failed to get pointer to Player from g_Engine at: 765
+	Failed to get pointer to Player from g_Engine at: 766
 	Failed to get pointer to Player from g_Engine at: 766
 	Failed to get pointer to Player from g_Engine at: 767
 	Failed to get pointer to Player from g_Engine at: 768
-	Failed to get pointer to Player from g_Engine at: 768
+	Failed to get pointer to Player from g_Engine at: 769
 	Failed to get pointer to Player from g_Engine at: 770
 	Failed to get pointer to Player from g_Engine at: 771
 	Failed to get pointer to Player from g_Engine at: 772
@@ -663,8 +644,8 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 774
 	Failed to get pointer to Player from g_Engine at: 775
 	Failed to get pointer to Player from g_Engine at: 776
-	Failed to get pointer to Player from g_Engine at: 776
 	Failed to get pointer to Player from g_Engine at: 777
+	Failed to get pointer to Player from g_Engine at: 778
 	Failed to get pointer to Player from g_Engine at: 778
 	Failed to get pointer to Player from g_Engine at: 779
 	Failed to get pointer to Player from g_Engine at: 780
@@ -675,6 +656,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 785
 	Failed to get pointer to Player from g_Engine at: 786
 	Failed to get pointer to Player from g_Engine at: 787
+	Failed to get pointer to Player from g_Engine at: 787
 	Failed to get pointer to Player from g_Engine at: 788
 	Failed to get pointer to Player from g_Engine at: 789
 	Failed to get pointer to Player from g_Engine at: 790
@@ -682,17 +664,18 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 792
 	Failed to get pointer to Player from g_Engine at: 793
 	Failed to get pointer to Player from g_Engine at: 794
-	Failed to get pointer to Player from g_Engine at: 794
 	Failed to get pointer to Player from g_Engine at: 795
 	Failed to get pointer to Player from g_Engine at: 796
-	Failed to get pointer to Player from g_Engine at: 798
+	Failed to get pointer to Player from g_Engine at: 797
 	Failed to get pointer to Player from g_Engine at: 798
 	Failed to get pointer to Player from g_Engine at: 799
 	Failed to get pointer to Player from g_Engine at: 800
-	Failed to get pointer to Player from g_Engine at: 801
+	Failed to get pointer to Player from g_Engine at: 800
 	Failed to get pointer to Player from g_Engine at: 802
 	Failed to get pointer to Player from g_Engine at: 803
 	Failed to get pointer to Player from g_Engine at: 804
+	Failed to get pointer to Player from g_Engine at: 805
+	Failed to get pointer to Player from g_Engine at: 806
 	Failed to get pointer to Player from g_Engine at: 806
 	Failed to get pointer to Player from g_Engine at: 807
 	Failed to get pointer to Player from g_Engine at: 808
@@ -703,16 +686,16 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 813
 	Failed to get pointer to Player from g_Engine at: 814
 	Failed to get pointer to Player from g_Engine at: 815
-	Failed to get pointer to Player from g_Engine at: 815
 	Failed to get pointer to Player from g_Engine at: 816
 	Failed to get pointer to Player from g_Engine at: 817
 	Failed to get pointer to Player from g_Engine at: 818
+	Failed to get pointer to Player from g_Engine at: 819
 	Failed to get pointer to Player from g_Engine at: 820
+	Failed to get pointer to Player from g_Engine at: 821
 	Failed to get pointer to Player from g_Engine at: 821
 	Failed to get pointer to Player from g_Engine at: 822
 	Failed to get pointer to Player from g_Engine at: 823
 	Failed to get pointer to Player from g_Engine at: 824
-	Failed to get pointer to Player from g_Engine at: 825
 	Failed to get pointer to Player from g_Engine at: 825
 	Failed to get pointer to Player from g_Engine at: 826
 	Failed to get pointer to Player from g_Engine at: 827
@@ -724,26 +707,30 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 833
 	Failed to get pointer to Player from g_Engine at: 834
 	Failed to get pointer to Player from g_Engine at: 835
+	Failed to get pointer to Player from g_Engine at: 835
 	Failed to get pointer to Player from g_Engine at: 836
+	Failed to get pointer to Player from g_Engine at: 837
 	Failed to get pointer to Player from g_Engine at: 838
 	Failed to get pointer to Player from g_Engine at: 839
-	Failed to get pointer to Player from g_Engine at: 841
+	Failed to get pointer to Player from g_Engine at: 840
 	Failed to get pointer to Player from g_Engine at: 841
 	Failed to get pointer to Player from g_Engine at: 842
 	Failed to get pointer to Player from g_Engine at: 843
+	Failed to get pointer to Player from g_Engine at: 844
 	Failed to get pointer to Player from g_Engine at: 845
 	Failed to get pointer to Player from g_Engine at: 846
-	Failed to get pointer to Player from g_Engine at: 847
 	Failed to get pointer to Player from g_Engine at: 847
 	Failed to get pointer to Player from g_Engine at: 848
 	Failed to get pointer to Player from g_Engine at: 849
 	Failed to get pointer to Player from g_Engine at: 850
+	Failed to get pointer to Player from g_Engine at: 851
 	Failed to get pointer to Player from g_Engine at: 852
-	Failed to get pointer to Player from g_Engine at: 853
+	Failed to get pointer to Player from g_Engine at: 852
 	Failed to get pointer to Player from g_Engine at: 853
 	Failed to get pointer to Player from g_Engine at: 854
 	Failed to get pointer to Player from g_Engine at: 855
 	Failed to get pointer to Player from g_Engine at: 856
+	Failed to get pointer to Player from g_Engine at: 857
 	Failed to get pointer to Player from g_Engine at: 858
 	Failed to get pointer to Player from g_Engine at: 859
 	Failed to get pointer to Player from g_Engine at: 860
@@ -753,18 +740,18 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 864
 	Failed to get pointer to Player from g_Engine at: 865
 	Failed to get pointer to Player from g_Engine at: 866
-	Failed to get pointer to Player from g_Engine at: 866
 	Failed to get pointer to Player from g_Engine at: 867
 	Failed to get pointer to Player from g_Engine at: 868
 	Failed to get pointer to Player from g_Engine at: 869
 	Failed to get pointer to Player from g_Engine at: 870
 	Failed to get pointer to Player from g_Engine at: 871
 	Failed to get pointer to Player from g_Engine at: 872
+	Failed to get pointer to Player from g_Engine at: 872
 	Failed to get pointer to Player from g_Engine at: 873
 	Failed to get pointer to Player from g_Engine at: 874
 	Failed to get pointer to Player from g_Engine at: 875
-	Failed to get pointer to Player from g_Engine at: 876
 	Failed to get pointer to Player from g_Engine at: 877
+	Failed to get pointer to Player from g_Engine at: 878
 	Failed to get pointer to Player from g_Engine at: 878
 	Failed to get pointer to Player from g_Engine at: 879
 	Failed to get pointer to Player from g_Engine at: 880
@@ -772,16 +759,16 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 882
 	Failed to get pointer to Player from g_Engine at: 883
 	Failed to get pointer to Player from g_Engine at: 884
-	Failed to get pointer to Player from g_Engine at: 884
 	Failed to get pointer to Player from g_Engine at: 885
+	Failed to get pointer to Player from g_Engine at: 886
 	Failed to get pointer to Player from g_Engine at: 887
 	Failed to get pointer to Player from g_Engine at: 888
 	Failed to get pointer to Player from g_Engine at: 889
 	Failed to get pointer to Player from g_Engine at: 890
-	Failed to get pointer to Player from g_Engine at: 890
 	Failed to get pointer to Player from g_Engine at: 891
 	Failed to get pointer to Player from g_Engine at: 892
 	Failed to get pointer to Player from g_Engine at: 893
+	Failed to get pointer to Player from g_Engine at: 894
 	Failed to get pointer to Player from g_Engine at: 894
 	Failed to get pointer to Player from g_Engine at: 895
 	Failed to get pointer to Player from g_Engine at: 896
@@ -790,13 +777,16 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 899
 	Failed to get pointer to Player from g_Engine at: 900
 	Failed to get pointer to Player from g_Engine at: 901
+	Failed to get pointer to Player from g_Engine at: 901
 	Failed to get pointer to Player from g_Engine at: 902
+	Failed to get pointer to Player from g_Engine at: 903
 	Failed to get pointer to Player from g_Engine at: 904
 	Failed to get pointer to Player from g_Engine at: 905
 	Failed to get pointer to Player from g_Engine at: 906
 	Failed to get pointer to Player from g_Engine at: 907
 	Failed to get pointer to Player from g_Engine at: 908
 	Failed to get pointer to Player from g_Engine at: 909
+	Failed to get pointer to Player from g_Engine at: 910
 	Failed to get pointer to Player from g_Engine at: 910
 	Failed to get pointer to Player from g_Engine at: 911
 	Failed to get pointer to Player from g_Engine at: 912
@@ -815,11 +805,13 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 925
 	Failed to get pointer to Player from g_Engine at: 926
 	Failed to get pointer to Player from g_Engine at: 927
+	Failed to get pointer to Player from g_Engine at: 927
 	Failed to get pointer to Player from g_Engine at: 928
 	Failed to get pointer to Player from g_Engine at: 929
 	Failed to get pointer to Player from g_Engine at: 930
 	Failed to get pointer to Player from g_Engine at: 931
 	Failed to get pointer to Player from g_Engine at: 932
+	Failed to get pointer to Player from g_Engine at: 933
 	Failed to get pointer to Player from g_Engine at: 933
 	Failed to get pointer to Player from g_Engine at: 934
 	Failed to get pointer to Player from g_Engine at: 935
@@ -827,6 +819,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 937
 	Failed to get pointer to Player from g_Engine at: 938
 	Failed to get pointer to Player from g_Engine at: 939
+	Failed to get pointer to Player from g_Engine at: 940
 	Failed to get pointer to Player from g_Engine at: 940
 	Failed to get pointer to Player from g_Engine at: 941
 	Failed to get pointer to Player from g_Engine at: 942
@@ -837,12 +830,12 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 947
 	Failed to get pointer to Player from g_Engine at: 948
 	Failed to get pointer to Player from g_Engine at: 949
-	Failed to get pointer to Player from g_Engine at: 949
 	Failed to get pointer to Player from g_Engine at: 950
 	Failed to get pointer to Player from g_Engine at: 951
 	Failed to get pointer to Player from g_Engine at: 952
 	Failed to get pointer to Player from g_Engine at: 953
-	Failed to get pointer to Player from g_Engine at: 954
+	Failed to get pointer to Player from g_Engine at: 953
+	Failed to get pointer to Player from g_Engine at: 955
 	Failed to get pointer to Player from g_Engine at: 955
 	Failed to get pointer to Player from g_Engine at: 956
 	Failed to get pointer to Player from g_Engine at: 957
@@ -852,13 +845,14 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 961
 	Failed to get pointer to Player from g_Engine at: 962
 	Failed to get pointer to Player from g_Engine at: 963
-	Failed to get pointer to Player from g_Engine at: 964
+	Failed to get pointer to Player from g_Engine at: 963
 	Failed to get pointer to Player from g_Engine at: 964
 	Failed to get pointer to Player from g_Engine at: 965
 	Failed to get pointer to Player from g_Engine at: 966
 	Failed to get pointer to Player from g_Engine at: 967
 	Failed to get pointer to Player from g_Engine at: 968
 	Failed to get pointer to Player from g_Engine at: 969
+	Failed to get pointer to Player from g_Engine at: 970
 	Failed to get pointer to Player from g_Engine at: 970
 	Failed to get pointer to Player from g_Engine at: 971
 	Failed to get pointer to Player from g_Engine at: 972
@@ -872,10 +866,10 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 980
 	Failed to get pointer to Player from g_Engine at: 980
 	Failed to get pointer to Player from g_Engine at: 981
-	Failed to get pointer to Player from g_Engine at: 982
 	Failed to get pointer to Player from g_Engine at: 983
 	Failed to get pointer to Player from g_Engine at: 984
 	Failed to get pointer to Player from g_Engine at: 985
+	Failed to get pointer to Player from g_Engine at: 986
 	Failed to get pointer to Player from g_Engine at: 986
 	Failed to get pointer to Player from g_Engine at: 987
 	Failed to get pointer to Player from g_Engine at: 988
@@ -885,12 +879,14 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 992
 	Failed to get pointer to Player from g_Engine at: 993
 	Failed to get pointer to Player from g_Engine at: 994
+	Failed to get pointer to Player from g_Engine at: 994
 	Failed to get pointer to Player from g_Engine at: 995
 	Failed to get pointer to Player from g_Engine at: 996
 	Failed to get pointer to Player from g_Engine at: 997
 	Failed to get pointer to Player from g_Engine at: 998
 	Failed to get pointer to Player from g_Engine at: 999
 	Failed to get pointer to Player from g_Engine at: 1000
+	Failed to get pointer to Player from g_Engine at: 1001
 	Failed to get pointer to Player from g_Engine at: 1001
 	Failed to get pointer to Player from g_Engine at: 1002
 	Failed to get pointer to Player from g_Engine at: 1003
@@ -906,20 +902,22 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1013
 	Failed to get pointer to Player from g_Engine at: 1014
 	Failed to get pointer to Player from g_Engine at: 1015
+	Failed to get pointer to Player from g_Engine at: 1015
 	Failed to get pointer to Player from g_Engine at: 1016
 	Failed to get pointer to Player from g_Engine at: 1017
 	Failed to get pointer to Player from g_Engine at: 1018
 	Failed to get pointer to Player from g_Engine at: 1019
+	Failed to get pointer to Player from g_Engine at: 1020
 	Failed to get pointer to Player from g_Engine at: 1020
 	Failed to get pointer to Player from g_Engine at: 1021
 	Failed to get pointer to Player from g_Engine at: 1022
 	Failed to get pointer to Player from g_Engine at: 1023
 	Failed to get pointer to Player from g_Engine at: 1024
 	Failed to get pointer to Player from g_Engine at: 1024
-	Failed to get pointer to Player from g_Engine at: 1025
 	Failed to get pointer to Player from g_Engine at: 1026
 	Failed to get pointer to Player from g_Engine at: 1027
 	Failed to get pointer to Player from g_Engine at: 1028
+	Failed to get pointer to Player from g_Engine at: 1029
 	Failed to get pointer to Player from g_Engine at: 1029
 	Failed to get pointer to Player from g_Engine at: 1030
 	Failed to get pointer to Player from g_Engine at: 1031
@@ -934,9 +932,9 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1040
 	Failed to get pointer to Player from g_Engine at: 1041
 	Failed to get pointer to Player from g_Engine at: 1041
-	Failed to get pointer to Player from g_Engine at: 1042
 	Failed to get pointer to Player from g_Engine at: 1043
 	Failed to get pointer to Player from g_Engine at: 1044
+	Failed to get pointer to Player from g_Engine at: 1045
 	Failed to get pointer to Player from g_Engine at: 1045
 	Failed to get pointer to Player from g_Engine at: 1046
 	Failed to get pointer to Player from g_Engine at: 1047
@@ -944,6 +942,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1049
 	Failed to get pointer to Player from g_Engine at: 1050
 	Failed to get pointer to Player from g_Engine at: 1051
+	Failed to get pointer to Player from g_Engine at: 1052
 	Failed to get pointer to Player from g_Engine at: 1052
 	Failed to get pointer to Player from g_Engine at: 1053
 	Failed to get pointer to Player from g_Engine at: 1054
@@ -955,12 +954,14 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1060
 	Failed to get pointer to Player from g_Engine at: 1061
 	Failed to get pointer to Player from g_Engine at: 1062
+	Failed to get pointer to Player from g_Engine at: 1062
 	Failed to get pointer to Player from g_Engine at: 1063
 	Failed to get pointer to Player from g_Engine at: 1064
 	Failed to get pointer to Player from g_Engine at: 1065
 	Failed to get pointer to Player from g_Engine at: 1066
 	Failed to get pointer to Player from g_Engine at: 1067
 	Failed to get pointer to Player from g_Engine at: 1068
+	Failed to get pointer to Player from g_Engine at: 1069
 	Failed to get pointer to Player from g_Engine at: 1069
 	Failed to get pointer to Player from g_Engine at: 1070
 	Failed to get pointer to Player from g_Engine at: 1071
@@ -970,8 +971,8 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1075
 	Failed to get pointer to Player from g_Engine at: 1076
 	Failed to get pointer to Player from g_Engine at: 1077
-	Failed to get pointer to Player from g_Engine at: 1077
 	Failed to get pointer to Player from g_Engine at: 1078
+	Failed to get pointer to Player from g_Engine at: 1079
 	Failed to get pointer to Player from g_Engine at: 1079
 	Failed to get pointer to Player from g_Engine at: 1080
 	Failed to get pointer to Player from g_Engine at: 1081
@@ -984,7 +985,9 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1088
 	Failed to get pointer to Player from g_Engine at: 1089
 	Failed to get pointer to Player from g_Engine at: 1090
-	Failed to get pointer to Player from g_Engine at: 1092
+	Failed to get pointer to Player from g_Engine at: 1091
+	Failed to get pointer to Player from g_Engine at: 1091
+	Failed to get pointer to Player from g_Engine at: 1093
 	Failed to get pointer to Player from g_Engine at: 1093
 	Failed to get pointer to Player from g_Engine at: 1094
 	Failed to get pointer to Player from g_Engine at: 1095
@@ -994,12 +997,14 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1099
 	Failed to get pointer to Player from g_Engine at: 1100
 	Failed to get pointer to Player from g_Engine at: 1101
+	Failed to get pointer to Player from g_Engine at: 1101
 	Failed to get pointer to Player from g_Engine at: 1102
 	Failed to get pointer to Player from g_Engine at: 1103
 	Failed to get pointer to Player from g_Engine at: 1104
 	Failed to get pointer to Player from g_Engine at: 1105
 	Failed to get pointer to Player from g_Engine at: 1106
 	Failed to get pointer to Player from g_Engine at: 1107
+	Failed to get pointer to Player from g_Engine at: 1108
 	Failed to get pointer to Player from g_Engine at: 1108
 	Failed to get pointer to Player from g_Engine at: 1109
 	Failed to get pointer to Player from g_Engine at: 1110
@@ -1011,6 +1016,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1116
 	Failed to get pointer to Player from g_Engine at: 1117
 	Failed to get pointer to Player from g_Engine at: 1118
+	Failed to get pointer to Player from g_Engine at: 1119
 	Failed to get pointer to Player from g_Engine at: 1119
 	Failed to get pointer to Player from g_Engine at: 1120
 	Failed to get pointer to Player from g_Engine at: 1121
@@ -1025,6 +1031,7 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1130
 	Failed to get pointer to Player from g_Engine at: 1131
 	Failed to get pointer to Player from g_Engine at: 1132
+	Failed to get pointer to Player from g_Engine at: 1133
 	Failed to get pointer to Player from g_Engine at: 1133
 	Failed to get pointer to Player from g_Engine at: 1134
 	Failed to get pointer to Player from g_Engine at: 1135
@@ -1041,11 +1048,13 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1146
 	Failed to get pointer to Player from g_Engine at: 1147
 	Failed to get pointer to Player from g_Engine at: 1148
+	Failed to get pointer to Player from g_Engine at: 1148
 	Failed to get pointer to Player from g_Engine at: 1149
 	Failed to get pointer to Player from g_Engine at: 1150
 	Failed to get pointer to Player from g_Engine at: 1151
 	Failed to get pointer to Player from g_Engine at: 1152
 	Failed to get pointer to Player from g_Engine at: 1153
+	Failed to get pointer to Player from g_Engine at: 1154
 	Failed to get pointer to Player from g_Engine at: 1155
 	Failed to get pointer to Player from g_Engine at: 1156
 	Failed to get pointer to Player from g_Engine at: 1157
@@ -1053,17 +1062,343 @@ Engine initialized successfully!
 	Failed to get pointer to Player from g_Engine at: 1159
 	Failed to get pointer to Player from g_Engine at: 1160
 	Failed to get pointer to Player from g_Engine at: 1161
-	Failed to get pointer to Player from g_Engine at: 1162
+	Failed to get pointer to Player from g_Engine at: 1161
 	Failed to get pointer to Player from g_Engine at: 1162
 	Failed to get pointer to Player from g_Engine at: 1163
 	Failed to get pointer to Player from g_Engine at: 1164
-	Failed to get pointer to Player from g_Engine at: 1166
+	Failed to get pointer to Player from g_Engine at: 1165
 	Failed to get pointer to Player from g_Engine at: 1166
 	Failed to get pointer to Player from g_Engine at: 1167
+	Failed to get pointer to Player from g_Engine at: 1168
+	Failed to get pointer to Player from g_Engine at: 1169
 	Failed to get pointer to Player from g_Engine at: 1169
 	Failed to get pointer to Player from g_Engine at: 1170
 	Failed to get pointer to Player from g_Engine at: 1171
 	Failed to get pointer to Player from g_Engine at: 1172
+	Failed to get pointer to Player from g_Engine at: 1173
+	Failed to get pointer to Player from g_Engine at: 1174
+	Failed to get pointer to Player from g_Engine at: 1175
+	Failed to get pointer to Player from g_Engine at: 1176
+	Failed to get pointer to Player from g_Engine at: 1177
+	Failed to get pointer to Player from g_Engine at: 1177
+	Failed to get pointer to Player from g_Engine at: 1178
+	Failed to get pointer to Player from g_Engine at: 1179
+	Failed to get pointer to Player from g_Engine at: 1180
+	Failed to get pointer to Player from g_Engine at: 1181
+	Failed to get pointer to Player from g_Engine at: 1182
+	Failed to get pointer to Player from g_Engine at: 1183
+	Failed to get pointer to Player from g_Engine at: 1184
+	Failed to get pointer to Player from g_Engine at: 1184
+	Failed to get pointer to Player from g_Engine at: 1185
+	Failed to get pointer to Player from g_Engine at: 1186
+	Failed to get pointer to Player from g_Engine at: 1187
+	Failed to get pointer to Player from g_Engine at: 1188
+	Failed to get pointer to Player from g_Engine at: 1189
+	Failed to get pointer to Player from g_Engine at: 1190
+	Failed to get pointer to Player from g_Engine at: 1190
+	Failed to get pointer to Player from g_Engine at: 1191
+	Failed to get pointer to Player from g_Engine at: 1192
+	Failed to get pointer to Player from g_Engine at: 1193
+	Failed to get pointer to Player from g_Engine at: 1194
+	Failed to get pointer to Player from g_Engine at: 1195
+	Failed to get pointer to Player from g_Engine at: 1196
+	Failed to get pointer to Player from g_Engine at: 1197
+	Failed to get pointer to Player from g_Engine at: 1198
+	Failed to get pointer to Player from g_Engine at: 1199
+	Failed to get pointer to Player from g_Engine at: 1199
+	Failed to get pointer to Player from g_Engine at: 1200
+	Failed to get pointer to Player from g_Engine at: 1201
+	Failed to get pointer to Player from g_Engine at: 1202
+	Failed to get pointer to Player from g_Engine at: 1203
+	Failed to get pointer to Player from g_Engine at: 1204
+	Failed to get pointer to Player from g_Engine at: 1205
+	Failed to get pointer to Player from g_Engine at: 1206
+	Failed to get pointer to Player from g_Engine at: 1207
+	Failed to get pointer to Player from g_Engine at: 1208
+	Failed to get pointer to Player from g_Engine at: 1209
+	Failed to get pointer to Player from g_Engine at: 1210
+	Failed to get pointer to Player from g_Engine at: 1211
+	Failed to get pointer to Player from g_Engine at: 1212
+	Failed to get pointer to Player from g_Engine at: 1212
+	Failed to get pointer to Player from g_Engine at: 1213
+	Failed to get pointer to Player from g_Engine at: 1214
+	Failed to get pointer to Player from g_Engine at: 1215
+	Failed to get pointer to Player from g_Engine at: 1216
+	Failed to get pointer to Player from g_Engine at: 1217
+	Failed to get pointer to Player from g_Engine at: 1218
+	Failed to get pointer to Player from g_Engine at: 1219
+	Failed to get pointer to Player from g_Engine at: 1220
+	Failed to get pointer to Player from g_Engine at: 1221
+	Failed to get pointer to Player from g_Engine at: 1222
+	Failed to get pointer to Player from g_Engine at: 1223
+	Failed to get pointer to Player from g_Engine at: 1224
+	Failed to get pointer to Player from g_Engine at: 1225
+	Failed to get pointer to Player from g_Engine at: 1226
+	Failed to get pointer to Player from g_Engine at: 1227
+	Failed to get pointer to Player from g_Engine at: 1228
+	Failed to get pointer to Player from g_Engine at: 1229
+	Failed to get pointer to Player from g_Engine at: 1230
+	Failed to get pointer to Player from g_Engine at: 1231
+	Failed to get pointer to Player from g_Engine at: 1232
+	Failed to get pointer to Player from g_Engine at: 1233
+	Failed to get pointer to Player from g_Engine at: 1234
+	Failed to get pointer to Player from g_Engine at: 1234
+	Failed to get pointer to Player from g_Engine at: 1235
+	Failed to get pointer to Player from g_Engine at: 1236
+	Failed to get pointer to Player from g_Engine at: 1237
+	Failed to get pointer to Player from g_Engine at: 1238
+	Failed to get pointer to Player from g_Engine at: 1239
+	Failed to get pointer to Player from g_Engine at: 1239
+	Failed to get pointer to Player from g_Engine at: 1240
+	Failed to get pointer to Player from g_Engine at: 1241
+	Failed to get pointer to Player from g_Engine at: 1242
+	Failed to get pointer to Player from g_Engine at: 1243
+	Failed to get pointer to Player from g_Engine at: 1244
+	Failed to get pointer to Player from g_Engine at: 1244
+	Failed to get pointer to Player from g_Engine at: 1246
+	Failed to get pointer to Player from g_Engine at: 1246
+	Failed to get pointer to Player from g_Engine at: 1247
+	Failed to get pointer to Player from g_Engine at: 1248
+	Failed to get pointer to Player from g_Engine at: 1249
+	Failed to get pointer to Player from g_Engine at: 1250
+	Failed to get pointer to Player from g_Engine at: 1251
+	Failed to get pointer to Player from g_Engine at: 1252
+	Failed to get pointer to Player from g_Engine at: 1252
+	Failed to get pointer to Player from g_Engine at: 1253
+	Failed to get pointer to Player from g_Engine at: 1254
+	Failed to get pointer to Player from g_Engine at: 1255
+	Failed to get pointer to Player from g_Engine at: 1256
+	Failed to get pointer to Player from g_Engine at: 1257
+	Failed to get pointer to Player from g_Engine at: 1258
+	Failed to get pointer to Player from g_Engine at: 1259
+	Failed to get pointer to Player from g_Engine at: 1260
+	Failed to get pointer to Player from g_Engine at: 1261
+	Failed to get pointer to Player from g_Engine at: 1262
+	Failed to get pointer to Player from g_Engine at: 1263
+	Failed to get pointer to Player from g_Engine at: 1264
+	Failed to get pointer to Player from g_Engine at: 1265
+	Failed to get pointer to Player from g_Engine at: 1266
+	Failed to get pointer to Player from g_Engine at: 1266
+	Failed to get pointer to Player from g_Engine at: 1267
+	Failed to get pointer to Player from g_Engine at: 1268
+	Failed to get pointer to Player from g_Engine at: 1269
+	Failed to get pointer to Player from g_Engine at: 1270
+	Failed to get pointer to Player from g_Engine at: 1271
+	Failed to get pointer to Player from g_Engine at: 1272
+	Failed to get pointer to Player from g_Engine at: 1273
+	Failed to get pointer to Player from g_Engine at: 1274
+	Failed to get pointer to Player from g_Engine at: 1275
+	Failed to get pointer to Player from g_Engine at: 1276
+	Failed to get pointer to Player from g_Engine at: 1277
+	Failed to get pointer to Player from g_Engine at: 1278
+	Failed to get pointer to Player from g_Engine at: 1279
+	Failed to get pointer to Player from g_Engine at: 1279
+	Failed to get pointer to Player from g_Engine at: 1280
+	Failed to get pointer to Player from g_Engine at: 1281
+	Failed to get pointer to Player from g_Engine at: 1282
+	Failed to get pointer to Player from g_Engine at: 1283
+	Failed to get pointer to Player from g_Engine at: 1284
+	Failed to get pointer to Player from g_Engine at: 1285
+	Failed to get pointer to Player from g_Engine at: 1286
+	Failed to get pointer to Player from g_Engine at: 1287
+	Failed to get pointer to Player from g_Engine at: 1287
+	Failed to get pointer to Player from g_Engine at: 1288
+	Failed to get pointer to Player from g_Engine at: 1289
+	Failed to get pointer to Player from g_Engine at: 1290
+	Failed to get pointer to Player from g_Engine at: 1291
+	Failed to get pointer to Player from g_Engine at: 1292
+	Failed to get pointer to Player from g_Engine at: 1293
+	Failed to get pointer to Player from g_Engine at: 1294
+	Failed to get pointer to Player from g_Engine at: 1295
+	Failed to get pointer to Player from g_Engine at: 1295
+	Failed to get pointer to Player from g_Engine at: 1296
+	Failed to get pointer to Player from g_Engine at: 1297
+	Failed to get pointer to Player from g_Engine at: 1298
+	Failed to get pointer to Player from g_Engine at: 1299
+	Failed to get pointer to Player from g_Engine at: 1300
+	Failed to get pointer to Player from g_Engine at: 1301
+	Failed to get pointer to Player from g_Engine at: 1301
+	Failed to get pointer to Player from g_Engine at: 1302
+	Failed to get pointer to Player from g_Engine at: 1303
+	Failed to get pointer to Player from g_Engine at: 1304
+	Failed to get pointer to Player from g_Engine at: 1305
+	Failed to get pointer to Player from g_Engine at: 1306
+	Failed to get pointer to Player from g_Engine at: 1307
+	Failed to get pointer to Player from g_Engine at: 1308
+	Failed to get pointer to Player from g_Engine at: 1308
+	Failed to get pointer to Player from g_Engine at: 1310
+	Failed to get pointer to Player from g_Engine at: 1310
+	Failed to get pointer to Player from g_Engine at: 1311
+	Failed to get pointer to Player from g_Engine at: 1312
+	Failed to get pointer to Player from g_Engine at: 1313
+	Failed to get pointer to Player from g_Engine at: 1314
+	Failed to get pointer to Player from g_Engine at: 1315
+	Failed to get pointer to Player from g_Engine at: 1316
+	Failed to get pointer to Player from g_Engine at: 1316
+	Failed to get pointer to Player from g_Engine at: 1317
+	Failed to get pointer to Player from g_Engine at: 1318
+	Failed to get pointer to Player from g_Engine at: 1319
+	Failed to get pointer to Player from g_Engine at: 1320
+	Failed to get pointer to Player from g_Engine at: 1321
+	Failed to get pointer to Player from g_Engine at: 1322
+	Failed to get pointer to Player from g_Engine at: 1323
+	Failed to get pointer to Player from g_Engine at: 1323
+	Failed to get pointer to Player from g_Engine at: 1324
+	Failed to get pointer to Player from g_Engine at: 1325
+	Failed to get pointer to Player from g_Engine at: 1326
+	Failed to get pointer to Player from g_Engine at: 1327
+	Failed to get pointer to Player from g_Engine at: 1328
+	Failed to get pointer to Player from g_Engine at: 1329
+	Failed to get pointer to Player from g_Engine at: 1330
+	Failed to get pointer to Player from g_Engine at: 1331
+	Failed to get pointer to Player from g_Engine at: 1331
+	Failed to get pointer to Player from g_Engine at: 1332
+	Failed to get pointer to Player from g_Engine at: 1333
+	Failed to get pointer to Player from g_Engine at: 1334
+	Failed to get pointer to Player from g_Engine at: 1335
+	Failed to get pointer to Player from g_Engine at: 1336
+	Failed to get pointer to Player from g_Engine at: 1337
+	Failed to get pointer to Player from g_Engine at: 1338
+	Failed to get pointer to Player from g_Engine at: 1338
+	Failed to get pointer to Player from g_Engine at: 1339
+	Failed to get pointer to Player from g_Engine at: 1340
+	Failed to get pointer to Player from g_Engine at: 1341
+	Failed to get pointer to Player from g_Engine at: 1342
+	Failed to get pointer to Player from g_Engine at: 1343
+	Failed to get pointer to Player from g_Engine at: 1344
+	Failed to get pointer to Player from g_Engine at: 1345
+	Failed to get pointer to Player from g_Engine at: 1345
+	Failed to get pointer to Player from g_Engine at: 1346
+	Failed to get pointer to Player from g_Engine at: 1347
+	Failed to get pointer to Player from g_Engine at: 1348
+	Failed to get pointer to Player from g_Engine at: 1349
+	Failed to get pointer to Player from g_Engine at: 1350
+	Failed to get pointer to Player from g_Engine at: 1351
+	Failed to get pointer to Player from g_Engine at: 1351
+	Failed to get pointer to Player from g_Engine at: 1352
+	Failed to get pointer to Player from g_Engine at: 1353
+	Failed to get pointer to Player from g_Engine at: 1354
+	Failed to get pointer to Player from g_Engine at: 1355
+	Failed to get pointer to Player from g_Engine at: 1356
+	Failed to get pointer to Player from g_Engine at: 1357
+	Failed to get pointer to Player from g_Engine at: 1358
+	Failed to get pointer to Player from g_Engine at: 1359
+	Failed to get pointer to Player from g_Engine at: 1360
+	Failed to get pointer to Player from g_Engine at: 1361
+	Failed to get pointer to Player from g_Engine at: 1361
+	Failed to get pointer to Player from g_Engine at: 1362
+	Failed to get pointer to Player from g_Engine at: 1363
+	Failed to get pointer to Player from g_Engine at: 1364
+	Failed to get pointer to Player from g_Engine at: 1365
+	Failed to get pointer to Player from g_Engine at: 1366
+	Failed to get pointer to Player from g_Engine at: 1367
+	Failed to get pointer to Player from g_Engine at: 1367
+	Failed to get pointer to Player from g_Engine at: 1368
+	Failed to get pointer to Player from g_Engine at: 1369
+	Failed to get pointer to Player from g_Engine at: 1370
+	Failed to get pointer to Player from g_Engine at: 1371
+	Failed to get pointer to Player from g_Engine at: 1372
+	Failed to get pointer to Player from g_Engine at: 1373
+	Failed to get pointer to Player from g_Engine at: 1373
+	Failed to get pointer to Player from g_Engine at: 1374
+	Failed to get pointer to Player from g_Engine at: 1375
+	Failed to get pointer to Player from g_Engine at: 1376
+	Failed to get pointer to Player from g_Engine at: 1377
+	Failed to get pointer to Player from g_Engine at: 1378
+	Failed to get pointer to Player from g_Engine at: 1379
+	Failed to get pointer to Player from g_Engine at: 1380
+	Failed to get pointer to Player from g_Engine at: 1381
+	Failed to get pointer to Player from g_Engine at: 1381
+	Failed to get pointer to Player from g_Engine at: 1382
+	Failed to get pointer to Player from g_Engine at: 1383
+	Failed to get pointer to Player from g_Engine at: 1384
+	Failed to get pointer to Player from g_Engine at: 1385
+	Failed to get pointer to Player from g_Engine at: 1386
+	Failed to get pointer to Player from g_Engine at: 1387
+	Failed to get pointer to Player from g_Engine at: 1387
+	Failed to get pointer to Player from g_Engine at: 1388
+	Failed to get pointer to Player from g_Engine at: 1389
+	Failed to get pointer to Player from g_Engine at: 1390
+	Failed to get pointer to Player from g_Engine at: 1391
+	Failed to get pointer to Player from g_Engine at: 1392
+	Failed to get pointer to Player from g_Engine at: 1393
+	Failed to get pointer to Player from g_Engine at: 1394
+	Failed to get pointer to Player from g_Engine at: 1395
+	Failed to get pointer to Player from g_Engine at: 1395
+	Failed to get pointer to Player from g_Engine at: 1396
+	Failed to get pointer to Player from g_Engine at: 1397
+	Failed to get pointer to Player from g_Engine at: 1398
+	Failed to get pointer to Player from g_Engine at: 1399
+	Failed to get pointer to Player from g_Engine at: 1400
+	Failed to get pointer to Player from g_Engine at: 1401
+	Failed to get pointer to Player from g_Engine at: 1402
+	Failed to get pointer to Player from g_Engine at: 1403
+	Failed to get pointer to Player from g_Engine at: 1404
+	Failed to get pointer to Player from g_Engine at: 1405
+	Failed to get pointer to Player from g_Engine at: 1406
+	Failed to get pointer to Player from g_Engine at: 1407
+	Failed to get pointer to Player from g_Engine at: 1408
+	Failed to get pointer to Player from g_Engine at: 1408
+	Failed to get pointer to Player from g_Engine at: 1410
+	Failed to get pointer to Player from g_Engine at: 1410
+	Failed to get pointer to Player from g_Engine at: 1411
+	Failed to get pointer to Player from g_Engine at: 1412
+	Failed to get pointer to Player from g_Engine at: 1413
+	Failed to get pointer to Player from g_Engine at: 1414
+	Failed to get pointer to Player from g_Engine at: 1415
+	Failed to get pointer to Player from g_Engine at: 1416
+	Failed to get pointer to Player from g_Engine at: 1417
+	Failed to get pointer to Player from g_Engine at: 1418
+	Failed to get pointer to Player from g_Engine at: 1419
+	Failed to get pointer to Player from g_Engine at: 1420
+	Failed to get pointer to Player from g_Engine at: 1421
+	Failed to get pointer to Player from g_Engine at: 1422
+	Failed to get pointer to Player from g_Engine at: 1422
+	Failed to get pointer to Player from g_Engine at: 1423
+	Failed to get pointer to Player from g_Engine at: 1424
+	Failed to get pointer to Player from g_Engine at: 1425
+	Failed to get pointer to Player from g_Engine at: 1426
+	Failed to get pointer to Player from g_Engine at: 1427
+	Failed to get pointer to Player from g_Engine at: 1428
+	Failed to get pointer to Player from g_Engine at: 1429
+	Failed to get pointer to Player from g_Engine at: 1430
+	Failed to get pointer to Player from g_Engine at: 1431
+	Failed to get pointer to Player from g_Engine at: 1432
+	Failed to get pointer to Player from g_Engine at: 1433
+	Failed to get pointer to Player from g_Engine at: 1435
+	Failed to get pointer to Player from g_Engine at: 1435
+	Failed to get pointer to Player from g_Engine at: 1436
+	Failed to get pointer to Player from g_Engine at: 1437
+	Failed to get pointer to Player from g_Engine at: 1438
+	Failed to get pointer to Player from g_Engine at: 1439
+	Failed to get pointer to Player from g_Engine at: 1440
+	Failed to get pointer to Player from g_Engine at: 1441
+	Failed to get pointer to Player from g_Engine at: 1443
+	Failed to get pointer to Player from g_Engine at: 1444
+	Failed to get pointer to Player from g_Engine at: 1445
+	Failed to get pointer to Player from g_Engine at: 1446
+	Failed to get pointer to Player from g_Engine at: 1447
+	Failed to get pointer to Player from g_Engine at: 1448
+	Failed to get pointer to Player from g_Engine at: 1449
+	Failed to get pointer to Player from g_Engine at: 1450
+	Failed to get pointer to Player from g_Engine at: 1451
+	Failed to get pointer to Player from g_Engine at: 1451
+	Failed to get pointer to Player from g_Engine at: 1452
+	Failed to get pointer to Player from g_Engine at: 1453
+	Failed to get pointer to Player from g_Engine at: 1454
+	Failed to get pointer to Player from g_Engine at: 1455
+	Failed to get pointer to Player from g_Engine at: 1456
+	Failed to get pointer to Player from g_Engine at: 1457
+	Failed to get pointer to Player from g_Engine at: 1458
+	Failed to get pointer to Player from g_Engine at: 1459
+	Failed to get pointer to Player from g_Engine at: 1460
+	Failed to get pointer to Player from g_Engine at: 1461
+	Failed to get pointer to Player from g_Engine at: 1462
+	Failed to get pointer to Player from g_Engine at: 1463
+	Failed to get pointer to Player from g_Engine at: 1464
+	Failed to get pointer to Player from g_Engine at: 1465
+	Failed to get pointer to Player from g_Engine at: 1466
+	Failed to get pointer to Player from g_Engine at: 1467
 Engine shutting down...
 TextureManager shutting down...
 TextureManager shutdown.
