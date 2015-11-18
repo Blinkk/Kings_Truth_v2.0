@@ -21,7 +21,7 @@ Player::Player()
 	facingLeft = false;
 	tag = "Player";
 	_speed = 2.0f;
-	_animState = IDLE;
+	_animState = PLAYER_ANIM_STATES::IDLE;
 
 	// Register with event system
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
@@ -73,16 +73,16 @@ void Player::HandleEvent(IEvent *e)
 					}
 
 					// Set animation frames
-					if (_animState != WALKING_UP)
+					if (_animState != PLAYER_ANIM_STATES::WALKING_UP)
 					{
 						Renderer.SetCurrentFrame(2);
 						Renderer.SetStartFrame(2);
 						Renderer.SetEndFrame(3);
-						_animState = WALKING_UP;
+						_animState = PLAYER_ANIM_STATES::WALKING_UP;
 					}
 
 					// Set keypress value
-					_lastKeyPress = UP;
+					_lastKeyPress = KEY_PRESS::UP;
 				}
 				else if (pTemp->down)
 				{
@@ -100,16 +100,16 @@ void Player::HandleEvent(IEvent *e)
 					}
 
 					// Set animation frames
-					if (_animState != WALKING_DOWN)
+					if (_animState != PLAYER_ANIM_STATES::WALKING_DOWN)
 					{
 						Renderer.SetCurrentFrame(0);
 						Renderer.SetStartFrame(0);
 						Renderer.SetEndFrame(1);
-						_animState = WALKING_DOWN;
+						_animState = PLAYER_ANIM_STATES::WALKING_DOWN;
 					}
 
 					// Set keypress value
-					_lastKeyPress = DOWN;
+					_lastKeyPress = KEY_PRESS::DOWN;
 				}
 				else if (pTemp->left)
 				{
@@ -127,16 +127,16 @@ void Player::HandleEvent(IEvent *e)
 					}
 
 					// Set animation frames
-					if (_animState != WALKING_LEFT)
+					if (_animState != PLAYER_ANIM_STATES::WALKING_LEFT)
 					{
 						Renderer.SetCurrentFrame(6);
 						Renderer.SetStartFrame(6);
 						Renderer.SetEndFrame(7);
-						_animState = WALKING_LEFT;
+						_animState = PLAYER_ANIM_STATES::WALKING_LEFT;
 					}
 
 					// Set keypress value
-					_lastKeyPress = LEFT;
+					_lastKeyPress = KEY_PRESS::LEFT;
 				}
 				else if (pTemp->right)
 				{
@@ -154,16 +154,16 @@ void Player::HandleEvent(IEvent *e)
 					}
 
 					// Set animation frames
-					if (_animState != WALKING_RIGHT)
+					if (_animState != PLAYER_ANIM_STATES::WALKING_RIGHT)
 					{
 						Renderer.SetCurrentFrame(4);
 						Renderer.SetStartFrame(4);
 						Renderer.SetEndFrame(5);
-						_animState = WALKING_RIGHT;
+						_animState = PLAYER_ANIM_STATES::WALKING_RIGHT;
 					}
 
 					// Set keypress value
-					_lastKeyPress = RIGHT;
+					_lastKeyPress = KEY_PRESS::RIGHT;
 				}
 			}
 		}
@@ -227,32 +227,32 @@ void Player::Update(float deltaTime)
 		/////////////////////////////////////////
 		switch (_lastKeyPress)
 		{
-		case UP:
+		case KEY_PRESS::UP:
 			Renderer.SetCurrentFrame(2);
 			Renderer.SetStartFrame(2);
 			Renderer.SetEndFrame(2);
-			_animState = IDLE;
+			_animState = PLAYER_ANIM_STATES::IDLE;
 			break;
 
-		case DOWN:
+		case KEY_PRESS::DOWN:
 			Renderer.SetCurrentFrame(0);
 			Renderer.SetStartFrame(0);
 			Renderer.SetEndFrame(0);
-			_animState = IDLE;
+			_animState = PLAYER_ANIM_STATES::IDLE;
 			break;
 
-		case LEFT:
+		case KEY_PRESS::LEFT:
 			Renderer.SetCurrentFrame(6);
 			Renderer.SetStartFrame(6);
 			Renderer.SetEndFrame(6);
-			_animState = IDLE;
+			_animState = PLAYER_ANIM_STATES::IDLE;
 			break;
 
-		case RIGHT:
+		case KEY_PRESS::RIGHT:
 			Renderer.SetCurrentFrame(4);
 			Renderer.SetStartFrame(4);
 			Renderer.SetEndFrame(4);
-			_animState = IDLE;
+			_animState = PLAYER_ANIM_STATES::IDLE;
 			break;
 
 		default:
@@ -276,7 +276,7 @@ void Player::Update(float deltaTime)
 
 void Player::Render()
 {
-	if (Renderer.GetInitSuccess())
+	if (Renderer.GetHasTextureFlag())
 		Renderer.Render();
 }
 

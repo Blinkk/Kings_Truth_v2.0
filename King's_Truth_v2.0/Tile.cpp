@@ -10,7 +10,7 @@ Tile::Tile()
 
 void Tile::Render()
 {
-	if (Renderer.GetInitSuccess())
+	if (Renderer.GetHasTextureFlag())
 		Renderer.Render();
 }
 

@@ -4,7 +4,7 @@
 #include "Vector.h"
 using namespace Smoke;
 
-enum Player_Animation_States
+enum PLAYER_ANIM_STATES
 {
 	IDLE = 0,
 	WALKING_LEFT,
@@ -13,7 +13,7 @@ enum Player_Animation_States
 	WALKING_DOWN
 };
 
-enum Key_Press
+enum KEY_PRESS
 {
 	UP = 0,	DOWN, LEFT, RIGHT
 };

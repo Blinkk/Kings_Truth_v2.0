@@ -28,7 +28,7 @@ namespace Smoke
 		unsigned int _ST;
 		int _direction;
 		float _rotation;
-		bool _initSuccess;
+		bool _hasTexture;
 
 		///////////////////////////////////
 		// Increment frame when flag is
@@ -79,7 +79,7 @@ namespace Smoke
 		//////////////////////////
 		// Accessor / Mutators
 		//////////////////////////
-		bool GetInitSuccess() { return _initSuccess; }
+		bool GetHasTextureFlag() { return _hasTexture; }
 		Vector2 GetPos() { return _posVector; }
 		const float GetAdjustedWidth() { return _frameW * _scaleX; }
 		const float GetAdjustedHeight() { return _frameH * _scaleY; }

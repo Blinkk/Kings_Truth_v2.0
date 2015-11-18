@@ -7,8 +7,16 @@
 #define GAMEMANAGER_H
 #include "Engine_Core.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 #include "TileManager.h"
+#include <Windows.h>
 using namespace Smoke;
+
+enum LEVELS
+{
+	LEVEL_MAIN_MENU = 0,
+	LEVEL_ONE = 1,
+};
 
 ////////////////////////
 // Game Manager class 
@@ -27,14 +35,14 @@ private:
 		it if the player dies. Also used to make sure we don't reload the same
 		assets unnecessarily.
 	*/
-	unsigned int currentLevel;
+	unsigned int _currentLevel;
 
 	/*
 		A function pointer that is used to load the necessary assets needed for
 		a given level.
 	 
-		The level functions are defined in Game.cpp, and are kept seperate from
-		the Game Object so that Game doesn't need to have a function for every
+		The level functions are defined in GameManager.cpp, and are kept seperate from
+		the Game Object so that GameManager doesn't need to have a function for every
 		possible level. This allows us to easily add/remove levels without modifying
 		too much code.
 	*/
@@ -58,7 +66,7 @@ public:
 	void Game_Render();						// Render game
 	void Game_End();						// Release game specific memory
 
-	void HandleEvent(IEvent* pEvent) override;
+	void HandleEvent(IEvent* e) override;
 
 
 	/*
@@ -83,6 +91,7 @@ public:
 	Camera2D* GetCamera() { return _camera; }
 	const unsigned int GetFrameInterval() { return _frameInterval; }
 	void SetFrameInterval(unsigned int newFrameInterval) { _frameInterval = newFrameInterval; }
+	unsigned int GetCurrentLevel() { return _currentLevel; }
 };
 #endif
 

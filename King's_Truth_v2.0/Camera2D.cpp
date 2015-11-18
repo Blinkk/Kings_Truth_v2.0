@@ -31,11 +31,11 @@ namespace Smoke
 		if (g_Engine->GetPlayer() != NULL)
 		{
 			_position = g_Engine->GetPlayer()->GetCurrentPos();
-			//_position.x += 8;	// Move to center of player
-			//_position.y += 8;	// Move to center of player
+			_position.x += 8;	// Move to center of player
+			_position.y += 8;	// Move to center of player
 		}
 		else
-			_position = Vector2(SCREENW / 2, SCREENH / 2);
+			_position = Vector2((SCREENW / 2) * _zoomFactor, (SCREENH / 2) * _zoomFactor);
 
 		// Set up view Matrix
 		D3DXMATRIX viewMatrix = D3DXMATRIX(

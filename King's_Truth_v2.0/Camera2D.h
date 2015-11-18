@@ -39,6 +39,7 @@ namespace Smoke
 		//////////////////////////////
 		Vector2 GetCurrentPos() { return _position; }
 		float GetZoomFactor() { return _zoomFactor; }
+		void SetZoomFactor(float zoom) { _zoomFactor = zoom; }
 		void GetProjMatrix(D3DXMATRIX &projMatrix) { projMatrix = _projMatrix; }	
 		void SetRotation(float x, float y, float z);	
 

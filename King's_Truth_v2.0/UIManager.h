@@ -11,10 +11,27 @@
 
 // UI_Object headers
 #include "Label.h"
+#include "Button.h"
 
-enum UI_Levels
+enum UI_LEVELS
 {
-	STANDARD_GAMEPLAY_UI = 0
+	STANDARD_GAMEPLAY_UI = 0,
+	MAIN_MENU_UI
+};
+
+/*
+	This enum is merely to avoid having to include the entire contents
+	of the GameManager.h when all we need access to is the LEVELS enum.
+
+	Note: This enum must match the one in the GameManager.h in order to function
+	properly.
+
+	TODO: Make this make more sense....
+*/
+enum GAME_LEVELS
+{
+	LEVEL_MAIN_MENU = 0,
+	LEVEL_ONE = 1,
 };
 
 namespace Smoke
@@ -31,6 +48,7 @@ namespace Smoke
 		///////////////////////
 		// Note: Called internally only, use LoadUI()
 		void Standard_Gameplay_UI();
+		void Main_Menu_UI();
 
 	public:
 		static UIManager& GetInstance()
@@ -73,7 +91,9 @@ namespace Smoke
 		// Utility Functions
 		//////////////////////
 		void DrawDebug();
-		void SetUIObjects(std::vector<IUI_Object*> uiObjects) { _uiObjects = uiObjects; }
+		void SetUIObjects(std::vector<IUI_Object*> uiObjects);
+		void PurgeUIObjects();
+		void UpdateMousePos();
 	};
 }
 

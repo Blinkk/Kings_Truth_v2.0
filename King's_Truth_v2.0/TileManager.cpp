@@ -46,12 +46,12 @@ void TileManager::TileMap(unsigned int levelID)
 	// Determine which files to use
 	switch (levelID)
 	{
-	case PROTOTYPE_MAP:
+	case MAPS::PROTOTYPE_MAP:
 		textureFile = "SourceMaps/purple_bricks.png";
 		layoutFile = "./bin/MapLayouts/Prototype_Level.txt";
 		break;
 
-	case LEVEL_ONE_MAP:
+	case MAPS::LEVEL_ONE_MAP:
 		textureFile = "SourceMaps/hedge_maze.png";
 		layoutFile = "./bin/MapLayouts/Level_One.txt";
 		break;
@@ -120,7 +120,7 @@ void TileManager::TileMap(unsigned int levelID)
 				////////////////
 				// Piece 1
 			case TileTypes::WIDE_WALL_1:
-				pTemp = new WideWallTilePiece(posX, posY, FIRST, textureFile);
+				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::FIRST, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -128,7 +128,7 @@ void TileManager::TileMap(unsigned int levelID)
 
 				// Piece 2
 			case TileTypes::WIDE_WALL_2:
-				pTemp = new WideWallTilePiece(posX, posY, SECOND, textureFile);
+				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::SECOND, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -136,7 +136,7 @@ void TileManager::TileMap(unsigned int levelID)
 
 				// Piece 3
 			case TileTypes::WIDE_WALL_3:
-				pTemp = new WideWallTilePiece(posX, posY, LAST, textureFile);
+				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::LAST, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -147,7 +147,7 @@ void TileManager::TileMap(unsigned int levelID)
 				////////////////
 				// Piece 1
 			case TileTypes::LONG_WALL_1:
-				pTemp = new LongWallTilePiece(posX, posY, FIRST, textureFile);
+				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::FIRST, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -155,7 +155,7 @@ void TileManager::TileMap(unsigned int levelID)
 
 				// Piece 2
 			case TileTypes::LONG_WALL_2:
-				pTemp = new LongWallTilePiece(posX, posY, SECOND, textureFile);
+				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::SECOND, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -163,7 +163,7 @@ void TileManager::TileMap(unsigned int levelID)
 
 				// Piece 3
 			case TileTypes::LONG_WALL_3:
-				pTemp = new LongWallTilePiece(posX, posY, LAST, textureFile);
+				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::LAST, textureFile);
 				if (_tileMap[r][c] == NULL)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
@@ -216,49 +216,52 @@ void TileManager::DrawMap()
 
 void TileManager::UpdatePlayerFlags()
 {
-	// Get a reference to the player and store position
-	Vector2 playerPos;
-	Player *pTemp = g_Engine->GetPlayer();
-	if (pTemp)
-		playerPos = pTemp->GetCurrentPos();
+	if (!_tileMap.empty())
+	{
+		// Get a reference to the player and store position
+		Vector2 playerPos;
+		Player *pTemp = g_Engine->GetPlayer();
+		if (pTemp)
+			playerPos = pTemp->GetCurrentPos();
 
-	// Determine what tile player is on
-	unsigned int currentCol = playerPos.GetX() / TILE_SIZE_X;
-	unsigned int currentRow = playerPos.GetY() / TILE_SIZE_Y;
+		// Determine what tile player is on
+		unsigned int currentCol = playerPos.GetX() / TILE_SIZE_X;
+		unsigned int currentRow = playerPos.GetY() / TILE_SIZE_Y;
 
-	////////////////////////////////
-	// Check the surrounding tiles
-	////////////////////////////////
-	bool canGoLeft, canGoRight, canGoUp, canGoDown;
+		////////////////////////////////
+		// Check the surrounding tiles
+		////////////////////////////////
+		bool canGoLeft, canGoRight, canGoUp, canGoDown;
 
-	// Check left tile
-	if (_tileMap[currentRow][currentCol - 1]->isCollidable)
-		canGoLeft = false;
-	else
-		canGoLeft = true;
+		// Check left tile
+		if (_tileMap[currentRow][currentCol - 1]->isCollidable)
+			canGoLeft = false;
+		else
+			canGoLeft = true;
 
-	// Check right tile
-	if (_tileMap[currentRow][currentCol + 1]->isCollidable)
-		canGoRight = false;
-	else
-		canGoRight = true;
+		// Check right tile
+		if (_tileMap[currentRow][currentCol + 1]->isCollidable)
+			canGoRight = false;
+		else
+			canGoRight = true;
 
-	// Check up tile
-	if (_tileMap[currentRow - 1][currentCol]->isCollidable)
-		canGoUp = false;
-	else
-		canGoUp = true;
+		// Check up tile
+		if (_tileMap[currentRow - 1][currentCol]->isCollidable)
+			canGoUp = false;
+		else
+			canGoUp = true;
 
-	// Check down tile
-	if (_tileMap[currentRow + 1][currentCol]->isCollidable)
-		canGoDown = false;
-	else
-		canGoDown = true;
+		// Check down tile
+		if (_tileMap[currentRow + 1][currentCol]->isCollidable)
+			canGoDown = false;
+		else
+			canGoDown = true;
 
 
-	/////////////////////////
-	// Set player flags
-	/////////////////////////
-	pTemp->SetMovementFlags(canGoLeft, canGoRight, canGoUp, canGoDown);
+		/////////////////////////
+		// Set player flags
+		/////////////////////////
+		pTemp->SetMovementFlags(canGoLeft, canGoRight, canGoUp, canGoDown);
+	}
 }
 

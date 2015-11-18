@@ -15,6 +15,9 @@ void Level1()
 	// Load all objects for Level1
 	std::vector<IGameObject*> gameObjects;
 
+	// Change the camera zoom for this level
+	g_Engine->GetActiveCamera()->SetZoomFactor(0.3f);
+
 	/////////////////////
 	// Create a player
 	/////////////////////
@@ -27,12 +30,32 @@ void Level1()
 	//////////////////////////////////
 	// Load in the map for this level
 	//////////////////////////////////
-	g_Manager->GetTileManager()->TileMap(LEVEL_ONE_MAP);
+	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
 
 	//////////////////////////////////
 	// Load in the UI for this level
 	//////////////////////////////////
-	g_Engine->GetUIManager()->LoadUI(STANDARD_GAMEPLAY_UI);
+	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::STANDARD_GAMEPLAY_UI);
+
+	//////////////////////////////////////
+	// Set the game objects for the level
+	//////////////////////////////////////
+	g_Manager->SetGameObjects(gameObjects);
+}
+
+
+void Level_MainMenu()
+{
+	// Load all objects for Level1
+	std::vector<IGameObject*> gameObjects;
+
+	// Change the camera zoom for this level
+	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
+
+	//////////////////////////////////
+	// Load in the UI for this level
+	//////////////////////////////////
+	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::MAIN_MENU_UI);
 
 	//////////////////////////////////////
 	// Set the game objects for the level
@@ -52,7 +75,8 @@ GameManager::GameManager()
 	_tileManager = NULL;
 	_camera = NULL;
 
-	lvlPtr = &Level1;				// Set default level to Level1
+	lvlPtr = &Level_MainMenu;		// Set default level to Level1
+	_currentLevel = LEVELS::LEVEL_MAIN_MENU;	// Set current level
 }
 
 
@@ -75,16 +99,6 @@ bool GameManager::Game_Init()
 	srand(time(NULL));
 
 	/////////////////////////
-	// Create a tile manager
-	/////////////////////////
-	_tileManager = &TileManager::GetInstance();
-	if (!_tileManager)
-	{
-		debug << "\tFailed to create tile manager in Game_Init()" << std::endl;
-		return false;
-	}
-
-	/////////////////////////
 	// Create a camera
 	/////////////////////////
 	_camera = new Camera2D();
@@ -95,9 +109,27 @@ bool GameManager::Game_Init()
 	}
 	g_Engine->SetActiveCamera(_camera);		// Set global camera pointer
 
+	/////////////////////////
+	// Create a tile manager
+	/////////////////////////
+	_tileManager = &TileManager::GetInstance();
+	if (!_tileManager)
+	{
+		debug << "\tFailed to create tile manager in Game_Init()" << std::endl;
+		return false;
+	}
+
 	///////////////////////
 	// Setup Input devices
 	///////////////////////
+	Mouse *pMouse = new Mouse();
+	if (!pMouse)
+	{
+		debug << "\tFailed to create a mouse in Game_Init()" << std::endl;
+		return false;
+	}
+	g_Engine->GetInputManager()->SetMouse(pMouse);
+
 	Keyboard *pKeyboard = new Keyboard();
 	if (!pKeyboard)
 	{
@@ -218,11 +250,31 @@ void GameManager::Game_Render()
 }
 
 
-void GameManager::HandleEvent(IEvent *pEvent)
+void GameManager::HandleEvent(IEvent *e)
 {
-	if (pEvent->Event_Type == Events::ENDLEVEL)
+	if (e->Event_Type == Events::ENDLEVEL)
+	{
+		EndLevelEvent *pTemp = static_cast<EndLevelEvent*>(e);
+		if (pTemp)
+		{
+			switch (pTemp->newLevel)
+			{
+			case LEVELS::LEVEL_MAIN_MENU:
+				lvlPtr = &Level_MainMenu;
+				break;
+
+			case LEVELS::LEVEL_ONE:
+				lvlPtr = &Level1;
+				break;
+
+			default:
+				debug << "\tFailed to load new level because levelID out of range" << std::endl;
+				break;
+			}
+		}
 		gameOver = true;
-	else if (pEvent->Event_Type == Events::ENDPROGRAM)
+	}	
+	else if (e->Event_Type == Events::ENDPROGRAM)
 		endProgram = true;
 }
 
@@ -234,8 +286,6 @@ void GameManager::Game_End()
 {
 	// Remove any current game objects
 	PurgeGameObjects();
-
-	// Deallocate any other memory here.
 }
 
 

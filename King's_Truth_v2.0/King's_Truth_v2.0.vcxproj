@@ -81,7 +81,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Button.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.cpp" />
@@ -105,8 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Button.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IUI_Object.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.h" />

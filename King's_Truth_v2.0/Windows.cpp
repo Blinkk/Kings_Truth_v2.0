@@ -64,6 +64,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 
 	// Show Window
 	ShowWindow(g_Engine->GetWindowHandle(), SW_SHOW);
+	ShowCursor(true);
 
 	/////////////////////
 	// Initialize engine

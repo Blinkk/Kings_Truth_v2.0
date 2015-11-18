@@ -6,7 +6,6 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-
 namespace Smoke
 {
 	/////////////////////////////////////////////////////////////////////
@@ -19,8 +18,10 @@ namespace Smoke
 	{
 		const unsigned int PLAYER_INPUT = 0;
 		const unsigned int PLAYER_COLLISION = 1;
-		const unsigned int ENDLEVEL = 2;
-		const unsigned int ENDPROGRAM = 3;
+		const unsigned int CLICK_DOWN = 2;
+		const unsigned int CLICK_UP = 3;
+		const unsigned int ENDLEVEL = 4;
+		const unsigned int ENDPROGRAM = 5;
 
 		const unsigned int MAX = ENDPROGRAM;
 	}
@@ -84,6 +85,60 @@ namespace Smoke
 		PlayerCollisionEvent()
 		{
 			Event_Type = Events::PLAYER_COLLISION;
+		}
+	};
+
+
+	class ClickDownEvent : public IEvent
+	{
+	public:
+		bool left;
+		bool right;
+		float mousePosX;
+		float mousePosY;
+
+		ClickDownEvent()
+		{
+			Event_Type = Events::CLICK_DOWN;
+
+			left = false;
+			right = false;
+			mousePosX = 0;
+			mousePosY = 0;
+		}
+	};
+
+
+	class ClickUpEvent : public IEvent
+	{
+	public:
+		bool left;
+		bool right;
+		float mousePosX;
+		float mousePosY;
+
+		ClickUpEvent()
+		{
+			Event_Type = Events::CLICK_UP;
+
+			left = false;
+			right = false;
+			mousePosX = 0;
+			mousePosY = 0;
+		}
+	};
+
+
+	class EndLevelEvent : public IEvent
+	{
+	public:
+		unsigned int newLevel;
+
+		EndLevelEvent()
+		{
+			Event_Type = Events::ENDLEVEL;
+
+			newLevel = 0;
 		}
 	};
 }	// End of namespace

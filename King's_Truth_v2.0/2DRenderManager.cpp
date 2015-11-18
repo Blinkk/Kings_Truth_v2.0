@@ -19,7 +19,7 @@ namespace Smoke
 		_direction = 1;
 		_rotation = 0;
 		_animate = false;
-		_initSuccess = false;
+		_hasTexture = false;
 	}
 
 	
@@ -55,7 +55,7 @@ namespace Smoke
 		_curFrame = _startFrame;	// Set current frame to the start frame
 
 		if (_texture != NULL)
-			_initSuccess = true;
+			_hasTexture = true;
 	}
 
 
@@ -152,7 +152,13 @@ namespace Smoke
 
 	void TwoDRenderManager::SetNewTexture(std::string newTexture)
 	{
-		// TODO: Implement using textureManager
+		_texture = g_Engine->GetTextureManager()->RetrieveTexture(newTexture);
+
+		// Set the init flag to true if texture is not NULL
+		if (_texture != NULL)
+			_hasTexture = true;
+		else
+			_hasTexture = false;
 	}
 
 	////////////////

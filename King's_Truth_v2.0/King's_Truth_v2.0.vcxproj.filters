@@ -141,6 +141,12 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.cpp">
       <Filter>Framework\UI\UI_Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Button.cpp">
+      <Filter>Framework\UI\UI_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp">
+      <Filter>Framework\Input/Output\Input Devices</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
@@ -229,6 +235,12 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.h">
       <Filter>Framework\UI\UI_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Button.h">
+      <Filter>Framework\UI\UI_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h">
+      <Filter>Framework\Input/Output\Input Devices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
