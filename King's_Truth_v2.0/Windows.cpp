@@ -84,7 +84,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 		return -1;
 	}
 
-	double prevTime = g_Engine->GetGameTime();		// Double to store previous time
+	double prevTime = g_Engine->GetGameTime();
 
 	
 	//////////////////////////////
@@ -93,8 +93,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 	MSG msg = { 0 };
 	while (!g_Manager->endProgram)
 	{
-		g_Manager->PurgeGameObjects();	// Remove all current game object
-		g_Manager->LoadLevel();			// Load a new level ((*lvlPtr)())
+		g_Engine->GetUIManager()->PurgeUIObjects();
+		g_Manager->PurgeGameObjects();		// Remove all current game object
+		g_Manager->LoadLevel();				// Load a new level ((*lvlPtr)())
 
 		/////////////////////////////
 		// Single Level Loop
@@ -119,9 +120,12 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 			g_Manager->Game_Render();				// Render game (Renders EVERYTHING in one scene)
 			g_Engine->GetEventManager()->Update();	// Handle events
 		}
-	}
 
-	g_Manager->Game_End();		// Shutdown game
+		
+	}
+	// Release level objects
+	g_Manager->Level_End();
+
 	g_Engine->Shutdown();		// Shutdown engine cores
 
 	return static_cast<int>(msg.wParam);

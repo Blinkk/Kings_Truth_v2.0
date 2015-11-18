@@ -282,10 +282,13 @@ void GameManager::HandleEvent(IEvent *e)
 //////////////////////////////////
 // Free game specific resources
 //////////////////////////////////
-void GameManager::Game_End()
+void GameManager::Level_End()
 {
 	// Remove any current game objects
 	PurgeGameObjects();
+
+	// Remove any current UI objects... this may need to be changed later
+	g_Engine->GetUIManager()->PurgeUIObjects();
 }
 
 

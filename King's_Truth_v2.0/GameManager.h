@@ -64,7 +64,7 @@ public:
 	bool Game_Init();						// Initialize game specifics
 	void Update(float deltaTime) override;	// Main update call
 	void Game_Render();						// Render game
-	void Game_End();						// Release game specific memory
+	void Level_End();						// Release game objects in level
 
 	void HandleEvent(IEvent* e) override;
 
