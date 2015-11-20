@@ -84,19 +84,7 @@ namespace Smoke
 
 	UIManager::UIManager()
 	{
-		// Ensure there are no UI_Objects in the vector (somehow)
-		if (!_uiObjects.empty())
-		{
-			for (_uiIt = _uiObjects.begin(); _uiIt != _uiObjects.end();)
-			{
-				delete (*_uiIt);
-				_uiIt = _uiObjects.erase(_uiIt);
-			}
-			_uiObjects.clear();
-		}
-
-		// Register events
-		g_Engine->GetEventManager()->RegisterListener(this, Events::CLICK_DOWN);
+		
 	}
 
 
@@ -116,22 +104,14 @@ namespace Smoke
 		case UI_LEVELS::STANDARD_GAMEPLAY_UI:
 			Standard_Gameplay_UI();
 			break;
+
 		case UI_LEVELS::MAIN_MENU_UI:
 			Main_Menu_UI();
 			break;
+
 		default:
 			debug << "\tFailed to load UI, levelID out of range" << std::endl;
 			break;
-		}
-	}
-
-
-	void UIManager::HandleEvent(IEvent* e)
-	{
-		if (e->Event_Type == Events::CLICK_DOWN)
-		{
-			for (_uiIt = _uiObjects.begin(); _uiIt != _uiObjects.end(); ++_uiIt)
-				(*_uiIt)->HandleEvent(e);
 		}
 	}
 
@@ -184,6 +164,8 @@ namespace Smoke
 
 	void UIManager::Shutdown()
 	{
+		debug << "\tUI shutting down..." << std::endl;
+
 		// Release memory used by UI
 		if (!_uiObjects.empty())
 		{
@@ -194,6 +176,11 @@ namespace Smoke
 			}
 			_uiObjects.clear();
 		}
+		
+		if (_uiObjects.empty())
+			debug << "\tUI shutdown" << std::endl;
+		else
+			debug << "\tError shutting down UI" << std::endl;
 	}
 
 

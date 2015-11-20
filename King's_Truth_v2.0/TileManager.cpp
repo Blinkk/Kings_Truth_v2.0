@@ -14,20 +14,18 @@ TileManager::~TileManager()
 	// Empty the map of maps of tiles
 	if (!_tileMap.empty())
 	{
-		std::map<unsigned int, TileRow>::iterator i;
-		std::map<unsigned int, Tile*>::iterator j;
-		for (i = _tileMap.begin(); i != _tileMap.end();)
+		for (_mIt = _tileMap.begin(); _mIt != _tileMap.end();)
 		{
-			if (!(*i).second.empty())
+			if (!(*_mIt).second.empty())
 			{
-				for (j = (*i).second.begin(); j != (*i).second.end();)
+				for (_tIt = (*_mIt).second.begin(); _tIt != (*_mIt).second.end();)
 				{
-					delete (*j).second;
-					j = (*i).second.erase(j);
+					delete (*_tIt).second;
+					_tIt = (*_mIt).second.erase(_tIt);
 				}
-				(*i).second.clear();
+				(*_mIt).second.clear();
 			}
-			i = _tileMap.erase(i);
+			_mIt = _tileMap.erase(_mIt);
 		}
 		_tileMap.clear();
 	}
@@ -210,6 +208,29 @@ void TileManager::DrawMap()
 					pTemp->Render();
 			}
 		}
+	}
+}
+
+
+void TileManager::PurgeMapObjects()
+{
+	// Empty the map of maps of tiles
+	if (!_tileMap.empty())
+	{
+		for (_mIt = _tileMap.begin(); _mIt != _tileMap.end();)
+		{
+			if (!(*_mIt).second.empty())
+			{
+				for (_tIt = (*_mIt).second.begin(); _tIt != (*_mIt).second.end();)
+				{
+					delete (*_tIt).second;
+					_tIt = (*_mIt).second.erase(_tIt);
+				}
+				(*_mIt).second.clear();
+			}
+			_mIt = _tileMap.erase(_mIt);
+		}
+		_tileMap.clear();
 	}
 }
 

@@ -5,6 +5,7 @@
 ***********************************/
 #ifndef GAMEOBJ_H
 #define GAMEOBJ_H
+#include <string>
 #include "Event.h"
 
 

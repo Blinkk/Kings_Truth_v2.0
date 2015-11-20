@@ -25,9 +25,6 @@
     <Filter Include="Framework\Windows">
       <UniqueIdentifier>{8683eb9a-631b-4c85-891f-d46c87b250be}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\DirectX">
-      <UniqueIdentifier>{15dee395-d4b0-4117-bd57-dec36f8c0154}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Event System">
       <UniqueIdentifier>{56cc7643-e3c5-47f6-835e-f517ebb35712}</UniqueIdentifier>
     </Filter>
@@ -73,16 +70,19 @@
     <Filter Include="Framework\UI\UI_Objects">
       <UniqueIdentifier>{255c85e0-05bf-4023-8dc2-19e27699545d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\DirectX / Graphics">
+      <UniqueIdentifier>{15dee395-d4b0-4117-bd57-dec36f8c0154}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.cpp">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.cpp">
       <Filter>Framework\Global</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Direct3D.cpp">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Engine_Core.cpp">
       <Filter>Framework\Global</Filter>
@@ -118,7 +118,7 @@
       <Filter>Framework\Windows</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.cpp">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.cpp">
       <Filter>Game\Source Files\Utilities</Filter>
@@ -136,7 +136,7 @@
       <Filter>Game\Source Files\Utilities</Filter>
     </ClCompile>
     <ClCompile Include="Camera2D.cpp">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.cpp">
       <Filter>Framework\UI\UI_Objects</Filter>
@@ -147,10 +147,16 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp">
       <Filter>Framework\Input/Output\Input Devices</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\BackgroundManager.cpp">
+      <Filter>Framework\DirectX / Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.cpp">
+      <Filter>Framework\DirectX / Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Debug.h">
       <Filter>Framework\Global</Filter>
@@ -159,7 +165,7 @@
       <Filter>Framework\Event System</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Direct3D.h">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Engine_Core.h">
       <Filter>Framework\Global</Filter>
@@ -207,7 +213,7 @@
       <Filter>Framework\Global</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\TextureManager.h">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.h">
       <Filter>Game\Header Files\Entities</Filter>
@@ -228,7 +234,7 @@
       <Filter>Game\Header Files\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="Camera2D.h">
-      <Filter>Framework\DirectX</Filter>
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IUI_Object.h">
       <Filter>Framework\UI\UI_Objects</Filter>
@@ -241,6 +247,15 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h">
       <Filter>Framework\Input/Output\Input Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IBackground.h">
+      <Filter>Framework\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\BackgroundManager.h">
+      <Filter>Framework\DirectX / Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.h">
+      <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

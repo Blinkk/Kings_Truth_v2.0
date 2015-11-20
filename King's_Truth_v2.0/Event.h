@@ -141,6 +141,16 @@ namespace Smoke
 			newLevel = 0;
 		}
 	};
+
+
+	class EndProgramEvent : public IEvent
+	{
+	public:
+		EndProgramEvent()
+		{
+			Event_Type = Events::ENDPROGRAM;
+		}
+	};
 }	// End of namespace
 
 #endif

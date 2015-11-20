@@ -198,8 +198,10 @@ namespace Smoke
 			mouse = NULL;
 		}
 
-		debug << "\tInput core shutdown with " << bugs
-			<< " bugs." <<std::endl;
+		if (mouse == NULL && keyboard == NULL)
+			debug << "\tInput shutdown successfully" << std::endl;
+		else
+			debug << "\tError shutting down input" << std::endl;
 	}
 
 }

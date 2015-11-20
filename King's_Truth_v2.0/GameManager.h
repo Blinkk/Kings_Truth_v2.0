@@ -8,6 +8,7 @@
 #include "Engine_Core.h"
 #include "Keyboard.h"
 #include "Mouse.h"
+#include "StaticBackground.h"
 #include "TileManager.h"
 #include <Windows.h>
 using namespace Smoke;
@@ -64,7 +65,7 @@ public:
 	bool Game_Init();						// Initialize game specifics
 	void Update(float deltaTime) override;	// Main update call
 	void Game_Render();						// Render game
-	void Level_End();						// Release game objects in level
+	void Game_End();						// Release game objects in level
 
 	void HandleEvent(IEvent* e) override;
 
@@ -76,6 +77,15 @@ public:
 		This function just calls whatever levelPointer points to.
 	*/
 	void LoadLevel();
+
+
+	/*
+		This function is used to release all objects
+		for a single level to allow for loading of objects
+		for a new level. This should be called only from
+		the end of the "Level Loop" in Windows.cpp
+	*/
+	void UnloadLevel();
 
 
 	//////////////////////

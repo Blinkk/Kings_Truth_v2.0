@@ -28,6 +28,8 @@ class TileManager
 private:
 	// Map of maps of tiles
 	std::map<unsigned int, TileRow> _tileMap;
+	std::map<unsigned int, TileRow>::iterator _mIt;
+	std::map<unsigned int, Tile*>::iterator _tIt;
 
 	/*
 		These variables will keep track of the number of rows
@@ -78,6 +80,13 @@ public:
 		Note: This should ONLY be called in the main Render()
 	*/
 	void DrawMap();
+
+	/*
+		This function is used to release all tile pointers
+
+		Note: This should only be called at the end of a level (g_Manager->UnloadLevel())
+	*/
+	void PurgeMapObjects();
 
 	/*
 		Testing this function	

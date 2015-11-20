@@ -53,6 +53,15 @@ void Level_MainMenu()
 	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
 
 	//////////////////////////////////
+	// Load the background for level
+	//////////////////////////////////
+	StaticBackground *background = g_Engine->GetFactory()->CreateObject<StaticBackground>();
+	if (background)
+		background->Initialize("menu_background.png", SCREENW, SCREENH, Vector2(0, 0));
+
+	g_Engine->GetBackgroundManager()->AddBackground(background);
+
+	//////////////////////////////////
 	// Load in the UI for this level
 	//////////////////////////////////
 	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::MAIN_MENU_UI);
@@ -168,6 +177,22 @@ void GameManager::LoadLevel()
 }
 
 
+void GameManager::UnloadLevel()
+{
+	// Purge GameObjects
+	PurgeGameObjects();
+
+	// Purge UI Objects
+	g_Engine->GetUIManager()->PurgeUIObjects();
+
+	// Purge Backgrounds
+	g_Engine->GetBackgroundManager()->PurgeBackgrounds();
+
+	// Purge map objects
+	_tileManager->PurgeMapObjects();
+}
+
+
 //////////////////////////////////////////////
 // Main update function (called in game loop)
 //////////////////////////////////////////////
@@ -178,6 +203,7 @@ void GameManager::Update(float deltaTime)
 	/////////////////////////////////
 	g_Engine->GetInputManager()->Update(deltaTime);
 	g_Engine->GetUIManager()->Update(deltaTime);
+	g_Engine->GetBackgroundManager()->Update(deltaTime);
 	g_Engine->GetDebugger()->Update(deltaTime);
 
 	///////////////////////////////
@@ -211,6 +237,10 @@ void GameManager::Game_Render()
 		//////////////////////////////
 		// Begin Spritebatch for 2D
 		g_Engine->GetSpriteObj()->Begin(D3DXSPRITE_ALPHABLEND | D3DXSPRITE_OBJECTSPACE);
+
+
+		// Render backgrounds
+		g_Engine->GetBackgroundManager()->Render();
 
 		// Render the map
 		_tileManager->DrawMap();
@@ -275,20 +305,22 @@ void GameManager::HandleEvent(IEvent *e)
 		gameOver = true;
 	}	
 	else if (e->Event_Type == Events::ENDPROGRAM)
+	{
+		// Break out of all game loops and shutdown
+		gameOver = true;
 		endProgram = true;
+	}
+		
 }
 
 
 //////////////////////////////////
 // Free game specific resources
 //////////////////////////////////
-void GameManager::Level_End()
+void GameManager::Game_End()
 {
 	// Remove any current game objects
 	PurgeGameObjects();
-
-	// Remove any current UI objects... this may need to be changed later
-	g_Engine->GetUIManager()->PurgeUIObjects();
 }
 
 

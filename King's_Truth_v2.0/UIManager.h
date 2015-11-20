@@ -36,7 +36,7 @@ enum GAME_LEVELS
 
 namespace Smoke
 {
-	class UIManager : public IGameObject, IRenderableObject
+	class UIManager
 	{
 	private:
 		UIManager();
@@ -80,10 +80,10 @@ namespace Smoke
 			Note: UI elements will not render if there is no
 			active camera set in the global reference. (g_Engine->SetActiveCamera(...))
 		*/
-		void Render() override;
+		void Render();
 
-		void HandleEvent(IEvent*) override;
-		void Update(float deltaTime) override;
+		void HandleEvent(IEvent*);
+		void Update(float deltaTime);
 		void Shutdown();
 		
 

@@ -36,6 +36,7 @@
 #include "EventManager.h"
 #include "InputManager.h"
 #include "UIManager.h"
+#include "BackgroundManager.h"
 #include "TextureManager.h"
 #include "Factory.h"
 #include "Direct3D.h"
@@ -81,6 +82,7 @@ namespace Smoke
 		EventManager *_eventManager;				// Event manager pointer
 		InputManager *_inputManager;				// Input core pointer
 		UIManager *_uiManager;						// UI object pointer
+		BackgroundManager *_backgroundManager;		// Background manager object
 		TextureManager *_textureManager;			// Texture manager pointer
 		Factory *_factory;							// Factory pointer
 		Debug *_debugger;							// In-Game debugger
@@ -116,6 +118,7 @@ namespace Smoke
 		EventManager* GetEventManager(); 			// Return pointer to Event Manager
 		InputManager* GetInputManager();			// Return pointer to Input Manager
 		UIManager* GetUIManager();					// Return pointer to UI Manager
+		BackgroundManager * GetBackgroundManager();	// Return a pointer to Background manager
 		TextureManager* GetTextureManager();		// Return a pointer to texture manager
 		Factory* GetFactory();						// Return a pointer to factory
 		Debug* GetDebugger();						// Return pointer to Debugger

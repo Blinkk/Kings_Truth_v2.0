@@ -125,7 +125,7 @@ namespace Smoke
 
 	void TextureManager::Shutdown()
 	{
-		debug << "TextureManager shutting down..." << std::endl;
+		debug << "\tTextureManager shutting down..." << std::endl;
 
 		std::map<std::string, LPDIRECT3DTEXTURE9>::iterator tlIt;
 		LPDIRECT3DTEXTURE9 temp = NULL;
@@ -135,7 +135,7 @@ namespace Smoke
 			temp = static_cast<LPDIRECT3DTEXTURE9>(tlIt->second);
 
 			if (temp == NULL)
-				debug << "\tFailed to release a texture, name: " + tlIt->first << std::endl;
+				debug << "\t\tFailed to release a texture, name: " + tlIt->first << std::endl;
 			else
 				// Release texture
 				temp->Release();
@@ -144,6 +144,9 @@ namespace Smoke
 		// Erase elements in map (should be NULL)
 		_textureList.erase(_textureList.begin(), _textureList.end());
 
-		debug << "TextureManager shutdown." << std::endl;
+		if (_textureList.empty())
+			debug << "\tTexture manager shutdown successfully" << std::endl;
+		else
+			debug << "\tError shutting down texture manager" << std::endl;
 	}
 }

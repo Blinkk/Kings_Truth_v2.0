@@ -121,11 +121,12 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 			g_Engine->GetEventManager()->Update();	// Handle events
 		}
 
-		
+		// Release level objects
+		g_Manager->UnloadLevel();
 	}
-	// Release level objects
-	g_Manager->Level_End();
-
+	
+	// Release game objects
+	g_Manager->Game_End();
 	g_Engine->Shutdown();		// Shutdown engine cores
 
 	return static_cast<int>(msg.wParam);

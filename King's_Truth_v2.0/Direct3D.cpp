@@ -105,12 +105,10 @@ namespace Smoke
 		// backbuffer and spriteObj
 		// are handled in the g_Engine
 		///////////////////////////////
-		int bugs = 0;
 		debug << "\tDirect3D shutting down..." << std::endl;
 
 		
-		debug << "\t\tDirect3D shutdown with " << bugs
-			<< " bugs." << std::endl;
+		debug << "\tDirect3D shutdown successfully" << std::endl;
 	}
 
 

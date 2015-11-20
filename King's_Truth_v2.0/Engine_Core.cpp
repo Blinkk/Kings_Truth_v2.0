@@ -35,13 +35,14 @@ namespace Smoke
 	{
 		debug << "Engine initilization started..." << std::endl;
 
-		_eventManager = &EventManager::GetInstance();		// Create a pointer to event manager
-		_inputManager = &InputManager::GetInstance();		// Create a pointer to input manager
-		_uiManager = &UIManager::GetInstance();				// Create a pointer to UI manager
-		_textureManager = &TextureManager::GetInstance();	// Create a pointer to texture manager
-		_factory = &Factory::GetInstance();					// Create a pointer to the factory
-		_debugger = &Debug::GetInstance();					// Create a pointer to debugger
-		_directX = &Direct3D::GetInstance();				// Create a pointer to DirectX wrapper object
+		_eventManager = &EventManager::GetInstance();			// Create a pointer to event manager
+		_inputManager = &InputManager::GetInstance();			// Create a pointer to input manager
+		_uiManager = &UIManager::GetInstance();					// Create a pointer to UI manager
+		_backgroundManager = &BackgroundManager::GetInstance();	// Create a pointer to Background manager
+		_textureManager = &TextureManager::GetInstance();		// Create a pointer to texture manager
+		_factory = &Factory::GetInstance();						// Create a pointer to the factory
+		_debugger = &Debug::GetInstance();						// Create a pointer to debugger
+		_directX = &Direct3D::GetInstance();					// Create a pointer to DirectX wrapper object
 
 		//////////////////////////
 		// Initialize DirectX
@@ -51,6 +52,8 @@ namespace Smoke
 			debug << "\tFailed to initialize DirectX" << std::endl;
 			return false;
 		}
+		else
+			debug << "\tDirectX initialized." << std::endl;
 
 		//////////////////////////////
 		// Initialize texture manager
@@ -60,6 +63,8 @@ namespace Smoke
 			debug << "\tFailed to initialize InputManager" << std::endl;
 			return false;
 		}
+		else
+			debug << "\tTexture Manager initialized." << std::endl;
 
 		//////////////////////////
 		// Initialize UI object
@@ -89,6 +94,8 @@ namespace Smoke
 			debug << "\tFailed to initialize debugger" << std::endl;
 			return false;
 		}
+		else
+			debug << "\tDebugger initialized." << std::endl;
 		SetShowDebug(true);
 
 		// If everything successful
@@ -99,7 +106,6 @@ namespace Smoke
 
 	void Engine_Core::Shutdown()
 	{
-		int bugs = 0;
 		debug << "Engine shutting down..." << std::endl;
 
 		// Shutdown debugger
@@ -148,6 +154,14 @@ namespace Smoke
 			_eventManager = NULL;
 		}
 
+		// Shutdown and delete DirectX
+		if (_directX)
+		{
+			_directX->Shutdown();
+			delete _directX;
+			_directX = NULL;
+		}
+
 
 		////////////////////////////////////////////
 		// After all other cores shutdown, delete 
@@ -156,10 +170,8 @@ namespace Smoke
 		if (_backBuffer)
 		{
 			if ((*_backBuffer)->Release() > 0)
-			{
 				debug << "\tError releasing D3D backbuffer" << std::endl;
-				bugs++;
-			}
+
 			delete _backBuffer;
 			_backBuffer = NULL;
 		}
@@ -167,38 +179,26 @@ namespace Smoke
 		if (_spriteObj)
 		{
 			if ((*_spriteObj)->Release() > 0)
-			{
 				debug << "\tError releasing D3D sprite object" << std::endl;
-				bugs++;
-			}
+
 			delete _spriteObj;
 			_spriteObj = NULL;
 		}
 		if (_d3dContext)
 		{
 			if ((*_d3dContext)->Release() > 0)
-			{
-				debug << "\tError releasing D3Dcontext" << std::endl;
-				bugs++;
-			}
+				debug << "\tError releasing D3DContext" << std::endl;
+
 			delete _d3dContext;
 			_d3dContext = NULL;
 		}
 		if (_d3dDevice)
 		{
 			if ((*_d3dDevice)->Release() > 0)
-			{
-				debug << "\tError releasing D3Ddevice" << std::endl;
-				bugs++;
-			}
+				debug << "\tError releasing D3DDevice" << std::endl;
+
 			delete _d3dDevice;
 			_d3dDevice = NULL;
-		}
-		if (_directX)
-		{
-			_directX->Shutdown();
-			delete _directX;
-			_directX = NULL;
 		}
 		
 		if (_window)
@@ -212,7 +212,6 @@ namespace Smoke
 			_coreTimer = NULL;
 		}
 
-		debug << "Main engine core shutdown with " << bugs << " bugs." << std::endl;
 		debug << "Engine shutdown complete." << std::endl;
 	}
 
@@ -288,7 +287,19 @@ namespace Smoke
 			debug << "\tFailed to get pointer to UIManager from g_Engine at: " << g_Engine->GetGameTime() << std::endl;
 			return NULL;
 		}
-	}				
+	}		
+
+	// Return a pointer to Background Manager
+	BackgroundManager* Engine_Core::GetBackgroundManager()
+	{
+		if (_backgroundManager != NULL)
+			return _backgroundManager;
+		else
+		{
+			debug << "\tFailed to get pointer to BackgroundManager from g_Engine at: " << g_Engine->GetGameTime() << std::endl;
+			return NULL;
+		}
+	}
 	
 	// Return a pointer to texture manager
 	TextureManager* Engine_Core::GetTextureManager()	
@@ -344,10 +355,7 @@ namespace Smoke
 		if (_player != NULL)
 			return _player;
 		else
-		{
-			debug << "\tFailed to get pointer to Player from g_Engine at: " << g_Engine->GetGameTime() << std::endl;
 			return NULL;
-		}
 	}
 	
 	// Return a pointer to the camera

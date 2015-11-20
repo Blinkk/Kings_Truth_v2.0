@@ -46,9 +46,12 @@ namespace Smoke
 
 	void EventManager::PurgeAllListeners()
 	{
-		for (unsigned int i = 0; i < Registrants.size(); ++i)
+		// Erase listeners
+		int size = Registrants.size();
+		for (unsigned int i = 0; i < size; ++i)
 		{
 			Registrants[i].erase(Registrants[i].begin(), Registrants[i].end());
+			Registrants.erase(i);
 		}
 	}
 
@@ -90,7 +93,14 @@ namespace Smoke
 
 	void EventManager::Shutdown()
 	{
+		debug << "\tEvent manager shutting down..." << std::endl;
+
 		this->PurgeAllListeners();
+
+		if (Registrants.empty())
+			debug << "\tEvent manager shutdown successfully" << std::endl;
+		else
+			debug << "\tError shutting down event manager" << std::endl;
 	}
 	
 
