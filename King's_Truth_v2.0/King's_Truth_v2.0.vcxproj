@@ -147,6 +147,8 @@
     <Text Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textureList.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_background.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_button.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\player.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\hedge_maze.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\ice_bricks.png" />

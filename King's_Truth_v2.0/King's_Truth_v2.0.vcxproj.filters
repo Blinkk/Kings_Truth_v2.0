@@ -285,5 +285,11 @@
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\player.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_background.png">
+      <Filter>Game\Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_button.png">
+      <Filter>Game\Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
