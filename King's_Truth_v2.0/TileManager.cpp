@@ -46,12 +46,12 @@ void TileManager::TileMap(unsigned int levelID)
 	{
 	case MAPS::PROTOTYPE_MAP:
 		textureFile = "SourceMaps/purple_bricks.png";
-		layoutFile = "./textures/MapLayouts/Prototype_Level.txt";
+		layoutFile = "./Textures/MapLayouts/Prototype_Level.txt";
 		break;
 
 	case MAPS::LEVEL_ONE_MAP:
 		textureFile = "SourceMaps/hedge_maze.png";
-		layoutFile = "./textures/MapLayouts/Level_One.txt";
+		layoutFile = "./Textures/MapLayouts/Level_One.txt";
 		break;
 
 	default:
