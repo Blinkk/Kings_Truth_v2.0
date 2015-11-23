@@ -41,7 +41,7 @@ namespace Smoke
 			buffer >> fileName >> alphaR >> alphaG >> alphaB;
 
 			// Add "bin/" extension to filename
-			fileName = "bin/" + fileName;
+			fileName = "textures/" + fileName;
 
 			// If transparency key is NULL, add texture w/ NULL key
 			if (alphaR == "NULL" && alphaG == "NULL" && alphaB == "NULL")
@@ -111,7 +111,7 @@ namespace Smoke
 		LPDIRECT3DTEXTURE9 texture = NULL;
 
 		// Add "bin/" extension
-		textureToRetrieve = "bin/" + textureToRetrieve;
+		textureToRetrieve = "textures/" + textureToRetrieve;
 
 		// Get the texture from the map
 		if (_textureList[textureToRetrieve])
