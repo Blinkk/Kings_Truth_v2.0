@@ -3,3 +3,4 @@ menu_button.png 255 255 255
 SourceMaps/purple_bricks.png 255 255 255
 SourceMaps/hedge_maze.png 255 255 255
 menu_background.png 255 255 255
+label_texture.png 255 255 255

@@ -20,15 +20,36 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
-		Camera2D *pTemp = g_Engine->GetActiveCamera();
-		if (pTemp != NULL)
+		if (g_Engine->GetActiveCamera() != NULL)
 		{
-			// Create a test label and initialize it, then add to vector
+			// Set up button dimensions and offset
+			float lWidth = 200.0f;
+			float lHeight = 75.0f;
+			float offsetX = 0.0f;
+			float offsetY = 0.0f;
+
+			Label *pTemp = g_Engine->GetFactory()->CreateObject<Label>();
+			if (pTemp)
+			{
+				pTemp->Initialize("Calibri", 14, offsetX, offsetY, lWidth,
+					lHeight, "Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
+
+				uiObjects.push_back(pTemp);
+			}
+
+			Button *bTemp = g_Engine->GetFactory()->CreateObject<Button>();
+			if (bTemp)
+			{
+				bTemp->Initialize("Calibri", 14, offsetX, offsetY, lWidth,
+					lHeight, "Health: ", BUTTONTEXTURES::MENU_BUTTON_TEXTURE);
+
+				uiObjects.push_back(bTemp);
+			}
 			
 		}
 
 		// Set the UI Objects
-		g_Engine->GetUIManager()->SetUIObjects(uiObjects);
+		SetUIObjects(uiObjects);
 	}
 
 
@@ -42,12 +63,11 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
-		Camera2D *pTemp = g_Engine->GetActiveCamera();
-		if (pTemp != NULL)
+		if (g_Engine->GetActiveCamera() != NULL)
 		{
 			// Set up button dimensions and offset
 			float bWidth = 200.0f;
-			float bHeight = 68.5f;
+			float bHeight = 64.5f;
 			float offsetX = -(bWidth / 2);
 			float offsetY = -(bHeight / 2) + 50;
 
@@ -78,7 +98,7 @@ namespace Smoke
 		}
 
 		// Set the UI Objects
-		g_Engine->GetUIManager()->SetUIObjects(uiObjects);
+		SetUIObjects(uiObjects);
 	}
 
 
@@ -147,9 +167,9 @@ namespace Smoke
 			for (_uiIt = _uiObjects.begin(); _uiIt != _uiObjects.end(); ++_uiIt)
 			{
 				/*
-			Dynamically cast in IRenderableObject to ensure each
-			object can call the Render() function
-			*/
+					Dynamically cast in IRenderableObject to ensure each
+					object can call the Render() function
+				*/
 				IRenderableObject *pTemp = NULL;
 				pTemp = dynamic_cast<IRenderableObject*>((*_uiIt));
 

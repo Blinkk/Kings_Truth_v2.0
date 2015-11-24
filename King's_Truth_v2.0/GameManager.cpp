@@ -16,7 +16,7 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(0.3f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
 
 	/////////////////////
 	// Create a player
@@ -237,7 +237,6 @@ void GameManager::Game_Render()
 		//////////////////////////////
 		// Begin Spritebatch for 2D
 		g_Engine->GetSpriteObj()->Begin(D3DXSPRITE_ALPHABLEND | D3DXSPRITE_OBJECTSPACE);
-
 
 		// Render backgrounds
 		g_Engine->GetBackgroundManager()->Render();

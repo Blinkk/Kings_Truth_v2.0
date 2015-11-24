@@ -8,7 +8,10 @@ namespace Smoke
 		// Set default values
 		_text = "";
 		_offsetPosition = Vector2(0, 0);
-		_cameraPrevPos = Vector2(0, 0);
+		if (g_Engine->GetActiveCamera())
+			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
+		else
+			_cameraPrevPos = Vector2(0, 0);
 
 		Renderer.SetX(0);
 		Renderer.SetY(0);
@@ -31,12 +34,16 @@ namespace Smoke
 		// Set offset amount
 		_offsetPosition = Vector2(offsetX, offsetY);
 
+		// Set dimensions
+		_width = lWidth;
+		_height = lHeight;
+
 		// Initialize Renderer
 		switch (textureID)
 		{
 		case STANDARD_LABEL_TEXTURE:
-			Renderer.Initialize(1.0f, 1.0f, _width, _height, 1, 0, 0, 0, 1, 0.0f,
-				_offsetPosition.x, _offsetPosition.y, "");
+			Renderer.Initialize(1.0f, 1.0f, _width, _height, 1, 0, 0, 0, 1,
+				0.0f, _offsetPosition.x, _offsetPosition.y, "label_texture.png");
 			break;
 
 		default:
@@ -109,6 +116,6 @@ namespace Smoke
 		float textY = (Renderer.GetPos().y + (_height / 2)) - (_fontObject.getTextHeight(_text) / 2);
 
 		// Print text to screen
-		_fontObject.Print(Renderer.GetPos().x, Renderer.GetPos().y, _text, _textColor);
+		_fontObject.Print(textX, textY, _text, _textColor);
 	}
 }
