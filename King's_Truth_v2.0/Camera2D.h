@@ -34,6 +34,13 @@ namespace Smoke
 		*/
 		void Render();
 
+		/*
+			This function will be used as a wrapper to update the camera
+			position. This allows the camera to be able to update its position
+			without calling the entire Render() function
+		*/
+		void UpdatePos();
+
 		//////////////////////////////
 		// Accessor/Mutator functions
 		//////////////////////////////

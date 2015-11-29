@@ -25,31 +25,11 @@ namespace Smoke
 
 
 	void Label::Initialize(std::string fontName, int fontSize, 
-		float offsetX, float offsetY, float lWidth, float lHeight,
-		std::string text, unsigned int textureID, D3DXCOLOR textColor)
+		float offsetX, float offsetY, std::string text, 
+		unsigned int textureID, D3DXCOLOR textColor)
 	{
 		// Set object type
 		_objectType = UI_OBJECT_TYPES::UI_LABEL;
-
-		// Set offset amount
-		_offsetPosition = Vector2(offsetX, offsetY);
-
-		// Set dimensions
-		_width = lWidth;
-		_height = lHeight;
-
-		// Initialize Renderer
-		switch (textureID)
-		{
-		case STANDARD_LABEL_TEXTURE:
-			Renderer.Initialize(1.0f, 1.0f, _width, _height, 1, 0, 0, 0, 1,
-				0.0f, _offsetPosition.x, _offsetPosition.y, "label_texture.png");
-			break;
-
-		default:
-			debug << "\tLabel could not load texture because textureID out of range, reverted to default" << std::endl;
-			break;
-		}
 
 		// Create the font object
 		_fontObject = Font(fontName, fontSize);
@@ -58,18 +38,31 @@ namespace Smoke
 		_text = text;
 		_textColor = textColor;
 
-		// Set camera original position and scaling factor for UI Objects
-		if (g_Engine->GetActiveCamera() != NULL)
+		// Set offset amount
+		_offsetPosition = Vector2(offsetX, offsetY);
+
+		// Set dimensions
+		float paddingX = 5.0f;
+		float paddingY = paddingX * 0.75f;
+		_width = _fontObject.getTextWidth(_text) + paddingX;
+		_height = _fontObject.getTextHeight(_text) + paddingY;
+
+		// Initialize Renderer
+		switch (textureID)
 		{
-			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
+		case STANDARD_LABEL_TEXTURE:
+			Renderer.Initialize(1.0f, 1.0f, _width, _height, 1, 0, 0, 0, 1,
+				0.0f, _offsetPosition.x, _offsetPosition.y, "");
+			break;
 
-			// Determine scaling
-			float scaleX = _width / Renderer.GetAdjustedWidth();
-			float scaleY = _height / Renderer.GetAdjustedHeight();
-
-			Renderer.SetScaleX(scaleX * g_Engine->GetActiveCamera()->GetZoomFactor());
-			Renderer.SetScaleY(scaleY * g_Engine->GetActiveCamera()->GetZoomFactor());
+		default:
+			debug << "\tLabel could not load texture because textureID out of range, reverted to default" << std::endl;
+			break;
 		}
+
+		// Set camera original position (scaling handled by size of text)
+		if (g_Engine->GetActiveCamera() != NULL)
+			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
 	}
 
 

@@ -36,6 +36,12 @@ namespace Smoke
         D3DXCreateFontIndirect(g_Engine->GetDevice(), &fontDesc, &fontObj);
     }
 
+	Font::~Font()
+	{
+		//if (fontObj)
+		//	fontObj->Release();
+	}
+
     void Font::Print(int x, int y, string text, D3DCOLOR color)
     {
         //figure out the text boundary

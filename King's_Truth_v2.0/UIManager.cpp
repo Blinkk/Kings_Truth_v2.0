@@ -25,27 +25,17 @@ namespace Smoke
 			// Set up button dimensions and offset
 			float lWidth = 200.0f;
 			float lHeight = 75.0f;
-			float offsetX = 0.0f;
-			float offsetY = 0.0f;
+			float offsetX = -((SCREENW / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 10;
+			float offsetY = -((SCREENH / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 7.5f;
 
-			Label *pTemp = g_Engine->GetFactory()->CreateObject<Label>();
+			Label* pTemp = g_Engine->GetFactory()->CreateObject<Label>();
 			if (pTemp)
 			{
-				pTemp->Initialize("Calibri", 14, offsetX, offsetY, lWidth,
-					lHeight, "Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
+				pTemp->Initialize("Calibri", 12, offsetX, offsetY,
+					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
 
 				uiObjects.push_back(pTemp);
 			}
-
-			Button *bTemp = g_Engine->GetFactory()->CreateObject<Button>();
-			if (bTemp)
-			{
-				bTemp->Initialize("Calibri", 14, offsetX, offsetY, lWidth,
-					lHeight, "Health: ", BUTTONTEXTURES::MENU_BUTTON_TEXTURE);
-
-				uiObjects.push_back(bTemp);
-			}
-			
 		}
 
 		// Set the UI Objects

@@ -43,8 +43,8 @@ namespace Smoke
 			in those values for the offsetX and offsetY.
 		*/
 		void Initialize(std::string fontName, int fontSize,
-			float offsetX, float offsetY,float lWidth, float lHeight, 
-			std::string text, unsigned int textureID = 0, D3DXCOLOR textColor = D3DCOLOR_XRGB(255, 255, 255));
+			float offsetX, float offsetY, std::string text, 
+			unsigned int textureID = 0, D3DXCOLOR textColor = D3DCOLOR_XRGB(255, 255, 255));
 	};
 }
 

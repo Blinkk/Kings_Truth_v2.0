@@ -16,7 +16,7 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(0.3f);
 
 	/////////////////////
 	// Create a player
@@ -26,6 +26,12 @@ void Level1()
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);
+
+	/* 
+		THIS IS VERY IMPORTANT FOR LOADING UI OBJECTS 
+	*/
+	// Update camera position BEFORE loading UI
+	g_Engine->GetActiveCamera()->UpdatePos();
 
 	//////////////////////////////////
 	// Load in the map for this level
@@ -190,6 +196,9 @@ void GameManager::UnloadLevel()
 
 	// Purge map objects
 	_tileManager->PurgeMapObjects();
+
+	// Purge event system listeners to allow for new level objects to register
+	g_Engine->GetEventManager()->PurgeAllListeners();
 }
 
 

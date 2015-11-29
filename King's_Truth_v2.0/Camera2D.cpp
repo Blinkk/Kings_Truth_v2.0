@@ -28,14 +28,7 @@ namespace Smoke
 	void Camera2D::Render()
 	{
 		// Update position
-		if (g_Engine->GetPlayer() != NULL)
-		{
-			_position = g_Engine->GetPlayer()->GetCurrentPos();
-			_position.x += 8;	// Move to center of player
-			_position.y += 8;	// Move to center of player
-		}
-		else
-			_position = Vector2((SCREENW / 2) * _zoomFactor, (SCREENH / 2) * _zoomFactor);
+		UpdatePos();
 
 		// Set up view Matrix
 		D3DXMATRIX viewMatrix = D3DXMATRIX(
@@ -53,6 +46,20 @@ namespace Smoke
 		g_Engine->GetDevice()->SetTransform(D3DTS_PROJECTION, &_projMatrix);
 		g_Engine->GetDevice()->SetTransform(D3DTS_WORLD, &identityMatrix);
 		g_Engine->GetDevice()->SetTransform(D3DTS_VIEW, &viewMatrix);
+	}
+
+
+	void Camera2D::UpdatePos()
+	{
+		// Update position
+		if (g_Engine->GetPlayer() != NULL)
+		{
+			_position = g_Engine->GetPlayer()->GetCurrentPos();
+			_position.x += 8;	// Move to center of player
+			_position.y += 8;	// Move to center of player
+		}
+		else
+			_position = Vector2((SCREENW / 2) * _zoomFactor, (SCREENH / 2) * _zoomFactor);
 	}
 
 

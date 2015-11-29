@@ -23,7 +23,7 @@ namespace Smoke
     public:
 		Font();
         Font(std::string name, int size);
-        ~Font() { }
+		~Font();
         void Print(int x, int y, std::string text, D3DCOLOR color);
         int getTextWidth(std::string text);
         int getTextHeight(std::string text);
