@@ -35,6 +35,13 @@ namespace Smoke
 					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
 
 				uiObjects.push_back(pTemp);
+				pTemp = NULL;
+			}
+
+			Button* bTemp = g_Engine->GetFactory()->CreateObject<Button>();
+			if (pTemp)
+			{
+				
 			}
 		}
 
@@ -70,6 +77,7 @@ namespace Smoke
 					bWidth, bHeight, "START", BUTTONTYPES::START_BUTTON, BUTTONTEXTURES::MENU_BUTTON_TEXTURE, D3DCOLOR_XRGB(255, 255, 255));
 
 				uiObjects.push_back(pTemp);
+				pTemp = NULL;
 			}
 
 			// Create a exit button and initialize it, then add to vector
@@ -84,6 +92,7 @@ namespace Smoke
 					bWidth, bHeight, "EXIT", BUTTONTYPES::EXIT_BUTTON, BUTTONTEXTURES::MENU_BUTTON_TEXTURE, D3DCOLOR_XRGB(255, 255, 255));
 
 				uiObjects.push_back(pTemp);
+				pTemp = NULL;
 			}
 		}
 

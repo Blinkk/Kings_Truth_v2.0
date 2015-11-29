@@ -90,7 +90,7 @@ GameManager::GameManager()
 	_tileManager = NULL;
 	_camera = NULL;
 
-	lvlPtr = &Level_MainMenu;		// Set default level to Level1
+	lvlPtr = &Level_MainMenu;		// Set default level to Main_Menu
 	_currentLevel = LEVELS::LEVEL_MAIN_MENU;	// Set current level
 }
 
@@ -196,9 +196,6 @@ void GameManager::UnloadLevel()
 
 	// Purge map objects
 	_tileManager->PurgeMapObjects();
-
-	// Purge event system listeners to allow for new level objects to register
-	g_Engine->GetEventManager()->PurgeAllListeners();
 }
 
 

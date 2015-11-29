@@ -68,7 +68,7 @@ namespace Smoke
 		if (!pTemp)
 			pTemp = new T();
 
-		// Assign new object an ID
+		// If new object is an IGameObject, assign it an ID
 		IGameObject* pTempObj = dynamic_cast<IGameObject*>(pTemp);
 		if (pTempObj)
 		{

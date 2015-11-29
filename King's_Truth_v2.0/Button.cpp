@@ -20,7 +20,9 @@ namespace Smoke
 
 	Button::~Button()
 	{
-		
+		// Purge event listeners
+		g_Engine->GetEventManager()->PurgeListener(ID, Events::CLICK_DOWN);
+		g_Engine->GetEventManager()->PurgeListener(ID, Events::CLICK_UP);
 	}
 
 
@@ -107,10 +109,10 @@ namespace Smoke
 				if (pTemp->left)
 				{
 					// Check if mouse position was within the button collider
-					if ((pTemp->mousePosX < Renderer.GetPos().x + _width
-						&& pTemp->mousePosX > Renderer.GetPos().x)
-						&& (pTemp->mousePosY < Renderer.GetPos().y + _height
-						&& pTemp->mousePosY > Renderer.GetPos().y))
+					if ((pTemp->mousePosX < _collider.right
+						&& pTemp->mousePosX > _collider.left)
+						&& (pTemp->mousePosY < _collider.bottom
+						&& pTemp->mousePosY > _collider.top))
 					{
 						// Change button frame to show it has been clicked
 						Renderer.SetCurrentFrame(1);
@@ -134,10 +136,10 @@ namespace Smoke
 				if (pTemp->left)
 				{
 					// Check if mouse position was within the button collider
-					if ((pTemp->mousePosX < Renderer.GetPos().x + _width
-						&& pTemp->mousePosX > Renderer.GetPos().x)
-						&& (pTemp->mousePosY < Renderer.GetPos().y + _height
-						&& pTemp->mousePosY > Renderer.GetPos().y))
+					if ((pTemp->mousePosX < _collider.right
+						&& pTemp->mousePosX > _collider.left)
+						&& (pTemp->mousePosY < _collider.bottom
+						&& pTemp->mousePosY > _collider.top))
 					{
 						// Reset button frame to default
 						Renderer.SetCurrentFrame(0);
