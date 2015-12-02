@@ -12,6 +12,7 @@
 // UI_Object headers
 #include "Label.h"
 #include "Button.h"
+#include "PicBox.h"
 
 enum UI_LEVELS
 {

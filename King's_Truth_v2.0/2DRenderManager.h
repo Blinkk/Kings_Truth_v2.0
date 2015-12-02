@@ -79,7 +79,7 @@ namespace Smoke
 		//////////////////////////
 		// Accessor / Mutators
 		//////////////////////////
-		bool GetHasTextureFlag() { return _hasTexture; }
+		bool HasTexture() { return _hasTexture; }
 		Vector2 GetPos() { return _posVector; }
 		const float GetAdjustedWidth() { return _frameW * _scaleX; }
 		const float GetAdjustedHeight() { return _frameH * _scaleY; }

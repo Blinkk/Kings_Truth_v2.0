@@ -6,7 +6,7 @@
 
 enum LABELTEXTURES
 {
-	STANDARD_LABEL_TEXTURE = 0
+	STANDARD_LABEL_TEXTURE = 0,
 };
 
 namespace Smoke

@@ -208,7 +208,7 @@ namespace Smoke
 		}
 
 		// If a texture has been given to the Renderer, render it
-		if (Renderer.GetHasTextureFlag())
+		if (Renderer.HasTexture())
 			Renderer.Render();
 
 		// Calc text position

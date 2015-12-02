@@ -38,7 +38,7 @@ namespace Smoke
 
 	void StaticBackground::Render()
 	{
-		if (Renderer.GetHasTextureFlag())
+		if (Renderer.HasTexture())
 			Renderer.Render();
 	}
 }

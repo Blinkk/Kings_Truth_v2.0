@@ -98,7 +98,6 @@ public:
 	// Accessor/Mutator Functions
 	//////////////////////////////
 	TileManager* GetTileManager() { return _tileManager; }
-	Camera2D* GetCamera() { return _camera; }
 	const unsigned int GetFrameInterval() { return _frameInterval; }
 	void SetFrameInterval(unsigned int newFrameInterval) { _frameInterval = newFrameInterval; }
 	unsigned int GetCurrentLevel() { return _currentLevel; }

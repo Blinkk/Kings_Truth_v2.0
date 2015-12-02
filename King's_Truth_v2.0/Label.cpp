@@ -50,7 +50,7 @@ namespace Smoke
 		// Initialize Renderer
 		switch (textureID)
 		{
-		case STANDARD_LABEL_TEXTURE:
+		case LABELTEXTURES::STANDARD_LABEL_TEXTURE:
 			Renderer.Initialize(1.0f, 1.0f, _width, _height, 1, 0, 0, 0, 1,
 				0.0f, _offsetPosition.x, _offsetPosition.y, "");
 			break;
@@ -101,7 +101,7 @@ namespace Smoke
 		}
 
 		// If a texture has been given to the Renderer, render it
-		if (Renderer.GetHasTextureFlag())
+		if (Renderer.HasTexture())
 			Renderer.Render();
 
 		// Calc text position

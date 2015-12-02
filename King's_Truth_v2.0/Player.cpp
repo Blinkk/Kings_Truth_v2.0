@@ -276,7 +276,7 @@ void Player::Update(float deltaTime)
 
 void Player::Render()
 {
-	if (Renderer.GetHasTextureFlag())
+	if (Renderer.HasTexture())
 		Renderer.Render();
 }
 

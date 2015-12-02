@@ -153,6 +153,9 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.cpp">
       <Filter>Framework\DirectX / Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.cpp">
+      <Filter>Framework\UI\UI_Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
@@ -256,6 +259,9 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.h">
       <Filter>Framework\DirectX / Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.h">
+      <Filter>Framework\UI\UI_Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -85,6 +85,7 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Button.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IUI_Object.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.h" />
