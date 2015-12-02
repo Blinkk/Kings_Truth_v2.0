@@ -264,31 +264,31 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\hedge_maze.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\hedge_maze.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\ice_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\ice_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\lightblue_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\lightblue_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\purple_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\purple_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_bricks.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\stone_bricks.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_walls.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\stone_walls.png">
       <Filter>Game\Resource Files\Maps</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\player.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_background.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_background.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_button.png">
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>

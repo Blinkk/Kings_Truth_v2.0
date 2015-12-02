@@ -31,18 +31,18 @@ namespace Smoke
 			Label* pTemp = g_Engine->GetFactory()->CreateObject<Label>();
 			if (pTemp)
 			{
-				pTemp->Initialize("Calibri", 12, offsetX, offsetY,
+				pTemp->Initialize("Calibri", 10, offsetX, offsetY,
 					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
 
 				uiObjects.push_back(pTemp);
 				pTemp = NULL;
 			}
 
-			Button* bTemp = g_Engine->GetFactory()->CreateObject<Button>();
-			if (pTemp)
-			{
-				
-			}
+			//Button* bTemp = g_Engine->GetFactory()->CreateObject<Button>();
+			//if (pTemp)
+			//{
+			//	
+			//}
 		}
 
 		// Set the UI Objects

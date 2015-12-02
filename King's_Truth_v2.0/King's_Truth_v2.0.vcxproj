@@ -147,15 +147,15 @@
     <Text Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textureList.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_background.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\menu_button.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\player.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\hedge_maze.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\ice_bricks.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\lightblue_bricks.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\purple_bricks.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_bricks.png" />
-    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\bin\SourceMaps\stone_walls.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_background.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\hedge_maze.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\ice_bricks.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\lightblue_bricks.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\purple_bricks.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\stone_bricks.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\stone_walls.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
