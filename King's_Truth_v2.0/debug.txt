@@ -18,3 +18,5 @@ Engine shutting down...
 	Error releasing D3DContext
 	Error releasing D3DDevice
 Engine shutdown complete.
+
+Changes made
