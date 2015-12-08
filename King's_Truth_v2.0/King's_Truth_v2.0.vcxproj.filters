@@ -52,12 +52,6 @@
     <Filter Include="Game\Source Files\Graphics">
       <UniqueIdentifier>{bff891a4-0d69-483e-a0b5-110dc4ae3adf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Header Files\Entities">
-      <UniqueIdentifier>{5ef4cd6e-289e-4c5b-a37b-b628c8144986}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Source Files\Entities">
-      <UniqueIdentifier>{46d0fc26-48d6-4216-9e78-6813dee5dc80}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\Source Files\Utilities">
       <UniqueIdentifier>{67a27e5e-986a-4bac-8de6-080d3d19dfdf}</UniqueIdentifier>
     </Filter>
@@ -72,6 +66,24 @@
     </Filter>
     <Filter Include="Framework\DirectX / Graphics">
       <UniqueIdentifier>{15dee395-d4b0-4117-bd57-dec36f8c0154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\GameObjects">
+      <UniqueIdentifier>{de2f7a9d-8814-4460-8213-ed999722effc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\GameObjects\Entities">
+      <UniqueIdentifier>{5ef4cd6e-289e-4c5b-a37b-b628c8144986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\GameObjects">
+      <UniqueIdentifier>{6f3f44d6-125b-4831-9b6d-ad236488a512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\GameObjects\Entities">
+      <UniqueIdentifier>{46d0fc26-48d6-4216-9e78-6813dee5dc80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\GameObjects\Weapons">
+      <UniqueIdentifier>{593d7b93-4fe6-4a45-be43-f2e2bc11ff33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Source Files\GameObjects\Weapons">
+      <UniqueIdentifier>{07a81c3c-e1c2-4eb3-be93-fd92d911e47f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -124,7 +136,7 @@
       <Filter>Game\Source Files\Utilities</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.cpp">
-      <Filter>Game\Source Files\Entities</Filter>
+      <Filter>Game\Source Files\GameObjects\Entities</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\GameManager.cpp">
       <Filter>Game\Source Files\Game Manager</Filter>
@@ -155,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.cpp">
       <Filter>Framework\UI\UI_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.cpp">
+      <Filter>Game\Source Files\GameObjects\Weapons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -219,7 +234,7 @@
       <Filter>Framework\DirectX / Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Player.h">
-      <Filter>Game\Header Files\Entities</Filter>
+      <Filter>Game\Header Files\GameObjects\Entities</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.h">
       <Filter>Game\Header Files\Utilities</Filter>
@@ -262,6 +277,12 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.h">
       <Filter>Framework\UI\UI_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IWeapon.h">
+      <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.h">
+      <Filter>Game\Header Files\GameObjects\Weapons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
