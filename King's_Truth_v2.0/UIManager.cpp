@@ -47,12 +47,6 @@ namespace Smoke
 				uiObjects.push_back(pTemp1);
 				pTemp1 = NULL;
 			}
-
-			//Button* bTemp = g_Engine->GetFactory()->CreateObject<Button>();
-			//if (pTemp)
-			//{
-			//	
-			//}
 		}
 
 		// Set the UI Objects
