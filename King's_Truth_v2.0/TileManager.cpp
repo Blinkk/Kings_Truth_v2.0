@@ -72,7 +72,7 @@ void TileManager::TileMap(unsigned int levelID)
 	inStream.open(layoutFile);
 
 	// Get each char and create a tile
-	Tile* pTemp = NULL;
+	Tile* pTemp = nullptr;
 	for (int r = 0; r < _rows; ++r)
 	{
 		for (int c = 0; c < _columns; ++c)
@@ -83,7 +83,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Single path
 			case TileTypes::SINGLE_PATH:
 				pTemp = new SinglePathTile(posX, posY, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -91,7 +91,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Alt Single path 
 			case TileTypes::SINGLE_PATH_ALT:
 				pTemp = new SinglePathTileAlt(posX, posY, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -99,7 +99,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Corner path
 			case TileTypes::SNGLE_PATH_CORNER:
 				pTemp = new CornerPathTile(posX, posY, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -107,7 +107,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Single wall
 			case TileTypes::SINGLE_WALL:
 				pTemp = new SingleWallTile(posX, posY, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -119,7 +119,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 1
 			case TileTypes::WIDE_WALL_1:
 				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::FIRST, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -127,7 +127,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 2
 			case TileTypes::WIDE_WALL_2:
 				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::SECOND, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -135,7 +135,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 3
 			case TileTypes::WIDE_WALL_3:
 				pTemp = new WideWallTilePiece(posX, posY, TILEPOS::LAST, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -146,7 +146,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 1
 			case TileTypes::LONG_WALL_1:
 				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::FIRST, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -154,7 +154,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 2
 			case TileTypes::LONG_WALL_2:
 				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::SECOND, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -162,7 +162,7 @@ void TileManager::TileMap(unsigned int levelID)
 				// Piece 3
 			case TileTypes::LONG_WALL_3:
 				pTemp = new LongWallTilePiece(posX, posY, TILEPOS::LAST, textureFile);
-				if (_tileMap[r][c] == NULL)
+				if (_tileMap[r][c] == nullptr)
 					_tileMap[r][c] = pTemp;
 				posX += TILE_SIZE_X;
 				break;
@@ -192,7 +192,7 @@ void TileManager::DrawMap()
 	if (!_tileMap.empty())
 	{
 		// Render all of the tiles
-		IRenderableObject *pTemp = NULL;
+		IRenderableObject *pTemp = nullptr;
 		for (i = _tileMap.begin(); i != _tileMap.end(); ++i)
 		{
 			for (j = (*i).second.begin(); j != (*i).second.end(); ++j)

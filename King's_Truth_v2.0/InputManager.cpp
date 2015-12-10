@@ -108,11 +108,11 @@ namespace Smoke
 	bool InputManager::DirectInput_Initialize()
 	{
 		// Create DirectInput object
-		DirectInput8Create(GetModuleHandle(NULL), DIRECTINPUT_VERSION,
-			IID_IDirectInput8, (void**)&di, NULL);
+		DirectInput8Create(GetModuleHandle(nullptr), DIRECTINPUT_VERSION,
+			IID_IDirectInput8, (void**)&di, nullptr);
 
 		// Initialize keyboard
-		di->CreateDevice(GUID_SysKeyboard, &diKeyboard, NULL);
+		di->CreateDevice(GUID_SysKeyboard, &diKeyboard, nullptr);
 		diKeyboard->SetDataFormat(&c_dfDIKeyboard);
 		diKeyboard->SetCooperativeLevel(g_Engine->GetWindowHandle(),
 			DISCL_FOREGROUND | DISCL_NONEXCLUSIVE);
@@ -122,7 +122,7 @@ namespace Smoke
 		memset(keyState, 0, 256);
 
 		// Initialize mouse
-		di->CreateDevice(GUID_SysMouse, &diMouse, NULL);
+		di->CreateDevice(GUID_SysMouse, &diMouse, nullptr);
 		diMouse->SetDataFormat(&c_dfDIMouse);
 		diMouse->SetCooperativeLevel(g_Engine->GetWindowHandle(),
 			DISCL_FOREGROUND | DISCL_NONEXCLUSIVE);
@@ -167,7 +167,7 @@ namespace Smoke
 				debug << "\t\tFailed to release mouse" << std::endl;
 				bugs++;
 			}
-			diMouse = NULL;
+			diMouse = nullptr;
 		}
 		if (diKeyboard)
 		{
@@ -177,7 +177,7 @@ namespace Smoke
 				debug << "\t\tFailed to release keyboard" << std::endl;
 				bugs++;
 			}
-			diKeyboard = NULL;
+			diKeyboard = nullptr;
 		}
 		if (di->Release() > 0)
 		{
@@ -189,16 +189,16 @@ namespace Smoke
 		if (keyboard)
 		{
 			delete keyboard;
-			keyboard = NULL;
+			keyboard = nullptr;
 		}
 
 		if (mouse)
 		{
 			delete mouse;
-			mouse = NULL;
+			mouse = nullptr;
 		}
 
-		if (mouse == NULL && keyboard == NULL)
+		if (mouse == nullptr && keyboard == nullptr)
 			debug << "\tInput shutdown successfully" << std::endl;
 		else
 			debug << "\tError shutting down input" << std::endl;

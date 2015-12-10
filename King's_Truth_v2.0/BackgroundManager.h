@@ -26,7 +26,7 @@ namespace Smoke
 	public:
 		static BackgroundManager& GetInstance()
 		{
-			BackgroundManager *pInstance = NULL;
+			BackgroundManager *pInstance = nullptr;
 
 			if (!pInstance)
 			{

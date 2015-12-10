@@ -61,7 +61,7 @@ namespace Smoke
 		}
 
 		// Set camera original position (scaling handled by size of text)
-		if (g_Engine->GetActiveCamera() != NULL)
+		if (g_Engine->GetActiveCamera() != nullptr)
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
 	}
 

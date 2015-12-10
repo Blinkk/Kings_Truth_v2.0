@@ -2,6 +2,7 @@
 #define INVENTORY_H
 #include "IGameObject.h"
 #include <map>
+using namespace Smoke;
 
 //////////////////////////////////////////////
 // Only one inventory should ever be created
@@ -24,8 +25,12 @@ public:
 
 		return (*pInstance);
 	}
+
 	~Inventory();
 
+	void AddItem(IGameObject* obj);
+	void RemoveItem(unsigned int objectID);
+	void PurgeInventory();
 };
 
 #endif

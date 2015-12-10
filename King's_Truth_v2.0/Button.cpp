@@ -70,7 +70,7 @@ namespace Smoke
 		}
 
 		// Set camera original position and scaling factor for UI Objects
-		if (g_Engine->GetActiveCamera() != NULL)
+		if (g_Engine->GetActiveCamera() != nullptr)
 		{
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
 

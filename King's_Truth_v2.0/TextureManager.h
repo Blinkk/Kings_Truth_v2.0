@@ -22,7 +22,7 @@ namespace Smoke
 
 		static TextureManager& GetInstance()
 		{
-			TextureManager *pInstance = NULL;
+			TextureManager *pInstance = nullptr;
 
 			if (!pInstance)
 			{

@@ -86,9 +86,9 @@ GameManager::GameManager()
 	_frameInterval = DEFAULT_FPS;	// Set default fps
 	GameObjects.clear();			// Clear vector of GameObjects
 
-	// Set tile manager pointer to NULL
-	_tileManager = NULL;
-	_camera = NULL;
+	// Set tile manager pointer to nullptr
+	_tileManager = nullptr;
+	_camera = nullptr;
 
 	lvlPtr = &Level_MainMenu;		// Set default level to Main_Menu
 	_currentLevel = LEVELS::LEVEL_MAIN_MENU;	// Set current level
@@ -101,7 +101,7 @@ GameManager::~GameManager()
 	if (_tileManager)
 	{
 		delete _tileManager;
-		_tileManager = NULL;
+		_tileManager = nullptr;
 	}
 }
 
@@ -111,13 +111,13 @@ GameManager::~GameManager()
 ////////////////////////////////////////
 bool GameManager::Game_Init()
 {
-	srand(time(NULL));
+	srand(time(nullptr));
 
 	/////////////////////////
 	// Create a camera
 	/////////////////////////
 	_camera = new Camera2D();
-	if (_camera == NULL)
+	if (_camera == nullptr)
 	{
 		debug << "\tFailed to create camera in Game_Init()" << std::endl;
 		return false;
@@ -251,7 +251,7 @@ void GameManager::Game_Render()
 		_tileManager->DrawMap();
 
 		// Render the renderable game objects
-		IRenderableObject *pTemp = NULL;
+		IRenderableObject *pTemp = nullptr;
 		for (goIt = GameObjects.begin(); goIt != GameObjects.end(); ++goIt)
 		{
 			/*

@@ -53,7 +53,7 @@ private:
 public:
 	static TileManager &GetInstance()
 	{
-		TileManager *pTemp = NULL;
+		TileManager *pTemp = nullptr;
 
 		if (!pTemp)
 		{

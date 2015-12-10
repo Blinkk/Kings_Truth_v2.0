@@ -37,7 +37,7 @@ namespace Smoke
 
 	void BackgroundManager::AddBackground(IBackground *bg)
 	{
-		if (bg != NULL)
+		if (bg != nullptr)
 			_backgrounds.push_back(bg);
 		else
 			debug << "\tFailed to add a background to vector" << std::endl;

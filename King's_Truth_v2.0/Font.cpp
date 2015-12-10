@@ -17,7 +17,7 @@ namespace Smoke
 
     Font::Font(string name, int pointsize)
     {
-        fontObj = NULL;
+        fontObj = nullptr;
 
         D3DXFONT_DESC fontDesc = {
             pointsize,              //height
@@ -46,7 +46,7 @@ namespace Smoke
     {
         //figure out the text boundary
         RECT rect = { x, y, 0, 0 };
-        fontObj->DrawText( NULL, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, color); 
+        fontObj->DrawText( nullptr, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, color); 
 
         //print the text
         fontObj->DrawText( g_Engine->GetSpriteObj(), text.c_str(), (int)text.length(), &rect, DT_LEFT, color); 
@@ -55,14 +55,14 @@ namespace Smoke
     int Font::getTextWidth(std::string text)
     {
         RECT rect = { 0, 0, 0, 0 };
-        fontObj->DrawText( NULL, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, 0xffffffff); 
+        fontObj->DrawText( nullptr, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, 0xffffffff); 
         return rect.right;
     }
 
     int Font::getTextHeight(std::string text)
     {
         RECT rect = { 0, 0, 0, 0 };
-        fontObj->DrawText( NULL, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, 0xffffffff); 
+        fontObj->DrawText( nullptr, text.c_str(), (int)text.length(), &rect, DT_CALCRECT, 0xffffffff); 
         return rect.bottom;
     }
 

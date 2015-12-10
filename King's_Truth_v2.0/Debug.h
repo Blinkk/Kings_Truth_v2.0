@@ -29,7 +29,7 @@ namespace Smoke
 
 		static Debug& GetInstance()
 		{
-			static Debug* pInstance = NULL;
+			static Debug* pInstance = nullptr;
 
 			if (!pInstance)
 			{

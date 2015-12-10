@@ -55,7 +55,7 @@ namespace Smoke
 
 		_curFrame = _startFrame;	// Set current frame to the start frame
 
-		if (_texture != NULL)
+		if (_texture != nullptr)
 			_hasTexture = true;
 	}
 
@@ -91,7 +91,7 @@ namespace Smoke
 
 		// Create the matrix
 		D3DXMATRIX transform;
-		D3DXMatrixTransformation2D(&transform, NULL, 0, &scale.ToD3DXVECTOR2(),
+		D3DXMatrixTransformation2D(&transform, nullptr, 0, &scale.ToD3DXVECTOR2(),
 			&center.ToD3DXVECTOR2(), _rotation, &translation.ToD3DXVECTOR2());
 
 		// Set our transform matrix
@@ -105,7 +105,7 @@ namespace Smoke
 		rect.bottom = rect.top + _frameH;
 
 		// Draw to screen
-		g_Engine->GetSpriteObj()->Draw(_texture, &rect, NULL, NULL, D3DCOLOR_XRGB(255, 255, 255));
+		g_Engine->GetSpriteObj()->Draw(_texture, &rect, nullptr, nullptr, D3DCOLOR_XRGB(255, 255, 255));
 
 		// Reset transform to identity matrix
 		D3DXMATRIX mat;
@@ -155,8 +155,8 @@ namespace Smoke
 	{
 		_texture = g_Engine->GetTextureManager()->RetrieveTexture(newTexture);
 
-		// Set the init flag to true if texture is not NULL
-		if (_texture != NULL)
+		// Set the init flag to true if texture is not nullptr
+		if (_texture != nullptr)
 			_hasTexture = true;
 		else
 			_hasTexture = false;

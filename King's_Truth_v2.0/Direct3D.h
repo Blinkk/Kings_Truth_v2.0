@@ -30,7 +30,7 @@ namespace Smoke
 	public:
 		static Direct3D& GetInstance()
 		{
-			Direct3D *pInstance = NULL;
+			Direct3D *pInstance = nullptr;
 
 			if (!pInstance)
 			{

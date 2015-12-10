@@ -3,7 +3,7 @@
 
 Collider::Collider()
 {
-	_boundingBox = NULL;
+	_boundingBox = nullptr;
 }
 
 
@@ -12,7 +12,7 @@ Collider::~Collider()
 	if (_boundingBox)
 	{
 		delete _boundingBox;
-		_boundingBox = NULL;
+		_boundingBox = nullptr;
 	}
 }
 
