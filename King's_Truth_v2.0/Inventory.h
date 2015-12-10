@@ -1,6 +1,7 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
 #include "IGameObject.h"
+#include "IWeapon.h"
 #include <map>
 using namespace Smoke;
 
@@ -31,6 +32,13 @@ public:
 	void AddItem(IGameObject* obj);
 	void RemoveItem(unsigned int objectID);
 	void PurgeInventory();
+
+	/////////////////////////
+	// Accessors / Mutators
+	/////////////////////////
+	unsigned int GetNumItems();
+	unsigned int GetInventoryMax();
+	void SetInventoryMax(unsigned int maxItems);
 };
 
 #endif
