@@ -171,6 +171,9 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.cpp">
       <Filter>Game\Source Files\GameObjects\Weapons</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Inventory.cpp">
+      <Filter>Game\Source Files\Utilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.h">
@@ -283,6 +286,9 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.h">
       <Filter>Game\Header Files\GameObjects\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Inventory.h">
+      <Filter>Game\Header Files\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
