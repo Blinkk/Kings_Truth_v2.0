@@ -10,6 +10,7 @@ class IWeapon : public IGameObject, public IRenderableObject
 protected:
 	float _range;
 	float _damage;
+	bool _inInventory;
 
 	TwoDRenderManager Renderer;
 

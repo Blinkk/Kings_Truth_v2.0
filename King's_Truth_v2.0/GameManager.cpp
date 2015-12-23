@@ -4,7 +4,6 @@
 *  Date Created: 06/02/2015
 ***********************************/
 #include "GameManager.h"
-#include "Player.h"
 
 
 ///////////////////////////
@@ -23,6 +22,7 @@ void Level1()
 	/////////////////////
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
+
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);

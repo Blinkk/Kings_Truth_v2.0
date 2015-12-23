@@ -38,15 +38,15 @@ namespace Smoke
 				pTemp = nullptr;
 			}
 
-			PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTemp1)
-			{
-				offsetX += 25;
-				pTemp1->Initialize(200, 40, offsetX, offsetY, true, "health_bar.png");
-
-				uiObjects.push_back(pTemp1);
-				pTemp1 = nullptr;
-			}
+			//PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			//if (pTemp1)
+			//{
+			//	offsetX += 25;
+			//	pTemp1->Initialize(200, 40, offsetX, offsetY, true, "health_bar.png");
+			//
+			//	uiObjects.push_back(pTemp1);
+			//	pTemp1 = nullptr;
+			//}
 		}
 
 		// Set the UI Objects

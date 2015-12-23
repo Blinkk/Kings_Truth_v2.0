@@ -10,6 +10,8 @@
 #include "Mouse.h"
 #include "StaticBackground.h"
 #include "TileManager.h"
+#include "Player.h"
+#include "Sword.h"
 #include <Windows.h>
 using namespace Smoke;
 
