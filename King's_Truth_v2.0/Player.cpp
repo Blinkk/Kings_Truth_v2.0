@@ -33,6 +33,9 @@ Player::Player()
 	// Initialize hitbox
 	hitBox.Initialize(Renderer.GetPos().GetX(), Renderer.GetPos().GetY(), 
 		Renderer.GetAdjustedWidth(), Renderer.GetAdjustedHeight());
+
+	// Initialize inventory
+	_playerInventory = &Inventory::GetInstance();
 }
 
 
@@ -318,13 +321,39 @@ void Player::KeepInBounds()
 	}
 }
 
-//////////////////////
-// Set movement flags
-//////////////////////
+/////////////////////////
+// Utility Functions
+/////////////////////////
 void Player::SetMovementFlags(bool left, bool right, bool up, bool down)
 {
 	_canGoLeft = left;
 	_canGoRight = right;
 	_canGoUp = up;
 	_canGoDown = down;
+}
+
+
+void Player::AddItemToInventory(IGameObject* item)
+{
+	// Check if inventory limit has been reached
+	if (_playerInventory->GetNumItems() < _playerInventory->GetInventoryMax())
+		_playerInventory->AddItem(item);
+	else
+		return;
+}
+
+
+
+/////////////////////////
+// Accessors / Mutators
+/////////////////////////
+Vector2 Player::GetCurrentPos()
+{
+	return _currentPos;
+}
+
+
+RECT Player::GetHitbox()
+{
+	return Renderer.GetBoundingBox();
 }

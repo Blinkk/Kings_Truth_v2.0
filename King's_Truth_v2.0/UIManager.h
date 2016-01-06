@@ -54,7 +54,7 @@ namespace Smoke
 	public:
 		static UIManager& GetInstance()
 		{
-			UIManager *pInstance = NULL;
+			UIManager *pInstance = nullptr;
 
 			if (!pInstance)
 			{

@@ -43,8 +43,8 @@ namespace Smoke
 			// Add "bin/" extension to filename
 			fileName = "Textures/" + fileName;
 
-			// If transparency key is NULL, add texture w/ NULL key
-			if (alphaR == "NULL" && alphaG == "NULL" && alphaB == "NULL")
+			// If transparency key is nullptr, add texture w/ nullptr key
+			if (alphaR == "nullptr" && alphaG == "nullptr" && alphaB == "nullptr")
 				AddTexture(fileName, NULL);
 			// Otherwise, get color key conversions and AddTexture w/ that key
 			else
@@ -63,7 +63,7 @@ namespace Smoke
 	void TextureManager::AddTexture(std::string textureToStore, D3DCOLOR transparencyKey)
 	{
 		HRESULT result;
-		LPDIRECT3DTEXTURE9 pTexture = NULL;
+		LPDIRECT3DTEXTURE9 pTexture = nullptr;
 		D3DXIMAGE_INFO _info;
 
 		// Get width and height from bitmap file
@@ -72,7 +72,7 @@ namespace Smoke
 		if (result != D3D_OK)
 		{
 			debug << "\tUnable to get image info" << std::endl;
-			pTexture = NULL;
+			pTexture = nullptr;
 			return;
 		}
 
@@ -90,14 +90,14 @@ namespace Smoke
 			D3DX_DEFAULT,			// Mip filter
 			transparencyKey,		// Color key for transparency
 			&_info,                 // Bitmap file info (from loaded file)
-			NULL,					// Color palette
+			nullptr,					// Color palette
 			&pTexture);				// Destination texture
 
 		// Check that texture was created successfully
 		if (result != D3D_OK)
 		{
 			debug << "\tFailed to create texture from file, name: " + textureToStore << std::endl;
-			pTexture = NULL;
+			pTexture = nullptr;
 			return;
 		}
 
@@ -108,7 +108,7 @@ namespace Smoke
 	LPDIRECT3DTEXTURE9 TextureManager::RetrieveTexture(std::string textureToRetrieve)
 	{
 		// Create a texture pointer
-		LPDIRECT3DTEXTURE9 texture = NULL;
+		LPDIRECT3DTEXTURE9 texture = nullptr;
 
 		// Add "bin/" extension
 		textureToRetrieve = "Textures/" + textureToRetrieve;
@@ -128,20 +128,20 @@ namespace Smoke
 		debug << "\tTextureManager shutting down..." << std::endl;
 
 		std::map<std::string, LPDIRECT3DTEXTURE9>::iterator tlIt;
-		LPDIRECT3DTEXTURE9 temp = NULL;
+		LPDIRECT3DTEXTURE9 temp = nullptr;
 		for (tlIt = _textureList.begin(); tlIt != _textureList.end(); ++tlIt)
 		{
 			// Get a temp pointer to the texture from map
 			temp = static_cast<LPDIRECT3DTEXTURE9>(tlIt->second);
 
-			if (temp == NULL)
+			if (temp == nullptr)
 				debug << "\t\tFailed to release a texture, name: " + tlIt->first << std::endl;
 			else
 				// Release texture
 				temp->Release();
 		}
 
-		// Erase elements in map (should be NULL)
+		// Erase elements in map (should be nullptr)
 		_textureList.erase(_textureList.begin(), _textureList.end());
 
 		if (_textureList.empty())

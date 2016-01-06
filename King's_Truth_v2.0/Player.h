@@ -2,6 +2,7 @@
 #define PLAYER_H
 #include "IEntity.h"
 #include "Vector.h"
+#include "Inventory.h"
 using namespace Smoke;
 
 enum PLAYER_ANIM_STATES
@@ -35,6 +36,13 @@ private:
 	bool _canGoDown;
 	float _speed;
 
+	/*
+		This is the player inventory. It will hold
+		all items for the player including weapons,
+		ammo, extra hearts, etc.
+	*/
+	Inventory *_playerInventory;
+
 public:
 	Player();
 	~Player();
@@ -43,15 +51,19 @@ public:
 	void Update(float deltaTime) override;
 	void Render() override;
 
+	/////////////////////////
+	// Utility Functions
+	/////////////////////////
 	void SetIdle() override;
 	void KeepInBounds() override;
-
-	// Accessors
-	Vector2 GetCurrentPos() { return _currentPos; }
-	RECT GetHitbox() { return Renderer.GetBoundingBox(); }
-
-	// Mutators
 	void SetMovementFlags(bool left, bool right, bool up, bool down);
+	void AddItemToInventory(IGameObject* item);
+
+	/////////////////////////
+	// Accessors / Mutators
+	/////////////////////////
+	Vector2 GetCurrentPos();
+	RECT GetHitbox();
 };
 
 #endif

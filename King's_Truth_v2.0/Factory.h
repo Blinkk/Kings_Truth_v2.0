@@ -30,7 +30,7 @@ namespace Smoke
 	public:
 		static Factory& GetInstance()
 		{
-			Factory *pInstance = NULL;
+			Factory *pInstance = nullptr;
 
 			if (!pInstance)
 				pInstance = new Factory();
@@ -63,7 +63,7 @@ namespace Smoke
 	template <class T>
 	T* Factory::CreateObject()
 	{
-		T* pTemp = NULL;
+		T* pTemp = nullptr;
 
 		if (!pTemp)
 			pTemp = new T();

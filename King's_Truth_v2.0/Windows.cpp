@@ -33,9 +33,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 	wndClass.style = CS_HREDRAW | CS_VREDRAW;
 	wndClass.lpfnWndProc = WndProc;
 	wndClass.hInstance = hInstance;
-	wndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+	wndClass.hCursor = LoadCursor(nullptr, IDC_ARROW);
 	wndClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	wndClass.lpszMenuName = NULL;
+	wndClass.lpszMenuName = nullptr;
 	wndClass.lpszClassName = APPTITLE;
 	if (!RegisterClassEx(&wndClass))
 	{
@@ -48,7 +48,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 
 	g_Engine->GetWindowHandle() = CreateWindowA(APPTITLE, APPTITLE, WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top,
-		NULL, NULL, hInstance, NULL);
+		nullptr, nullptr, hInstance, nullptr);
 	if (!g_Engine->GetWindowHandle())
 	{
 		debug << "\tFailed to create window" << std::endl;

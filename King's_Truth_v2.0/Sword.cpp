@@ -5,6 +5,10 @@ Sword::Sword()
 {
 	_damage = 0.0f;
 	_range = 0.0f;
+	_inInventory = false;
+
+	// Default hitbox
+	hitBox.Initialize(0, 0, 0, 0);
 }
 
 
@@ -14,17 +18,14 @@ Sword::~Sword()
 }
 
 
-void Sword::Initialize(float damage, float range)
+void Sword::Initialize(float posX, float posY, float rotationInRadians)
 {
 	// Set values for damage/range
-	if (damage > 0.0f)
-		_damage = damage;
-	if (range > 0.0f)
-		_range = range;
+	_damage = 1.0f;
+	_range = 1.0f;
 
 	// Set up renderer
-	//Renderer.Initialize()
-
+	Renderer.Initialize(1.0f, 1.0f, 16, 16, 1, 0, 0, 0, 0, rotationInRadians, posX, posY, "sword.png");
 }
 
 

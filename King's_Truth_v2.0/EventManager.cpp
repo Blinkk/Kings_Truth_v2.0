@@ -69,7 +69,7 @@ namespace Smoke
 			// More convienent reference to the Event
 			IEvent* pEvent = EventQueue.front();
 
-			if (pEvent == NULL)
+			if (pEvent == nullptr)
 			{
 				// TODO: Create proper error message because this should not happen
 				return;
@@ -86,7 +86,7 @@ namespace Smoke
 			}
 
 			delete pEvent;
-			pEvent = NULL;
+			pEvent = nullptr;
 			EventQueue.pop();
 		}
 	}

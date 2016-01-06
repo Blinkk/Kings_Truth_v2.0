@@ -43,7 +43,7 @@ namespace Smoke
 			debug << "\tPicBox could not load texture because texture was not found" << std::endl;
 
 		// Set camera original position (scaling handled by size of text)
-		if (g_Engine->GetActiveCamera() != NULL)
+		if (g_Engine->GetActiveCamera() != nullptr)
 		{
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
 

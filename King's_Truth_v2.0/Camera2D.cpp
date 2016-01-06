@@ -52,7 +52,7 @@ namespace Smoke
 	void Camera2D::UpdatePos()
 	{
 		// Update position
-		if (g_Engine->GetPlayer() != NULL)
+		if (g_Engine->GetPlayer() != nullptr)
 		{
 			_position = g_Engine->GetPlayer()->GetCurrentPos();
 			_position.x += 8;	// Move to center of player

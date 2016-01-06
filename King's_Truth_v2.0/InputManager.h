@@ -42,7 +42,7 @@ namespace Smoke
 
 		static InputManager& GetInstance()
 		{
-			static InputManager* pInstance = NULL;
+			static InputManager* pInstance = nullptr;
 
 			if (!pInstance)
 			{

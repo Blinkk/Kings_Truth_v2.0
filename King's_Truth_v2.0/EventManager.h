@@ -59,7 +59,7 @@ namespace Smoke
 
 		static EventManager& GetInstance()
 		{
-			static EventManager* pInstance = NULL;
+			static EventManager* pInstance = nullptr;
 
 			if (!pInstance)
 			{

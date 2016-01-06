@@ -20,7 +20,7 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
-		if (g_Engine->GetActiveCamera() != NULL)
+		if (g_Engine->GetActiveCamera() != nullptr)
 		{
 			// Set up button dimensions and offset
 			float lWidth = 200.0f;
@@ -35,18 +35,18 @@ namespace Smoke
 					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
 
 				uiObjects.push_back(pTemp);
-				pTemp = NULL;
+				pTemp = nullptr;
 			}
 
-			PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTemp1)
-			{
-				offsetX += 25;
-				pTemp1->Initialize(200, 40, offsetX, offsetY, true, "health_bar.png");
-
-				uiObjects.push_back(pTemp1);
-				pTemp1 = NULL;
-			}
+			//PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			//if (pTemp1)
+			//{
+			//	offsetX += 25;
+			//	pTemp1->Initialize(200, 40, offsetX, offsetY, true, "health_bar.png");
+			//
+			//	uiObjects.push_back(pTemp1);
+			//	pTemp1 = nullptr;
+			//}
 		}
 
 		// Set the UI Objects
@@ -64,7 +64,7 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
-		if (g_Engine->GetActiveCamera() != NULL)
+		if (g_Engine->GetActiveCamera() != nullptr)
 		{
 			// Set up button dimensions and offset
 			float bWidth = 200.0f;
@@ -81,7 +81,7 @@ namespace Smoke
 					bWidth, bHeight, "START", BUTTONTYPES::START_BUTTON, BUTTONTEXTURES::MENU_BUTTON_TEXTURE, D3DCOLOR_XRGB(255, 255, 255));
 
 				uiObjects.push_back(pTemp);
-				pTemp = NULL;
+				pTemp = nullptr;
 			}
 
 			// Create a exit button and initialize it, then add to vector
@@ -96,7 +96,7 @@ namespace Smoke
 					bWidth, bHeight, "EXIT", BUTTONTYPES::EXIT_BUTTON, BUTTONTEXTURES::MENU_BUTTON_TEXTURE, D3DCOLOR_XRGB(255, 255, 255));
 
 				uiObjects.push_back(pTemp);
-				pTemp = NULL;
+				pTemp = nullptr;
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace Smoke
 				Dynamically cast in IGameObject to ensure each
 				object can call the Update() function
 			*/
-			IGameObject *pTemp = NULL;
+			IGameObject *pTemp = nullptr;
 			pTemp = dynamic_cast<IGameObject*>((*_uiIt));
 
 			if (pTemp)
@@ -173,7 +173,7 @@ namespace Smoke
 					Dynamically cast in IRenderableObject to ensure each
 					object can call the Render() function
 				*/
-				IRenderableObject *pTemp = NULL;
+				IRenderableObject *pTemp = nullptr;
 				pTemp = dynamic_cast<IRenderableObject*>((*_uiIt));
 
 				if (pTemp)
