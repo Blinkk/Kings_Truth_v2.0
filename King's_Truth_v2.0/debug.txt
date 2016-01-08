@@ -1,5 +1,6 @@
 Engine initilization started...
 	DirectX initialized.
+	Unable to get image info
 	Texture Manager initialized.
 	Input initialized.
 	Debugger initialized.
