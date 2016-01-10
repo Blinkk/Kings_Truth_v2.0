@@ -15,7 +15,7 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(0.3f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
 
 	/////////////////////
 	// Create a player
@@ -23,6 +23,12 @@ void Level1()
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
 
+	Sword* pTemp2 = g_Engine->GetFactory()->CreateObject<Sword>();
+	if (pTemp2)
+	{
+		pTemp2->Initialize(128, 128, 0.0f);
+	}
+	gameObjects.push_back(pTemp2);
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);

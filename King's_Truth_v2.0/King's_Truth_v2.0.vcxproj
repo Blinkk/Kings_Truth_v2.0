@@ -154,6 +154,7 @@
     <Text Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textureList.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\items.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_background.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player.png" />

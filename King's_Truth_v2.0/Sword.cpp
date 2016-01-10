@@ -25,7 +25,10 @@ void Sword::Initialize(float posX, float posY, float rotationInRadians)
 	_range = 1.0f;
 
 	// Set up renderer
-	Renderer.Initialize(1.0f, 1.0f, 16, 16, 1, 0, 0, 0, 0, rotationInRadians, posX, posY, "sword.png");
+	Renderer.Initialize(1.0f, 1.0f, 16, 16, 13, 91, 91, 0, 0, rotationInRadians, posX, posY, "items.png");
+
+	// Initialize hitbox
+	hitBox.Initialize(posX, posY, Renderer.GetAdjustedWidth(), Renderer.GetAdjustedHeight());
 }
 
 

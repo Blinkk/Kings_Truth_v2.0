@@ -244,6 +244,11 @@ void TileManager::UpdatePlayerFlags()
 		Player *pTemp = g_Engine->GetPlayer();
 		if (pTemp)
 			playerPos = pTemp->GetCurrentPos();
+		else
+		{
+			debug << "\tFailed to get reference to player in TileManager." << std::endl;
+			return;
+		}
 
 		// Determine what tile player is on
 		unsigned int currentCol = playerPos.GetX() / TILE_SIZE_X;
