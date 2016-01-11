@@ -4,6 +4,8 @@
 *  Date Created: 06/02/2015
 ***********************************/
 #pragma once
+#define _USE_MATH_DEFINES
+
 
 ////////////////////////////////////////
 // Include Libraries 
@@ -11,6 +13,7 @@
 #include <Windows.h>
 #include <iostream>
 #include "stdafx.h"
+#include <cmath>
 
 
 ////////////////////////////////////////
@@ -50,6 +53,7 @@
 // Global Defines
 ////////////////////////////////////////
 #define WIN32_LEAN_AND_MEAN
+
 
 // Screen parameters
 #define SCREEN_DEPTH 1.0f

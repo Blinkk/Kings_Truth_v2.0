@@ -18,17 +18,35 @@ void Level1()
 	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
 
 	/////////////////////
-	// Create a player
+	// Create Objects
 	/////////////////////
+	// Create player
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	gameObjects.push_back(pTemp);
 
-	Sword* pTemp2 = g_Engine->GetFactory()->CreateObject<Sword>();
-	if (pTemp2)
+	//// Create sword
+	//Sword* pTemp2 = g_Engine->GetFactory()->CreateObject<Sword>();
+	//if (pTemp2)
+	//{
+	//	pTemp2->Initialize(128, 128);
+	//}
+	//gameObjects.push_back(pTemp2);
+
+	// Create Key
+	DungeonKey *pTemp3 = g_Engine->GetFactory()->CreateObject<DungeonKey>();
+	if (pTemp3)
 	{
-		pTemp2->Initialize(128, 128, 0.0f);
+		pTemp3->Initialize(29 * TILE_SIZE_X, 3 * TILE_SIZE_Y, 0.0f);
 	}
-	gameObjects.push_back(pTemp2);
+	gameObjects.push_back(pTemp3);
+
+	// Create a chest
+	Chest *pTemp4 = g_Engine->GetFactory()->CreateObject<Chest>();
+	if (pTemp4)
+	{
+		pTemp4->Initialize(48 * TILE_SIZE_X, 35 * TILE_SIZE_Y, M_PI / 2);
+	}
+	gameObjects.push_back(pTemp4);
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);
@@ -269,6 +287,9 @@ void GameManager::Game_Render()
 		
 			if (pTemp)
 				pTemp->Render();
+
+			// Reset temp pointer
+			pTemp = nullptr;
 		}
 
 		// Call engine manager render functions

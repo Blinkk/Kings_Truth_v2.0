@@ -1,7 +1,6 @@
 #ifndef SWORD_H
 #define SWORD_H
 #include "IWeapon.h"
-#include "Collider.h"
 
 class Sword : public IWeapon
 {
@@ -12,12 +11,7 @@ public:
 	Sword();
 	~Sword();
 
-	///////////////////////////////////////
-	// Use to initialize sword
-	//
-	// TODO: Add more parameters as needed
-	///////////////////////////////////////
-	void Initialize(float posX, float posY, float rotationInRadians);
+	void Initialize(float posX, float posY, float rotationInRadians) override;
 
 	////////////////////////
 	// Overriden Functions

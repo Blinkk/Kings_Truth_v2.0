@@ -12,6 +12,8 @@
 #include "TileManager.h"
 #include "Player.h"
 #include "Sword.h"
+#include "DungeonKey.h"
+#include "Chest.h"
 #include <Windows.h>
 using namespace Smoke;
 

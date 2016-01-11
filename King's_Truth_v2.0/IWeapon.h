@@ -1,18 +1,13 @@
 #ifndef IWEAPON_H
 #define IWEAPON_H
-#include "IRenderableObject.h"
-#include "IGameObject.h"
-#include "2DRenderManager.h"
-using namespace Smoke;
+#include "IITem.h"
 
-class IWeapon : public IGameObject, public IRenderableObject
+class IWeapon : public IItem
 {
 protected:
 	float _range;
 	float _damage;
-	bool _inInventory;
-
-	TwoDRenderManager Renderer;
+	bool _equipped;
 
 public:
 	virtual ~IWeapon() {}

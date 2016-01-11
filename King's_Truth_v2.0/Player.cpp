@@ -27,7 +27,7 @@ Player::Player()
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
 
 	// Initialize player rendering information
-	Renderer.Initialize(1, 1, 16, 16, 16, 0, 0, 100, 1, 0, SCREENW / 2, 560, "player.png");
+	Renderer.Initialize(1, 1, 16, 16, 16, 0, 0, 100, 1, 0, SCREENW / 2, SCREENH - (TILE_SIZE_Y * 2), "player.png");
 	Renderer.SetAnimateFlag(true);
 
 	// Initialize hitbox
@@ -78,9 +78,10 @@ void Player::HandleEvent(IEvent *e)
 					// Set animation frames
 					if (_animState != PLAYER_ANIM_STATES::WALKING_UP)
 					{
-						Renderer.SetCurrentFrame(2);
-						Renderer.SetStartFrame(2);
-						Renderer.SetEndFrame(3);
+						//Renderer.SetCurrentFrame(2);
+						//Renderer.SetStartFrame(2);
+						//Renderer.SetEndFrame(3);
+						Renderer.Initialize(16, 16, 2, 3, 100);
 						_animState = PLAYER_ANIM_STATES::WALKING_UP;
 					}
 

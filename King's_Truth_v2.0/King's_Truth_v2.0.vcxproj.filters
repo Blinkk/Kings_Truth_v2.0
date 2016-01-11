@@ -79,11 +79,17 @@
     <Filter Include="Game\Source Files\GameObjects\Entities">
       <UniqueIdentifier>{46d0fc26-48d6-4216-9e78-6813dee5dc80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Header Files\GameObjects\Weapons">
-      <UniqueIdentifier>{593d7b93-4fe6-4a45-be43-f2e2bc11ff33}</UniqueIdentifier>
+    <Filter Include="Game\Source Files\GameObjects\Items">
+      <UniqueIdentifier>{b63a8d10-1de5-48c0-8c8b-ea30812e7581}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Source Files\GameObjects\Weapons">
+    <Filter Include="Game\Source Files\GameObjects\Items\Weapons">
       <UniqueIdentifier>{07a81c3c-e1c2-4eb3-be93-fd92d911e47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\GameObjects\Items">
+      <UniqueIdentifier>{7b730370-4264-40b2-8e29-018f6d2e0a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Header Files\GameObjects\Items\Weapons">
+      <UniqueIdentifier>{593d7b93-4fe6-4a45-be43-f2e2bc11ff33}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -169,10 +175,16 @@
       <Filter>Framework\UI\UI_Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.cpp">
-      <Filter>Game\Source Files\GameObjects\Weapons</Filter>
+      <Filter>Game\Source Files\GameObjects\Items\Weapons</Filter>
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Inventory.cpp">
       <Filter>Game\Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\DungeonKey.cpp">
+      <Filter>Game\Source Files\GameObjects\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Chest.cpp">
+      <Filter>Game\Source Files\GameObjects\Items</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -285,10 +297,19 @@
       <Filter>Game\Header Files\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.h">
-      <Filter>Game\Header Files\GameObjects\Weapons</Filter>
+      <Filter>Game\Header Files\GameObjects\Items\Weapons</Filter>
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Inventory.h">
       <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IITem.h">
+      <Filter>Game\Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\DungeonKey.h">
+      <Filter>Game\Header Files\GameObjects\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Chest.h">
+      <Filter>Game\Header Files\GameObjects\Items</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +346,9 @@
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\items.png">
+      <Filter>Game\Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\misc_things.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>

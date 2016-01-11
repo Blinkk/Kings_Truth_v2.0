@@ -84,33 +84,42 @@ namespace Smoke
 
 	void TwoDRenderManager::Render()
 	{
-		// Set matrix vectors
-		Vector2 scale(_scaleX, _scaleY);
-		Vector2 center((float)(_frameW * _scaleX) / 2.0f, (float)(_frameH * _scaleY) / 2.0f);
-		Vector2 translation(_posVector.x, _posVector.y);
+		if (HasTexture())
+		{
+			// Set matrix vectors
+			Vector2 scale(_scaleX, _scaleY);
+			Vector2 center((float)(_frameW * _scaleX) / 2.0f, (float)(_frameH * _scaleY) / 2.0f);
+			Vector2 translation(_posVector.x, _posVector.y);
 
-		// Create the matrix
-		D3DXMATRIX transform;
-		D3DXMatrixTransformation2D(&transform, nullptr, 0, &scale.ToD3DXVECTOR2(),
-			&center.ToD3DXVECTOR2(), _rotation, &translation.ToD3DXVECTOR2());
+			// Create the matrix
+			D3DXMATRIX transform;
+			D3DXMatrixTransformation2D(&transform, nullptr, 0, &scale.ToD3DXVECTOR2(),
+				&center.ToD3DXVECTOR2(), _rotation, &translation.ToD3DXVECTOR2());
 
-		// Set our transform matrix
-		g_Engine->GetSpriteObj()->SetTransform(&transform);
+			// Set our transform matrix
+			g_Engine->GetSpriteObj()->SetTransform(&transform);
 
-		// Get a RECT for current frame
-		RECT rect;
-		rect.left = (_curFrame % _numCol) * _frameW;
-		rect.right = rect.left + _frameW;
-		rect.top = (_curFrame / _numCol) * _frameH;
-		rect.bottom = rect.top + _frameH;
+			// Get a RECT for current frame
+			RECT rect;
+			rect.left = (_curFrame % _numCol) * _frameW;
+			rect.right = rect.left + _frameW;
+			rect.top = (_curFrame / _numCol) * _frameH;
+			rect.bottom = rect.top + _frameH;
 
-		// Draw to screen
-		g_Engine->GetSpriteObj()->Draw(_texture, &rect, nullptr, nullptr, D3DCOLOR_XRGB(255, 255, 255));
+			// Draw to screen
+			g_Engine->GetSpriteObj()->Draw(_texture, &rect, nullptr, nullptr, D3DCOLOR_XRGB(255, 255, 255));
 
-		// Reset transform to identity matrix
-		D3DXMATRIX mat;
-		D3DXMatrixIdentity(&mat);
-		g_Engine->GetSpriteObj()->SetTransform(&mat);
+			// Reset transform to identity matrix
+			D3DXMATRIX mat;
+			D3DXMatrixIdentity(&mat);
+			g_Engine->GetSpriteObj()->SetTransform(&mat);
+		}
+		else
+		{
+			debug << "\tFailed to render object because no texture could be found" << std::endl;
+			return;
+		}
+		
 	}
 
 
