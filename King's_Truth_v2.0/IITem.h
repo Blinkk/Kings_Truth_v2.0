@@ -8,9 +8,11 @@ using namespace Smoke;
 
 enum ITEM_TYPES
 {
+	STATIC_OBJECT = 0,
 	DUNGEON_KEY = 1,
 	CHEST = 2,
 	SWORD = 5,
+	DEFAULT_NONE = 10
 };
 
 class IItem : public IGameObject, public IRenderableObject

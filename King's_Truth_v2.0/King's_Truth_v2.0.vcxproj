@@ -90,6 +90,7 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.cpp" />
@@ -127,6 +128,7 @@
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Collider.h" />
@@ -159,6 +161,7 @@
     <Text Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textureList.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\barrell.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\items.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_background.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png" />

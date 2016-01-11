@@ -12,6 +12,7 @@
 #include "TileManager.h"
 #include "Player.h"
 #include "Sword.h"
+#include "StaticObject.h"
 #include "DungeonKey.h"
 #include "Chest.h"
 #include <Windows.h>

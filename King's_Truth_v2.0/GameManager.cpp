@@ -22,7 +22,10 @@ void Level1()
 	/////////////////////
 	// Create player
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
-	gameObjects.push_back(pTemp);
+	if (pTemp)
+		gameObjects.push_back(pTemp);
+	else
+		debug << "\tFailed to create a 'Player' in Level1 load function" << std::endl;
 
 	//// Create sword
 	//Sword* pTemp2 = g_Engine->GetFactory()->CreateObject<Sword>();
@@ -36,17 +39,51 @@ void Level1()
 	DungeonKey *pTemp3 = g_Engine->GetFactory()->CreateObject<DungeonKey>();
 	if (pTemp3)
 	{
-		pTemp3->Initialize(29 * TILE_SIZE_X, 3 * TILE_SIZE_Y, 0.0f);
+		// Initialize with position / rotation
+		float posX = TILE_SIZE_X * 29;
+		float posY = TILE_SIZE_Y * 3;
+		float rotationInRadians = 0.0f;
+		pTemp3->Initialize(posX, posY, rotationInRadians);
+
+		// Add initialized object to vector
+		gameObjects.push_back(pTemp3);
 	}
-	gameObjects.push_back(pTemp3);
+	else
+		debug << "\tFailed to create a 'DungeonKey' in Level1 load function" << std::endl;
 
 	// Create a chest
 	Chest *pTemp4 = g_Engine->GetFactory()->CreateObject<Chest>();
 	if (pTemp4)
 	{
-		pTemp4->Initialize(48 * TILE_SIZE_X, 35 * TILE_SIZE_Y, M_PI / 2);
+		// Initialize with position / rotation
+		float posX = TILE_SIZE_X * 48;
+		float posY = TILE_SIZE_Y * 35;
+		float rotationInRadians = M_PI / 2;
+		pTemp4->Initialize(posX, posY, rotationInRadians);
+
+		// Add initialized object to vector
+		gameObjects.push_back(pTemp4);
 	}
-	gameObjects.push_back(pTemp4);
+	else
+		debug << "\tFailed to create a 'Chest' in Level1 load function" << std::endl;
+
+	// Create a barrell
+	StaticObject *pTemp5 = g_Engine->GetFactory()->CreateObject<StaticObject>();
+	if (pTemp5)
+	{
+		// Initialize with position / rotation, frame info, etc.
+		float posX = TILE_SIZE_X * 45;
+		float posY = TILE_SIZE_Y * 35;
+		float rotationInRadians = 0.0f;
+		pTemp5->Initialize(posX, posY, rotationInRadians, 1.0f, 1.0f,
+			16, 16, 1, 0, 0, 0, 0, "barrell.png");
+
+		// Add initialized object to vector
+		gameObjects.push_back(pTemp5);
+	}
+	else
+		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
+	
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);

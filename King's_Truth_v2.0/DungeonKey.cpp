@@ -3,7 +3,7 @@
 
 DungeonKey::DungeonKey()
 {
-	_itemType = 0;
+	_itemType = ITEM_TYPES::DEFAULT_NONE;
 	_inInventory = false;
 
 	// Default hitbox

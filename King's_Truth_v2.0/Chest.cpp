@@ -3,7 +3,11 @@
 
 Chest::Chest()
 {
+	_itemType = ITEM_TYPES::DEFAULT_NONE;
+	_inInventory = false;
 
+	// Default hitbox
+	hitBox.Initialize(0, 0, 0, 0);
 }
 
 

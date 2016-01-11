@@ -7,3 +7,4 @@ label_texture.png 255 255 255
 health_bar.png 255 255 255
 items.png 255 255 255
 misc_things.png 255 255 255
+barrell.png 255 255 255
