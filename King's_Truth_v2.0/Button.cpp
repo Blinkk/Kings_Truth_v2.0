@@ -7,6 +7,7 @@ namespace Smoke
 	{
 		// Set default values
 		_text = "";
+		tag = "";
 		_offsetPosition = Vector2(0, 0);
 		if (g_Engine->GetActiveCamera())
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
@@ -28,10 +29,13 @@ namespace Smoke
 
 	void Button::Initialize(std::string fontName, int fontSize,
 		float offsetX, float offsetY, float bWidth, float bHeight, 
-		std::string text, unsigned int buttonType, unsigned int textureID, D3DXCOLOR textColor)
+		std::string text, unsigned int buttonType, unsigned int textureID, D3DXCOLOR textColor, std::string tagToUse)
 	{
 		// Set object type
 		_objectType = UI_OBJECT_TYPES::UI_BUTTON;
+
+		// Set tag
+		tag = tagToUse;
 
 		// Set button type
 		_buttonType = buttonType;

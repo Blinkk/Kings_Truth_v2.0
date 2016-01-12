@@ -20,6 +20,7 @@ Player::Player()
 	facingUp = true;
 	facingLeft = false;
 	tag = "Player";
+	_health = 5;
 	_speed = 2.0f;
 	_animState = PLAYER_ANIM_STATES::IDLE;
 
@@ -168,6 +169,14 @@ void Player::HandleEvent(IEvent *e)
 
 					// Set keypress value
 					_lastKeyPress = KEY_PRESS::RIGHT;
+				}
+
+				/////////// TEMPORARY ////////////
+				else if (pTemp->attack)
+				{
+					PlayerDamagedEvent *pTempEvent = new PlayerDamagedEvent();
+					if (pTempEvent) pTempEvent->damage = 1;
+					g_Engine->GetEventManager()->DispatchEvent(pTempEvent);
 				}
 			}
 		}

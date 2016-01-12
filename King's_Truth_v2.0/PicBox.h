@@ -28,7 +28,7 @@ namespace Smoke
 		void Render() override;
 
 		void Initialize(float width, float height, float offsetX, 
-			float offsetY, bool active, std::string textureToUse);
+			float offsetY, bool active, std::string textureToUse, std::string tagToUse = "");
 
 		////////////////////////
 		// Accessors / Mutators

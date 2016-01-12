@@ -37,7 +37,8 @@ enum GAME_LEVELS
 
 namespace Smoke
 {
-	class UIManager
+	// **This is only a GameObject so that it can handle events** //
+	class UIManager : public IGameObject
 	{
 	private:
 		UIManager();
@@ -83,8 +84,8 @@ namespace Smoke
 		*/
 		void Render();
 
-		void HandleEvent(IEvent*);
-		void Update(float deltaTime);
+		void HandleEvent(IEvent*) override;
+		void Update(float deltaTime) override;
 		void Shutdown();
 		
 

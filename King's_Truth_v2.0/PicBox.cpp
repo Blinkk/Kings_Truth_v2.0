@@ -8,6 +8,7 @@ namespace Smoke
 		_width = 0;
 		_height = 0;
 		_active = false;
+		tag = "";
 	}
 
 
@@ -18,10 +19,13 @@ namespace Smoke
 
 
 	void PicBox::Initialize(float width, float height, float offsetX,
-		float offsetY, bool active, std::string textureToUse)
+		float offsetY, bool active, std::string textureToUse, std::string tagToUse)
 	{
 		// Set object type
 		_objectType = UI_OBJECT_TYPES::UI_PICBOX;
+
+		// Set tag
+		tag = tagToUse;
 
 		// Set offset amount
 		_offsetPosition = Vector2(offsetX, offsetY);
@@ -51,8 +55,8 @@ namespace Smoke
 			float scaleX = _width / Renderer.GetAdjustedWidth();
 			float scaleY = _height / Renderer.GetAdjustedHeight();
 
-			Renderer.SetScaleX(scaleX * g_Engine->GetActiveCamera()->GetZoomFactor());
-			Renderer.SetScaleY(scaleY * g_Engine->GetActiveCamera()->GetZoomFactor());
+			//Renderer.SetScaleX(scaleX * g_Engine->GetActiveCamera()->GetZoomFactor());
+			//Renderer.SetScaleY(scaleY * g_Engine->GetActiveCamera()->GetZoomFactor());
 		}
 	}
 
@@ -65,7 +69,10 @@ namespace Smoke
 
 	void PicBox::HandleEvent(IEvent* e)
 	{
-
+		//if (e->Event_Type == Events::PLAYER_DAMAGED)
+		//{
+		//	_active = false;
+		//}
 	}
 
 

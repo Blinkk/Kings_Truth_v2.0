@@ -7,6 +7,7 @@ namespace Smoke
 	{
 		// Set default values
 		_text = "";
+		tag = "";
 		_offsetPosition = Vector2(0, 0);
 		if (g_Engine->GetActiveCamera())
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
@@ -26,10 +27,13 @@ namespace Smoke
 
 	void Label::Initialize(std::string fontName, int fontSize, 
 		float offsetX, float offsetY, std::string text, 
-		unsigned int textureID, D3DXCOLOR textColor)
+		unsigned int textureID, D3DXCOLOR textColor, std::string tagToUse)
 	{
 		// Set object type
 		_objectType = UI_OBJECT_TYPES::UI_LABEL;
+
+		// Set tag
+		tag = tagToUse;
 
 		// Create the font object
 		_fontObject = Font(fontName, fontSize);

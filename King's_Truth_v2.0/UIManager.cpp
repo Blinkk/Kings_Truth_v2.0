@@ -20,34 +20,99 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
+		#pragma region UIObjectCreation
 		if (g_Engine->GetActiveCamera() != nullptr)
 		{
-			// Set up button dimensions and offset
+			// Set up label dimensions and offset
 			float lWidth = 200.0f;
 			float lHeight = 75.0f;
 			float offsetX = -((SCREENW / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 10;
 			float offsetY = -((SCREENH / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 7.5f;
 
+			// Health label
 			Label* pTemp = g_Engine->GetFactory()->CreateObject<Label>();
 			if (pTemp)
 			{
-				pTemp->Initialize("Calibri", 10, offsetX, offsetY,
+				pTemp->Initialize("Calibri", 14, offsetX, offsetY,
 					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
 
 				uiObjects.push_back(pTemp);
 				pTemp = nullptr;
 			}
+			else
+				debug << "\tFailed to create 'Label - Health' in STANDARD_GAMEPLAY_UI" << std::endl;
 
-			//PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
-			//if (pTemp1)
-			//{
-			//	offsetX += 25;
-			//	pTemp1->Initialize(200, 40, offsetX, offsetY, true, "health_bar.png");
-			//
-			//	uiObjects.push_back(pTemp1);
-			//	pTemp1 = nullptr;
-			//}
+			// Hearts - 1
+			PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			if (pTemp1)
+			{
+				offsetX += 40;
+				pTemp1->Initialize(16, 16, offsetX, offsetY,
+					true, "heart.png", "heart");
+			
+				uiObjects.push_back(pTemp1);
+				pTemp1 = nullptr;
+			}
+			else
+				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
+
+			// Hearts - 2
+			pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			if (pTemp1)
+			{
+				offsetX += 16;
+				pTemp1->Initialize(16, 16, offsetX, offsetY, 
+					true, "heart.png", "heart");
+
+				uiObjects.push_back(pTemp1);
+				pTemp1 = nullptr;
+			}
+			else
+				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
+
+			// Hearts - 3
+			pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			if (pTemp1)
+			{
+				offsetX += 16;
+				pTemp1->Initialize(16, 16, offsetX, offsetY, 
+					true, "heart.png", "heart");
+
+				uiObjects.push_back(pTemp1);
+				pTemp1 = nullptr;
+			}
+			else
+				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
+
+			// Hearts - 4
+			pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			if (pTemp1)
+			{
+				offsetX += 16;
+				pTemp1->Initialize(16, 16, offsetX, offsetY,
+					true, "heart.png", "heart");
+
+				uiObjects.push_back(pTemp1);
+				pTemp1 = nullptr;
+			}
+			else
+				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
+
+			// Hearts - 5
+			pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
+			if (pTemp1)
+			{
+				offsetX += 16;
+				pTemp1->Initialize(16, 16, offsetX, offsetY,
+					true, "heart.png", "heart");
+
+				uiObjects.push_back(pTemp1);
+				pTemp1 = nullptr;
+			}
+			else
+				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
 		}
+		#pragma endregion
 
 		// Set the UI Objects
 		SetUIObjects(uiObjects);
@@ -64,6 +129,7 @@ namespace Smoke
 		// Note: This requires that there be an active camera set in
 		// the g_Engine global reference.
 		//////////////////////////////////////////////////////////////
+		#pragma region UIObjectCreation
 		if (g_Engine->GetActiveCamera() != nullptr)
 		{
 			// Set up button dimensions and offset
@@ -99,6 +165,7 @@ namespace Smoke
 				pTemp = nullptr;
 			}
 		}
+		#pragma endregion
 
 		// Set the UI Objects
 		SetUIObjects(uiObjects);
@@ -107,7 +174,8 @@ namespace Smoke
 
 	UIManager::UIManager()
 	{
-		
+		// Register event listeners
+		g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DAMAGED);
 	}
 
 
@@ -158,6 +226,15 @@ namespace Smoke
 
 			if (pTemp)
 				pTemp->Update(deltaTime);
+		}
+	}
+
+
+ 	void UIManager::HandleEvent(IEvent *e)
+	{
+		if (e->Event_Type == Events::PLAYER_DAMAGED)
+		{
+
 		}
 	}
 

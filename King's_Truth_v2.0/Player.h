@@ -64,6 +64,7 @@ public:
 	/////////////////////////
 	Vector2 GetCurrentPos();
 	RECT GetHitbox();
+	unsigned int GetHealth() { return _health; }
 };
 
 #endif

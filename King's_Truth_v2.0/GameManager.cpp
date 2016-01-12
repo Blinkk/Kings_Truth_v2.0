@@ -15,15 +15,22 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(0.45f);
 
-	/////////////////////
-	// Create Objects
-	/////////////////////
+	//////////////////////////////
+	// Create All Game Objects
+	//////////////////////////////
+	#pragma region ObjectCreation
 	// Create player
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	if (pTemp)
+	{
 		gameObjects.push_back(pTemp);
+
+		// Get a global reference to the player
+		g_Engine->SetPlayer(pTemp);
+	}
+		
 	else
 		debug << "\tFailed to create a 'Player' in Level1 load function" << std::endl;
 
@@ -51,7 +58,9 @@ void Level1()
 	else
 		debug << "\tFailed to create a 'DungeonKey' in Level1 load function" << std::endl;
 
-	// Create a chest
+	//////////////////
+	// Create chests
+	//////////////////
 	Chest *pTemp4 = g_Engine->GetFactory()->CreateObject<Chest>();
 	if (pTemp4)
 	{
@@ -67,26 +76,49 @@ void Level1()
 	else
 		debug << "\tFailed to create a 'Chest' in Level1 load function" << std::endl;
 
+	///////////////////////
+	// Static objects
+	///////////////////////
 	// Create a barrell
-	StaticObject *pTemp5 = g_Engine->GetFactory()->CreateObject<StaticObject>();
-	if (pTemp5)
+	StaticObject *pTempStatObj = g_Engine->GetFactory()->CreateObject<StaticObject>();
+	if (pTempStatObj)
 	{
 		// Initialize with position / rotation, frame info, etc.
-		float posX = TILE_SIZE_X * 45;
-		float posY = TILE_SIZE_Y * 35;
+		float posX = TILE_SIZE_X * 42;
+		float posY = TILE_SIZE_Y * 34;
 		float rotationInRadians = 0.0f;
-		pTemp5->Initialize(posX, posY, rotationInRadians, 1.0f, 1.0f,
+		pTempStatObj->Initialize(posX, posY, rotationInRadians, 1.0f, 1.0f,
 			16, 16, 1, 0, 0, 0, 0, "barrell.png");
 
 		// Add initialized object to vector
-		gameObjects.push_back(pTemp5);
+		gameObjects.push_back(pTempStatObj);
+
+		// Reset pointer
+		pTempStatObj = nullptr;
 	}
 	else
 		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
-	
 
-	// Get a global reference to the player
-	g_Engine->SetPlayer(pTemp);
+	pTempStatObj = g_Engine->GetFactory()->CreateObject<StaticObject>();
+	if (pTempStatObj)
+	{
+		// Initialize with position / rotation, frame info, etc.
+		float posX = TILE_SIZE_X * 46;
+		float posY = TILE_SIZE_Y * 34;
+		float rotationInRadians = 0.0f;
+		pTempStatObj->Initialize(posX, posY, rotationInRadians, 1.0f, 1.0f,
+			16, 16, 1, 0, 0, 0, 0, "barrell.png");
+
+		// Add initialized object to vector
+		gameObjects.push_back(pTempStatObj);
+
+		// Reset pointer
+		pTempStatObj = nullptr;
+	}
+	else
+		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
+	#pragma endregion
+	
 
 	/* 
 		THIS IS VERY IMPORTANT FOR LOADING UI OBJECTS 
