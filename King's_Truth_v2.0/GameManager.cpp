@@ -15,7 +15,17 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(0.3f);
+
+	//////////////////////////////////
+	// Load in the map for this level
+	//////////////////////////////////
+	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
+
+	//////////////////////////////////
+	// Load in the UI for this level
+	//////////////////////////////////
+	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::STANDARD_GAMEPLAY_UI);
 
 	/////////////////////
 	// Create Objects
@@ -93,16 +103,6 @@ void Level1()
 	*/
 	// Update camera position BEFORE loading UI
 	g_Engine->GetActiveCamera()->UpdatePos();
-
-	//////////////////////////////////
-	// Load in the map for this level
-	//////////////////////////////////
-	g_Manager->GetTileManager()->TileMap(MAPS::LEVEL_ONE_MAP);
-
-	//////////////////////////////////
-	// Load in the UI for this level
-	//////////////////////////////////
-	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::STANDARD_GAMEPLAY_UI);
 
 	//////////////////////////////////////
 	// Set the game objects for the level
