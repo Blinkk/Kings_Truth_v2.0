@@ -46,6 +46,8 @@ Player::~Player()
 {
 	// Purge event listeners
 	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_INPUT);
+	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
+	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DEAD);
 }
 
 
@@ -186,17 +188,17 @@ void Player::HandleEvent(IEvent *e)
 	}
 #pragma endregion
 
-	if (e->Event_Type == Events::PLAYER_DAMAGED)
-	{
-		// Cast to proper event
-		PlayerDamagedEvent* pEvent = static_cast<PlayerDamagedEvent*>(e);
-
-		if (pEvent)
-		{
-			// Decrement health based on damage
-			_health -= pEvent->damage;
-		}
-	}
+	//if (e->Event_Type == Events::PLAYER_DAMAGED)
+	//{
+	//	// Cast to proper event
+	//	PlayerDamagedEvent* pEvent = static_cast<PlayerDamagedEvent*>(e);
+	//
+	//	if (pEvent)
+	//	{
+	//		// Decrement health based on damage
+	//		_health -= pEvent->damage;
+	//	}
+	//}
 }
 
 

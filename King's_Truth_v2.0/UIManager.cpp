@@ -241,6 +241,10 @@ namespace Smoke
 		// Release any remaining objects
 		if (!_uiObjects.empty())
 			PurgeUIObjects();
+
+		// Purge event listeners
+		g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
+		g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
 	}
 
 
