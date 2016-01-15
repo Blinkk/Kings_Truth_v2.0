@@ -26,6 +26,8 @@ Player::Player()
 
 	// Register with event system
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
+	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DAMAGED);
+	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DEAD);
 
 	// Initialize player rendering information
 	Renderer.Initialize(1, 1, 16, 16, 16, 0, 0, 100, 1, 0, SCREENW / 2, SCREENH - (TILE_SIZE_Y * 2), "player.png");
@@ -49,6 +51,7 @@ Player::~Player()
 
 void Player::HandleEvent(IEvent *e)
 {
+	#pragma region Player_Input_Event
 	if (e->Event_Type == Events::PLAYER_INPUT)
 	{
 		PlayerInputEvent *pTemp = static_cast<PlayerInputEvent*>(e);
@@ -179,6 +182,19 @@ void Player::HandleEvent(IEvent *e)
 					g_Engine->GetEventManager()->DispatchEvent(pTempEvent);
 				}
 			}
+		}
+	}
+#pragma endregion
+
+	if (e->Event_Type == Events::PLAYER_DAMAGED)
+	{
+		// Cast to proper event
+		PlayerDamagedEvent* pEvent = static_cast<PlayerDamagedEvent*>(e);
+
+		if (pEvent)
+		{
+			// Decrement health based on damage
+			_health -= pEvent->damage;
 		}
 	}
 }

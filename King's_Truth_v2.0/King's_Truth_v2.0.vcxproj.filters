@@ -363,5 +363,8 @@
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\heart.png">
       <Filter>Game\Resource Files\Textures</Filter>
     </Image>
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player_icon.png">
+      <Filter>Game\Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

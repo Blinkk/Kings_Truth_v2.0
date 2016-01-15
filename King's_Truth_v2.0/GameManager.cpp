@@ -119,11 +119,10 @@ void Level1()
 		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
 	#pragma endregion
 	
-
 	/* 
 		THIS IS VERY IMPORTANT FOR LOADING UI OBJECTS 
 	*/
-	// Update camera position BEFORE loading UI
+	// Update camera position BEFORE loading UI but AFTER player creation
 	g_Engine->GetActiveCamera()->UpdatePos();
 
 	//////////////////////////////////

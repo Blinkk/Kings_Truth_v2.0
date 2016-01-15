@@ -168,6 +168,7 @@
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\misc_things.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player_icon.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\hedge_maze.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\ice_bricks.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\lightblue_bricks.png" />
