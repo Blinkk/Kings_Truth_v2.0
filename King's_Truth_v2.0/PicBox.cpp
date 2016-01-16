@@ -100,9 +100,7 @@ namespace Smoke
 
 		// If a texture has been given to the Renderer, and the pic
 		// box is active, render it to the screen
-		if (Renderer.HasTexture() && this->IsActive())
+		if (this->IsActive())
 			Renderer.Render();
-		else
-			debug << "\tFailed to render texture for PicBox, ID = " << this->ID << std::endl;
 	}
 }

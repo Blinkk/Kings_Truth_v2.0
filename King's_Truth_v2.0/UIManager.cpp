@@ -343,15 +343,15 @@ namespace Smoke
 						}
 					}
 				}
+				/*
+					Note: This should be managed within the player
+					class.
 
-				//*************** FIX DEBUG FILE FOR PICBOX ***************//
-				// Check if player health <= 0
-				if (g_Engine->GetPlayer()->GetHealth() <= 0)
-				{
-					// Dispatch a new event
-					PlayerDeadEvent *pEvent = new PlayerDeadEvent();
-					g_Engine->GetEventManager()->DispatchEvent(pEvent);
-				}
+					TODO: Change this when actual damage events are
+					implemented, not using Player_Input
+				*/
+				// Player take damage
+				g_Engine->GetPlayer()->TakeDamage(pEvent->damage);
 			}
 		}
 

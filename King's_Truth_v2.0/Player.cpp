@@ -26,8 +26,8 @@ Player::Player()
 
 	// Register with event system
 	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_INPUT);
-	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DAMAGED);
-	g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DEAD);
+	//g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DAMAGED);
+	//g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DEAD);
 
 	// Initialize player rendering information
 	Renderer.Initialize(1, 1, 16, 16, 16, 0, 0, 100, 1, 0, SCREENW / 2, SCREENH - (TILE_SIZE_Y * 2), "player.png");
@@ -46,8 +46,8 @@ Player::~Player()
 {
 	// Purge event listeners
 	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_INPUT);
-	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
-	g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DEAD);
+	//g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
+	//g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DEAD);
 }
 
 
@@ -175,13 +175,11 @@ void Player::HandleEvent(IEvent *e)
 					// Set keypress value
 					_lastKeyPress = KEY_PRESS::RIGHT;
 				}
-
-				/////////// TEMPORARY ////////////
 				else if (pTemp->attack)
 				{
-					PlayerDamagedEvent *pTempEvent = new PlayerDamagedEvent();
-					if (pTempEvent) pTempEvent->damage = 1;
-					g_Engine->GetEventManager()->DispatchEvent(pTempEvent);
+					PlayerDamagedEvent *pEventDamaged = new PlayerDamagedEvent();
+					if (pEventDamaged) pEventDamaged->damage = 1;
+					g_Engine->GetEventManager()->DispatchEvent(pEventDamaged);
 				}
 			}
 		}
@@ -192,11 +190,9 @@ void Player::HandleEvent(IEvent *e)
 	//{
 	//	// Cast to proper event
 	//	PlayerDamagedEvent* pEvent = static_cast<PlayerDamagedEvent*>(e);
-	//
 	//	if (pEvent)
 	//	{
-	//		// Decrement health based on damage
-	//		_health -= pEvent->damage;
+	//		this->TakeDamage(pEvent->damage);
 	//	}
 	//}
 }
@@ -368,6 +364,43 @@ void Player::AddItemToInventory(IGameObject* item)
 		_playerInventory->AddItem(item);
 	else
 		return;
+}
+
+
+void Player::TakeDamage(unsigned int damage)
+{
+	// If damage is greater than remaining health
+	if (damage >= _health)
+	{
+		// Set damage = remaining health
+		damage = _health;
+
+		// Take damage
+		_health -= damage;
+
+		if (_health <= 0)
+		{
+			PlayerDeadEvent *pEvent = new PlayerDeadEvent();
+			if (pEvent)
+			{
+				g_Engine->GetEventManager()->DispatchEvent(pEvent);
+			}
+		}
+	}
+	else
+	{
+		// Take damage
+		_health -= damage;
+
+		if (_health <= 0)
+		{
+			PlayerDeadEvent *pEvent = new PlayerDeadEvent();
+			if (pEvent)
+			{
+				g_Engine->GetEventManager()->DispatchEvent(pEvent);
+			}
+		}
+	}
 }
 
 

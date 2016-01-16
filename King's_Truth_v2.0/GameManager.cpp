@@ -372,7 +372,6 @@ void GameManager::Game_Render()
 		// End Spritebatch for 2D
 		//////////////////////////////
 
-
 		// 3D rendering will go here....
 
 		g_Engine->EndScene();		// End scene and present backbuffer
@@ -410,7 +409,6 @@ void GameManager::HandleEvent(IEvent *e)
 		gameOver = true;
 		endProgram = true;
 	}
-		
 }
 
 
