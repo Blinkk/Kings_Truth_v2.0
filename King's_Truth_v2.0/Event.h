@@ -18,19 +18,10 @@ namespace Smoke
 	{
 		const unsigned int PLAYER_INPUT = 0;
 		const unsigned int PLAYER_COLLISION = 1;
-<<<<<<< HEAD
 		const unsigned int CLICK_DOWN = 2;
 		const unsigned int CLICK_UP = 3;
 		const unsigned int ENDLEVEL = 4;
 		const unsigned int ENDPROGRAM = 5;
-=======
-		const unsigned int PLAYER_DAMAGED = 2;
-		const unsigned int PLAYER_DEAD = 3;
-		const unsigned int CLICK_DOWN = 4;
-		const unsigned int CLICK_UP = 5;
-		const unsigned int ENDLEVEL = 6;
-		const unsigned int ENDPROGRAM = 7;
->>>>>>> origin/master
 
 		const unsigned int MAX = ENDPROGRAM;
 	}
@@ -98,31 +89,6 @@ namespace Smoke
 	};
 
 
-<<<<<<< HEAD
-=======
-	class PlayerDamagedEvent : public IEvent
-	{
-	public:
-		unsigned int damage;
-
-		PlayerDamagedEvent()
-		{
-			Event_Type = Events::PLAYER_DAMAGED;
-		}
-	};
-
-
-	class PlayerDeadEvent : public IEvent
-	{
-	public:
-		PlayerDeadEvent()
-		{
-			Event_Type = Events::PLAYER_DEAD;
-		}
-	};
-
-
->>>>>>> origin/master
 	class ClickDownEvent : public IEvent
 	{
 	public:

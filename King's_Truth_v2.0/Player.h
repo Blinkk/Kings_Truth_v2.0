@@ -58,7 +58,6 @@ public:
 	void KeepInBounds() override;
 	void SetMovementFlags(bool left, bool right, bool up, bool down);
 	void AddItemToInventory(IGameObject* item);
-	void TakeDamage(unsigned int damage);
 
 	/////////////////////////
 	// Accessors / Mutators

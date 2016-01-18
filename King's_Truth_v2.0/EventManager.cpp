@@ -71,7 +71,7 @@ namespace Smoke
 
 			if (pEvent == nullptr)
 			{
-				debug << "\tFailed to process event queue." << std::endl;
+				// TODO: Create proper error message because this should not happen
 				return;
 			}
 

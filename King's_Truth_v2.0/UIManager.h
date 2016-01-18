@@ -43,7 +43,6 @@ namespace Smoke
 		UIManager();
 		std::vector<IUI_Object*> _uiObjects;
 		std::vector<IUI_Object*>::iterator _uiIt;
-		std::vector<IUI_Object*>::reverse_iterator _ruiIt;
 
 		///////////////////////
 		// UI Setup Functions

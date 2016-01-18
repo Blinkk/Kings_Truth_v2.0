@@ -28,25 +28,15 @@ namespace Smoke
 			float offsetX = -((SCREENW / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 10;
 			float offsetY = -((SCREENH / 2) * g_Engine->GetActiveCamera()->GetZoomFactor()) + 7.5f;
 
-<<<<<<< HEAD
 			Label* pTemp = g_Engine->GetFactory()->CreateObject<Label>();
 			if (pTemp)
 			{
 				pTemp->Initialize("Calibri", 10, offsetX, offsetY,
 					"Health: ", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
-=======
-			// Health label
-			Label* pTempLabel = g_Engine->GetFactory()->CreateObject<Label>();
-			if (pTempLabel)
-			{
-				pTempLabel->Initialize("Calibri", 14, offsetX, offsetY,
-					"Health:", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
->>>>>>> origin/master
 
-				uiObjects.push_back(pTempLabel);
-				pTempLabel = nullptr;
+				uiObjects.push_back(pTemp);
+				pTemp = nullptr;
 			}
-<<<<<<< HEAD
 
 			//PicBox* pTemp1 = g_Engine->GetFactory()->CreateObject<PicBox>();
 			//if (pTemp1)
@@ -57,136 +47,6 @@ namespace Smoke
 			//	uiObjects.push_back(pTemp1);
 			//	pTemp1 = nullptr;
 			//}
-=======
-			else
-				debug << "\tFailed to create 'Label - Health' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Hearts - 1
-			PicBox* pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 40;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "heart.png", "heart");
-			
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Hearts - 2
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY, 
-					true, "heart.png", "heart");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Hearts - 3
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY, 
-					true, "heart.png", "heart");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Hearts - 4
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "heart.png", "heart");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Hearts - 5
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "heart.png", "heart");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - Heart' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Lives Label
-			pTempLabel = g_Engine->GetFactory()->CreateObject<Label>();
-			if (pTempLabel)
-			{
-				offsetX += 25;
-				pTempLabel->Initialize("Calibri", 14, offsetX, offsetY,
-					"Lives:", LABELTEXTURES::STANDARD_LABEL_TEXTURE);
-
-				uiObjects.push_back(pTempLabel);
-				pTempLabel = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'Label - Lives' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Player lives icon - 1
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 32;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "player_icon.png", "player_life");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - PlayerIcon' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Player lives icon - 2
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "player_icon.png", "player_life");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - PlayerIcon' in STANDARD_GAMEPLAY_UI" << std::endl;
-
-			// Player lives icon - 3
-			pTempPic = g_Engine->GetFactory()->CreateObject<PicBox>();
-			if (pTempPic)
-			{
-				offsetX += 16;
-				pTempPic->Initialize(16, 16, offsetX, offsetY,
-					true, "player_icon.png", "player_life");
-
-				uiObjects.push_back(pTempPic);
-				pTempPic = nullptr;
-			}
-			else
-				debug << "\tFailed to create 'PicBox - PlayerIcon' in STANDARD_GAMEPLAY_UI" << std::endl;
->>>>>>> origin/master
 		}
 
 		// Set the UI Objects
@@ -247,13 +107,7 @@ namespace Smoke
 
 	UIManager::UIManager()
 	{
-<<<<<<< HEAD
 		
-=======
-		// Register event listeners
-		g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DAMAGED);
-		g_Engine->GetEventManager()->RegisterListener(this, Events::PLAYER_DEAD);
->>>>>>> origin/master
 	}
 
 
@@ -262,10 +116,6 @@ namespace Smoke
 		// Release any remaining objects
 		if (!_uiObjects.empty())
 			PurgeUIObjects();
-
-		// Purge event listeners
-		g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
-		g_Engine->GetEventManager()->PurgeListener(ID, Events::PLAYER_DAMAGED);
 	}
 
 
@@ -312,83 +162,6 @@ namespace Smoke
 	}
 
 
-<<<<<<< HEAD
-=======
- 	void UIManager::HandleEvent(IEvent *e)
-	{
-		//////////////////////
-		// Player Damaged
-		//////////////////////
-		if (e->Event_Type == Events::PLAYER_DAMAGED)
-		{
-			// Cast to proper event type
-			PlayerDamagedEvent *pEvent = static_cast<PlayerDamagedEvent*>(e);
-			if (pEvent)
-			{
-				// Create temp object pointers
-				IGameObject *pTemp = nullptr;
-				PicBox *tempPic = nullptr;
-
-				// Deactivate hearts based on damage dealt
-				for (int i = 0; i < pEvent->damage; ++i)
-				{
-					// Ensure temp pointers are null
-					pTemp = nullptr;
-					tempPic = nullptr;
-
-					// Run backwards through UIObjects vector
-					for (_ruiIt = _uiObjects.rbegin(); _ruiIt != _uiObjects.rend(); ++_ruiIt)
-					{
-						// Cast to GameObject
-						pTemp = dynamic_cast<IGameObject*>((*_ruiIt));
-
-						if (pTemp)
-						{
-							if (pTemp->tag == "heart")
-							{
-								// Cast to picBox
-								tempPic = dynamic_cast<PicBox*>((*_ruiIt));
-								if (tempPic)
-								{
-									if (tempPic->IsActive())
-									{
-										// Deactivate
-										tempPic->SetActive(false);
-										break;
-									}
-									else
-									{
-										// Reset tempPic
-										tempPic = nullptr;
-									}
-								}
-							}
-						}
-					}
-				}
-				/*
-					Note: This should be managed within the player
-					class.
-
-					TODO: Change this when actual damage events are
-					implemented, not using Player_Input
-				*/
-				// Player take damage
-				g_Engine->GetPlayer()->TakeDamage(pEvent->damage);
-			}
-		}
-
-		//////////////////////
-		// Player Dead
-		//////////////////////
-		if (e->Event_Type == Events::PLAYER_DEAD)
-		{
-			debug << "\t\tPlayer Died." << std::endl;
-		}
-	}
-
-
->>>>>>> origin/master
 	void UIManager::Render()
 	{
 		if (g_Engine->GetActiveCamera())
