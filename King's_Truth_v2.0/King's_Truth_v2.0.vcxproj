@@ -88,7 +88,9 @@
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Inventory.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PhysicsManager.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.cpp" />
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\QuadTree.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.cpp" />
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.cpp" />
@@ -126,7 +128,9 @@
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\IWeapon.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Label.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Mouse.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PhysicsManager.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PicBox.h" />
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\QuadTree.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticBackground.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.h" />
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Sword.h" />
@@ -167,6 +171,7 @@
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\menu_button.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\Textures\misc_things.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player.png" />
+    <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\player_icon.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\hedge_maze.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\ice_bricks.png" />
     <Image Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\textures\SourceMaps\lightblue_bricks.png" />

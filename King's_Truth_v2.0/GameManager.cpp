@@ -94,14 +94,17 @@ void Level1()
 	else
 		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
 	
+<<<<<<< HEAD
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);
 
+=======
+>>>>>>> origin/master
 	/* 
 		THIS IS VERY IMPORTANT FOR LOADING UI OBJECTS 
 	*/
-	// Update camera position BEFORE loading UI
+	// Update camera position BEFORE loading UI but AFTER player creation
 	g_Engine->GetActiveCamera()->UpdatePos();
 
 	//////////////////////////////////////
@@ -341,7 +344,6 @@ void GameManager::Game_Render()
 		// End Spritebatch for 2D
 		//////////////////////////////
 
-
 		// 3D rendering will go here....
 
 		g_Engine->EndScene();		// End scene and present backbuffer
@@ -379,7 +381,6 @@ void GameManager::HandleEvent(IEvent *e)
 		gameOver = true;
 		endProgram = true;
 	}
-		
 }
 
 
