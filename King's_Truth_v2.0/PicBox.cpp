@@ -18,8 +18,11 @@ namespace Smoke
 
 
 	void PicBox::Initialize(float width, float height, float offsetX,
-		float offsetY, bool active, std::string textureToUse)
+		float offsetY, bool active, std::string textureToUse, std::string tagToUse)
 	{
+		// Set object tag
+		tag = tagToUse;
+
 		// Set object type
 		_objectType = UI_OBJECT_TYPES::UI_PICBOX;
 
@@ -47,12 +50,12 @@ namespace Smoke
 		{
 			_cameraPrevPos = g_Engine->GetActiveCamera()->GetCurrentPos();
 
-			// Determine scaling
-			float scaleX = _width / Renderer.GetAdjustedWidth();
-			float scaleY = _height / Renderer.GetAdjustedHeight();
-
-			Renderer.SetScaleX(scaleX * g_Engine->GetActiveCamera()->GetZoomFactor());
-			Renderer.SetScaleY(scaleY * g_Engine->GetActiveCamera()->GetZoomFactor());
+			//// Determine scaling
+			//float scaleX = _width / Renderer.GetAdjustedWidth();
+			//float scaleY = _height / Renderer.GetAdjustedHeight();
+			//
+			//Renderer.SetScaleX(scaleX * g_Engine->GetActiveCamera()->GetZoomFactor());
+			//Renderer.SetScaleY(scaleY * g_Engine->GetActiveCamera()->GetZoomFactor());
 		}
 	}
 
@@ -93,9 +96,7 @@ namespace Smoke
 
 		// If a texture has been given to the Renderer, and the pic
 		// box is active, render it to the screen
-		if (Renderer.HasTexture() && this->IsActive())
+		if (this->IsActive())
 			Renderer.Render();
-		else
-			debug << "\tFailed to render texture for PicBox, ID = " << this->ID << std::endl;
 	}
 }

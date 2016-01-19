@@ -344,6 +344,43 @@ void Player::AddItemToInventory(IGameObject* item)
 }
 
 
+void Player::TakeDamage(unsigned int damage)
+{
+	// If damage is greater than remaining health
+	if (damage >= _health)
+	{
+		// Set damage = remaining health
+		damage = _health;
+
+		// Take damage
+		_health -= damage;
+
+		if (_health <= 0)
+		{
+			PlayerDeadEvent *pEvent = new PlayerDeadEvent();
+			if (pEvent)
+			{
+				g_Engine->GetEventManager()->DispatchEvent(pEvent);
+			}
+		}
+	}
+	else
+	{
+		// Take damage
+		_health -= damage;
+
+		if (_health <= 0)
+		{
+			PlayerDeadEvent *pEvent = new PlayerDeadEvent();
+			if (pEvent)
+			{
+				g_Engine->GetEventManager()->DispatchEvent(pEvent);
+			}
+		}
+	}
+}
+
+
 
 /////////////////////////
 // Accessors / Mutators

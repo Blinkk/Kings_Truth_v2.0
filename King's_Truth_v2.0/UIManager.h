@@ -23,10 +23,10 @@ enum UI_LEVELS
 /*
 	This enum is merely to avoid having to include the entire contents
 	of the GameManager.h when all we need access to is the LEVELS enum.
-
+	
 	Note: This enum must match the one in the GameManager.h in order to function
 	properly.
-
+	
 	TODO: Make this make more sense....
 */
 enum GAME_LEVELS
@@ -37,12 +37,13 @@ enum GAME_LEVELS
 
 namespace Smoke
 {
-	class UIManager
+	class UIManager : public IGameObject
 	{
 	private:
 		UIManager();
 		std::vector<IUI_Object*> _uiObjects;
 		std::vector<IUI_Object*>::iterator _uiIt;
+		std::vector<IUI_Object*>::reverse_iterator _ruiIt;
 
 		///////////////////////
 		// UI Setup Functions
@@ -83,10 +84,10 @@ namespace Smoke
 		*/
 		void Render();
 
-		void HandleEvent(IEvent*);
-		void Update(float deltaTime);
+		void HandleEvent(IEvent*) override;
+		void Update(float deltaTime) override;
 		void Shutdown();
-		
+
 
 		//////////////////////
 		// Utility Functions

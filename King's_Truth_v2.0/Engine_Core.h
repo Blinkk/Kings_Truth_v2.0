@@ -62,7 +62,7 @@
 #define SCREENH 608
 
 // Default FPS
-#define DEFAULT_FPS 70
+#define DEFAULT_FPS 60
 
 
 ////////////////////////////////////////

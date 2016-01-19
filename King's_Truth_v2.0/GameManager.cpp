@@ -15,11 +15,12 @@ void Level1()
 	std::vector<IGameObject*> gameObjects;
 
 	// Change the camera zoom for this level
-	g_Engine->GetActiveCamera()->SetZoomFactor(1.0f);
+	g_Engine->GetActiveCamera()->SetZoomFactor(0.45f);
 
 	/////////////////////
 	// Create Objects
 	/////////////////////
+	#pragma region ObjectCreation
 	// Create player
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	if (pTemp)
@@ -27,13 +28,6 @@ void Level1()
 	else
 		debug << "\tFailed to create a 'Player' in Level1 load function" << std::endl;
 
-	//// Create sword
-	//Sword* pTemp2 = g_Engine->GetFactory()->CreateObject<Sword>();
-	//if (pTemp2)
-	//{
-	//	pTemp2->Initialize(128, 128);
-	//}
-	//gameObjects.push_back(pTemp2);
 
 	// Create Key
 	DungeonKey *pTemp3 = g_Engine->GetFactory()->CreateObject<DungeonKey>();
@@ -58,7 +52,7 @@ void Level1()
 		// Initialize with position / rotation
 		float posX = TILE_SIZE_X * 48;
 		float posY = TILE_SIZE_Y * 35;
-		float rotationInRadians = M_PI / 2;
+		float rotationInRadians = (float)M_PI / 2;
 		pTemp4->Initialize(posX, posY, rotationInRadians);
 
 		// Add initialized object to vector
@@ -83,7 +77,7 @@ void Level1()
 	}
 	else
 		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
-	
+#pragma endregion 
 
 	// Get a global reference to the player
 	g_Engine->SetPlayer(pTemp);

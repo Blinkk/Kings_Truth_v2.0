@@ -1,4 +1,5 @@
 player.png 255 255 255
+player_icon.png 255 255 255
 menu_button.png 255 255 255
 SourceMaps/purple_bricks.png 255 255 255
 SourceMaps/hedge_maze.png 255 255 255
@@ -8,3 +9,4 @@ health_bar.png 255 255 255
 items.png 255 255 255
 misc_things.png 255 255 255
 barrell.png 255 255 255
+heart.png 255 255 255
