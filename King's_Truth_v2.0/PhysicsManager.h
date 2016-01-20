@@ -26,11 +26,11 @@ namespace Smoke
 		~PhysicsManager();
 
 		bool Initialize();
-		void Update(float deltaTime, std::vector<Collider>);
+		void Update(float deltaTime, std::vector<IGameObject*>);
 		void Shutdown();
 
 		// Checks collision between (main object & collidable object)
-		bool CheckCollision(Collider m_Object, Collider c_Object);
+		bool CheckCollision(IGameObject* m_Object, IGameObject* c_Object);
 	};
 }
 

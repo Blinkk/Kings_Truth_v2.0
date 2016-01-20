@@ -64,7 +64,7 @@ public:
 	// Accessors / Mutators
 	/////////////////////////
 	Vector2 GetCurrentPos();
-	RECT GetHitbox();
+	Collider GetHitbox();
 };
 
 #endif

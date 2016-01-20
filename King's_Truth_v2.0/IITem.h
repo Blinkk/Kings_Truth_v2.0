@@ -17,13 +17,12 @@ enum ITEM_TYPES
 
 class IItem : public IGameObject, public IRenderableObject
 {
-protected:
+public:
 	unsigned int _itemType;
 	bool _inInventory;
 	Collider hitBox;
 	TwoDRenderManager Renderer;
 
-public:
 	virtual ~IItem() {}
 
 	virtual void Initialize(float posX, float posY, float rotationInRadians) = 0;

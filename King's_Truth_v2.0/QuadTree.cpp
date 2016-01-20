@@ -71,7 +71,7 @@ namespace Smoke
 	}
 
 
-	void QuadTree::Insert(Collider collider)
+	void QuadTree::Insert(IGameObject* object)
 	{
 		/*
 			If the nodes at this level already contain colliders,
@@ -81,16 +81,16 @@ namespace Smoke
 		*/
 		if (_nodes[0] != nullptr) 
 		{
-			int index = GetIndex(collider);
+			int index = GetIndex(object);
 			if (index != -1) 
 			{
-				_nodes[index]->Insert(collider);
+				_nodes[index]->Insert(object);
 				return;
 			}
 		}
 
 		// Once appropriate node level is reached, insert the collider into the array for this node
-		_objects.push_back(collider);
+		_objects.push_back(object);
 
 		/*
 			If the MAX_OBJECTS for this node has been reached, but the 
@@ -127,12 +127,12 @@ namespace Smoke
 
 
 
-	std::vector<Collider> QuadTree::Retrieve(std::vector<Collider> returnObjects, Collider collider)
+	std::vector<IGameObject*> QuadTree::Retrieve(std::vector<IGameObject*> returnObjects, IGameObject* object)
 	{
-		int index = GetIndex(collider);
+		int index = GetIndex(object);
 		if (index != -1 && _nodes[0] != nullptr) 
 		{
-			_nodes[index]->Retrieve(returnObjects, collider);
+			_nodes[index]->Retrieve(returnObjects, object);
 		}
 
 		// Get all objects that the collider could collide with
@@ -145,8 +145,30 @@ namespace Smoke
 	/////////////////////
 	// Utility Functions
 	/////////////////////
-	int QuadTree::GetIndex(Collider collider)
+	int QuadTree::GetIndex(IGameObject* object)
 	{
+		// Stores collider of object passed
+		Collider collider;
+
+		// Cast the object to correct type to access its collider
+		if (object->tag == "Player")
+		{
+			Player *pTemp = dynamic_cast<Player*>(object);
+			if (pTemp)
+			{
+				collider = pTemp->GetHitbox();
+			}
+		}
+		else if (object->tag == "Item")
+		{
+			IItem *pTemp = dynamic_cast<IItem*>(object);
+			if (pTemp)
+			{
+				collider = pTemp->hitBox;
+			}
+		}
+
+		// Determine index
 		int index = -1;
 		double verticalMidpoint = _nodeBounds.left + ((_nodeBounds.right - _nodeBounds.left) / 2);
 		double horizontalMidpoint = _nodeBounds.top + ((_nodeBounds.bottom - _nodeBounds.top) / 2);

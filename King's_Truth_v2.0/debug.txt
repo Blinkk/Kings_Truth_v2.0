@@ -1,6 +1,7 @@
 Engine initilization started...
 	DirectX initialized.
 	Texture Manager initialized.
+	Physics Manager initialized.
 	Input initialized.
 	Debugger initialized.
 Engine initialized successfully!

@@ -391,7 +391,7 @@ Vector2 Player::GetCurrentPos()
 }
 
 
-RECT Player::GetHitbox()
+Collider Player::GetHitbox()
 {
-	return Renderer.GetBoundingBox();
+	return hitBox;
 }
