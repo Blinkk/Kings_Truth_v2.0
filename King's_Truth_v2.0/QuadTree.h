@@ -15,7 +15,7 @@ namespace Smoke
 		unsigned int _currentNodeLevel;				// Current node level
 		std::vector<Collider> _objects;				// Vector of object colliders to check
 		std::vector<Collider>::iterator _cIt;		// Collider vector iterator
-		QuadTree** _nodes;							// Array of node pointers
+		QuadTree** _nodes;							// Pointer to array of node pointers
 		RECT _nodeBounds;							// Bounds that node occupies
 
 		/////////////////////
@@ -27,9 +27,11 @@ namespace Smoke
 		QuadTree(unsigned int nodeLevel, RECT nodeBounds);
 		~QuadTree();
 
-		void Clear();
-		void Split();
-		void Insert(Collider collider);
+		void Clear();								// Erase all elements in entire tree
+		void Split();								// Split node into smaller sub-sections (ie. expand the tree)
+		void Insert(Collider collider);				// Insert object into tree 
+
+		// Retrieves all objects that are likely to collide with the object passed to it
 		std::vector<Collider> Retrieve(std::vector<Collider> returnObjects, Collider collider);
 	};
 }

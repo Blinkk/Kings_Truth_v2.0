@@ -10,8 +10,6 @@ namespace Smoke
 
 		// Allocate memory for node* array
 		_nodes = new QuadTree*[4];
-
-
 	}
 
 
