@@ -41,6 +41,7 @@
 #include "UIManager.h"
 #include "BackgroundManager.h"
 #include "TextureManager.h"
+#include "PhysicsManager.h"
 #include "Factory.h"
 #include "Direct3D.h"
 #include "Camera2D.h"

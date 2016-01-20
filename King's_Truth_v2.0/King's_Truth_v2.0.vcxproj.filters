@@ -91,6 +91,9 @@
     <Filter Include="Game\Header Files\GameObjects\Items\Weapons">
       <UniqueIdentifier>{593d7b93-4fe6-4a45-be43-f2e2bc11ff33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Physics">
+      <UniqueIdentifier>{11705582-4737-4b01-97d0-aaac245d4b58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\2DRenderManager.cpp">
@@ -188,6 +191,12 @@
     </ClCompile>
     <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.cpp">
       <Filter>Game\Source Files\GameObjects\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PhysicsManager.cpp">
+      <Filter>Framework\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\QuadTree.cpp">
+      <Filter>Framework\Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +325,12 @@
     </ClInclude>
     <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\StaticObject.h">
       <Filter>Game\Header Files\GameObjects\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\PhysicsManager.h">
+      <Filter>Framework\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\King%27s_Truth_v2.0\King%27s_Truth_v2.0\QuadTree.h">
+      <Filter>Framework\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
