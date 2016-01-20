@@ -89,6 +89,7 @@ namespace Smoke
 		UIManager *_uiManager;						// UI object pointer
 		BackgroundManager *_backgroundManager;		// Background manager object
 		TextureManager *_textureManager;			// Texture manager pointer
+		PhysicsManager *_physicsManager;			// Physics manager pointer
 		Factory *_factory;							// Factory pointer
 		Debug *_debugger;							// In-Game debugger
 		
@@ -123,20 +124,21 @@ namespace Smoke
 		EventManager* GetEventManager(); 			// Return pointer to Event Manager
 		InputManager* GetInputManager();			// Return pointer to Input Manager
 		UIManager* GetUIManager();					// Return pointer to UI Manager
-		BackgroundManager * GetBackgroundManager();	// Return a pointer to Background manager
-		TextureManager* GetTextureManager();		// Return a pointer to texture manager
-		Factory* GetFactory();						// Return a pointer to factory
+		BackgroundManager * GetBackgroundManager();	// Return pointer to Background manager
+		TextureManager* GetTextureManager();		// Return pointer to texture manager
+		PhysicsManager* GetPhysicsManager();		// Return pointer to Physics manager
+		Factory* GetFactory();						// Return pointer to factory
 		Debug* GetDebugger();						// Return pointer to Debugger
 		Timer* GetCoreTimer();						// Return pointer to Core Timer
-		Player* GetPlayer();						// Return a pointer to the player 
-		Camera2D* GetActiveCamera();				// Return a pointer to the camera
+		Player* GetPlayer();						// Return pointer to the player 
+		Camera2D* GetActiveCamera();				// Return pointer to the camera
 
 		// Return addresses
-		HWND& GetWindowHandle();					// Return address of window
-		LPDIRECT3DDEVICE9& GetDevice();				// Return address of d3dDevice
-		LPDIRECT3D9& GetContext();					// Return address of d3dContext
-		LPD3DXSPRITE& GetSpriteObj();				// Return address of spriteObj
-		LPDIRECT3DSURFACE9& GetBackBuffer();		// Return address of backbuffer		
+		HWND& GetWindowHandle();					// Return reference of window
+		LPDIRECT3DDEVICE9& GetDevice();				// Return reference of d3dDevice
+		LPDIRECT3D9& GetContext();					// Return reference of d3dContext
+		LPD3DXSPRITE& GetSpriteObj();				// Return reference of spriteObj
+		LPDIRECT3DSURFACE9& GetBackBuffer();		// Return reference of backbuffer		
 	
 		// Return values
 		bool ShowDebug() { return _showDebug; }							// Return status of debugger (on/off)

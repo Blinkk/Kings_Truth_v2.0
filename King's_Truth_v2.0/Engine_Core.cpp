@@ -13,6 +13,7 @@ namespace Smoke
 		_inputManager = nullptr;
 		_uiManager = nullptr;
 		_textureManager = nullptr;
+		_physicsManager = nullptr;
 		_factory = nullptr;
 		_debugger = nullptr;
 		_player = nullptr;
@@ -40,6 +41,7 @@ namespace Smoke
 		_uiManager = &UIManager::GetInstance();					// Create a pointer to UI manager
 		_backgroundManager = &BackgroundManager::GetInstance();	// Create a pointer to Background manager
 		_textureManager = &TextureManager::GetInstance();		// Create a pointer to texture manager
+		_physicsManager = &PhysicsManager::GetInstance();		// Create a pointer to physics manager
 		_factory = &Factory::GetInstance();						// Create a pointer to the factory
 		_debugger = &Debug::GetInstance();						// Create a pointer to debugger
 		_directX = &Direct3D::GetInstance();					// Create a pointer to DirectX wrapper object
@@ -66,14 +68,16 @@ namespace Smoke
 		else
 			debug << "\tTexture Manager initialized." << std::endl;
 
-		//////////////////////////
-		// Initialize UI object
-		//////////////////////////
-		//if (!_uiManager->Initialize("Calibri", 24))
-		//{
-		//	debug << "\tFailed to initialize UI" << std::endl;
-		//	return false;
-		//}
+		//////////////////////////////
+		// Initialize Physics manager
+		//////////////////////////////
+		if (!_physicsManager->Initialize())
+		{
+			debug << "\tFailed to initialize physics manager" << std::endl;
+			return false;
+		}
+		else
+			debug << "\tPhysics Manager initialized." << std::endl;
 
 		/////////////////////////////
 		// Initialize input manager
@@ -123,6 +127,15 @@ namespace Smoke
 			_factory = nullptr;
 		}
 
+		// Shutdown physics manager
+		if (_physicsManager)
+		{
+			_physicsManager->Shutdown();
+			delete _physicsManager;
+			_physicsManager = nullptr;
+		}
+
+		// Shutdown texture manager
 		if (_textureManager)
 		{
 			_textureManager->Shutdown();
