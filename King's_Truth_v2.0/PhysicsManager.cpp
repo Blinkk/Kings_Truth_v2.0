@@ -36,39 +36,90 @@ namespace Smoke
 	void PhysicsManager::Update(float deltaTime, std::vector<IGameObject*> objects)
 	{
 		// Load all object's colliders into QuadTree
+		std::vector<IGameObject*>::iterator goIt;
 		_collisionTree->Clear();
-		for (int i = 0; i < objects.size(); ++i)
+		for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
 		{
-			_collisionTree->Insert(objects.at(i));
+			// Cast objects to determine type, insert their colliders into tree
+			if ((*goIt)->tag == "Player")
+			{
+				Player *pTemp = dynamic_cast<Player*>((*goIt));
+				if (pTemp)
+				{
+					Collider collider = pTemp->GetHitbox();
+					_collisionTree->Insert(collider);
+				}
+			}
+			else if ((*goIt)->tag == "Item")
+			{
+				IItem *pTemp = dynamic_cast<IItem*>((*goIt));
+				if (pTemp)
+				{
+					Collider collider = pTemp->hitBox;
+					_collisionTree->Insert(collider);
+				}
+			}
 		}
 
 		/*
 			Go through each object, determine the objects it could possibly
 			collide with and then check for collision
 		*/
-		std::vector<IGameObject*> collidableObjects;
-		for (int i = 0; i < objects.size(); ++i)
+		std::vector<Collider> collidableObjects;
+		std::vector<Collider>::iterator colIt;
+		for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
 		{
 			// Clear the temp vector
 			collidableObjects.clear();
 
-			// Store all objects that object being checked can collide with
-			_collisionTree->Retrieve(collidableObjects, objects.at(i));
-
-			// Check collision against each collidable
-			for (int j = 0; j < collidableObjects.size(); ++j)
+			// Cast objects to determine type, insert their colliders into tree
+			if ((*goIt)->tag == "Player")
 			{
-				// Check for collision
-				if (CheckCollision(objects.at(i), collidableObjects.at(j)))
+				Player *pTemp = dynamic_cast<Player*>((*goIt));
+				if (pTemp)
 				{
-					// Dispatch a collision event...
+					Collider collider = pTemp->GetHitbox();
+
+					// Store all objects that object being checked can collide with
+					_collisionTree->Retrieve(collidableObjects, collider);
+
+					// Check collision against each collidable
+					for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
+					{
+						// Check for collision
+						if (CheckCollision(collider, (*colIt)))
+						{
+							// Dispatch a collision event...
+						}
+					}
 				}
 			}
+			else if ((*goIt)->tag == "Item")
+			{
+				IItem *pTemp = dynamic_cast<IItem*>((*goIt));
+				if (pTemp)
+				{
+					Collider collider = pTemp->hitBox;
+
+					// Store all objects that object being checked can collide with
+					_collisionTree->Retrieve(collidableObjects, collider);
+
+					// Check collision against each collidable
+					for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
+					{
+						// Check for collision
+						if (CheckCollision(collider, (*colIt)))
+						{
+							// Dispatch a collision event...
+						}
+					}
+				}
+			}		
 		}
 	}
 
 
-	bool PhysicsManager::CheckCollision(IGameObject* m_Object, IGameObject* c_Object)
+	bool PhysicsManager::CheckCollision(Collider m_Object, Collider c_Object)
 	{
 		// Return variable
 		bool collisionOccurred = false;
@@ -76,50 +127,46 @@ namespace Smoke
 		// Temp RECT to store collision area
 		RECT collisionArea;
 
-		// Store colliders of each object
-		Collider collider1;
-		Collider collider2;
-
-		#pragma region CastObjects
-		// Cast m_Object to correct type to access its collider
-		if (m_Object->tag == "Player")
-		{
-			Player *pTemp = dynamic_cast<Player*>(m_Object);
-			if (pTemp)
-			{
-				collider1 = pTemp->GetHitbox();
-			}
-		}
-		else if (m_Object->tag == "Item")
-		{
-			IItem *pTemp = dynamic_cast<IItem*>(m_Object);
-			if (pTemp)
-			{
-				collider1 = pTemp->hitBox;
-			}
-		}
-
-		// Cast c_Object to correct type to access its collider
-		if (c_Object->tag == "Player")
-		{
-			Player *pTemp = dynamic_cast<Player*>(c_Object);
-			if (pTemp)
-			{
-				collider2 = pTemp->GetHitbox();
-			}
-		}
-		else if (c_Object->tag == "Item")
-		{
-			IItem *pTemp = dynamic_cast<IItem*>(c_Object);
-			if (pTemp)
-			{
-				collider2 = pTemp->hitBox;
-			}
-		}
-#pragma endregion
+//		#pragma region CastObjects
+//		// Cast m_Object to correct type to access its collider
+//		if (m_Object->tag == "Player")
+//		{
+//			Player *pTemp = dynamic_cast<Player*>(m_Object);
+//			if (pTemp)
+//			{
+//				collider1 = pTemp->GetHitbox();
+//			}
+//		}
+//		else if (m_Object->tag == "Item")
+//		{
+//			IItem *pTemp = dynamic_cast<IItem*>(m_Object);
+//			if (pTemp)
+//			{
+//				collider1 = pTemp->hitBox;
+//			}
+//		}
+//
+//		// Cast c_Object to correct type to access its collider
+//		if (c_Object->tag == "Player")
+//		{
+//			Player *pTemp = dynamic_cast<Player*>(c_Object);
+//			if (pTemp)
+//			{
+//				collider2 = pTemp->GetHitbox();
+//			}
+//		}
+//		else if (c_Object->tag == "Item")
+//		{
+//			IItem *pTemp = dynamic_cast<IItem*>(c_Object);
+//			if (pTemp)
+//			{
+//				collider2 = pTemp->hitBox;
+//			}
+//		}
+//#pragma endregion
 
 		// Check intersection of m_Object collider to c_Object collider
-		if (IntersectRect(&collisionArea, &collider1.GetBoundingBox(), &collider2.GetBoundingBox()))
+		if (IntersectRect(&collisionArea, &m_Object.GetBoundingBox(), &c_Object.GetBoundingBox()))
 		{
 			collisionOccurred = true;
 		}

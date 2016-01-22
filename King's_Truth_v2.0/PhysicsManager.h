@@ -30,7 +30,7 @@ namespace Smoke
 		void Shutdown();
 
 		// Checks collision between (main object & collidable object)
-		bool CheckCollision(IGameObject* m_Object, IGameObject* c_Object);
+		bool CheckCollision(Collider m_Object, Collider c_Object);
 	};
 }
 

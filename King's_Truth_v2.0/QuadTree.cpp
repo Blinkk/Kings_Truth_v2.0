@@ -8,19 +8,18 @@ namespace Smoke
 		_currentNodeLevel = nodeLevel;
 		_nodeBounds = nodeBounds;
 
-		// Allocate memory for node* array
-		_nodes = new QuadTree*[4];
+		// Initialize sub-nodes to nullptr
+		for (int i = 0; i < 4; ++i)
+		{
+			_nodes[i] = nullptr;
+		}
 	}
 
 
 	QuadTree::~QuadTree()
 	{
 		// Deallocate memory
-		if (_nodes != nullptr)
-		{
-			delete[] _nodes;
-			_nodes = nullptr;
-		}
+		this->Clear();
 	}
 
 
@@ -40,7 +39,7 @@ namespace Smoke
 			if (_nodes[i] != nullptr)
 			{
 				_nodes[i]->Clear();
-
+		
 				// Delete the node
 				delete _nodes[i];
 				_nodes[i] = nullptr;
@@ -71,7 +70,7 @@ namespace Smoke
 	}
 
 
-	void QuadTree::Insert(IGameObject* object)
+	void QuadTree::Insert(Collider collider)
 	{
 		/*
 			If the nodes at this level already contain colliders,
@@ -81,16 +80,16 @@ namespace Smoke
 		*/
 		if (_nodes[0] != nullptr) 
 		{
-			int index = GetIndex(object);
+			int index = GetIndex(collider);
 			if (index != -1) 
 			{
-				_nodes[index]->Insert(object);
+				_nodes[index]->Insert(collider);
 				return;
 			}
 		}
 
 		// Once appropriate node level is reached, insert the collider into the array for this node
-		_objects.push_back(object);
+		_objects.push_back(collider);
 
 		/*
 			If the MAX_OBJECTS for this node has been reached, but the 
@@ -127,47 +126,24 @@ namespace Smoke
 
 
 
-	std::vector<IGameObject*> QuadTree::Retrieve(std::vector<IGameObject*> returnObjects, IGameObject* object)
+	void QuadTree::Retrieve(std::vector<Collider> &returnObjects, Collider collider)
 	{
-		int index = GetIndex(object);
+		int index = GetIndex(collider);
 		if (index != -1 && _nodes[0] != nullptr) 
 		{
-			_nodes[index]->Retrieve(returnObjects, object);
+			_nodes[index]->Retrieve(returnObjects, collider);
 		}
 
 		// Get all objects that the collider could collide with
 		returnObjects.swap(_objects);
-
-		return returnObjects;
 	}
 
 
 	/////////////////////
 	// Utility Functions
 	/////////////////////
-	int QuadTree::GetIndex(IGameObject* object)
+	int QuadTree::GetIndex(Collider collider)
 	{
-		// Stores collider of object passed
-		Collider collider;
-
-		// Cast the object to correct type to access its collider
-		if (object->tag == "Player")
-		{
-			Player *pTemp = dynamic_cast<Player*>(object);
-			if (pTemp)
-			{
-				collider = pTemp->GetHitbox();
-			}
-		}
-		else if (object->tag == "Item")
-		{
-			IItem *pTemp = dynamic_cast<IItem*>(object);
-			if (pTemp)
-			{
-				collider = pTemp->hitBox;
-			}
-		}
-
 		// Determine index
 		int index = -1;
 		double verticalMidpoint = _nodeBounds.left + ((_nodeBounds.right - _nodeBounds.left) / 2);

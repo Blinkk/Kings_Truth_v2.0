@@ -19,6 +19,8 @@ DungeonKey::~DungeonKey()
 
 void DungeonKey::Initialize(float posX, float posY, float rotationInRadians)
 {
+	// Set tag/item_type
+	tag = "Item";
 	_itemType = ITEM_TYPES::DUNGEON_KEY;
 
 	// Set up renderer
