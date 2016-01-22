@@ -16,7 +16,7 @@ namespace Smoke
 		std::vector<IGameObject*> _objects;			// Vector of object colliders to check
 		std::vector<IGameObject*>::iterator _cIt;	// Collider vector iterator
 		QuadTree** _nodes;							// Pointer to array of node pointers
-		RECT _nodeBounds;							// Bounds that node occupies
+		RECT _nodeBounds;							// Bounds that node encapsulates
 
 		/////////////////////
 		// Utility Functions

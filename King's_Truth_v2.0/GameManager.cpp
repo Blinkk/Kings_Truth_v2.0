@@ -266,6 +266,7 @@ void GameManager::Update(float deltaTime)
 	g_Engine->GetUIManager()->Update(deltaTime);
 	g_Engine->GetBackgroundManager()->Update(deltaTime);
 	g_Engine->GetDebugger()->Update(deltaTime);
+	g_Engine->GetPhysicsManager()->Update(deltaTime, GameObjects);
 
 	///////////////////////////////
 	// Manage game object updates

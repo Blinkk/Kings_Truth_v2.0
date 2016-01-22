@@ -325,6 +325,18 @@ namespace Smoke
 			return nullptr;
 		}
 	}	
+
+	// Return a pointer to physics manager
+	PhysicsManager* Engine_Core::GetPhysicsManager()
+	{
+		if (_physicsManager != nullptr)
+			return _physicsManager;
+		else
+		{
+			debug << "\tFailed to get pointer to PhysicsManager from g_Engine at: " << g_Engine->GetGameTime() << std::endl;
+			return nullptr;
+		}
+	}
 	
 	// Return a pointer to the camera
 	Factory* Engine_Core::GetFactory() 
