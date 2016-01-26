@@ -163,7 +163,7 @@ namespace Smoke
 
 	int HandleManager::GetCount() const
 	{
-		return m_activeEntryCount;
+		return _activeEntryCount;
 	}
 
 
