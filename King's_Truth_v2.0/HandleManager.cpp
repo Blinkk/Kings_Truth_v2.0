@@ -81,7 +81,7 @@ namespace Smoke
 		}
 
 		//////////////////////////////////////////////
-		// Set up new handle, reset m_firstFreeEntry
+		// Set up new handle, reset _firstFreeEntry
 		//////////////////////////////////////////////
 		_firstFreeEntry = _entries[newIndex].nextFreeIndex;
 		_entries[newIndex].nextFreeIndex = 0;
@@ -151,12 +151,12 @@ namespace Smoke
 
 	bool HandleManager::Get(const Handle handle, void*& out) const
 	{
-		const int index = handle.m_index;
-		if (m_entries[index].m_counter != handle.m_counter ||
-			m_entries[index].m_active == false)
+		const int index = handle.index;
+		if (_entries[index].counter != handle.counter ||
+			_entries[index].active == false)
 			return false;
 
-		out = m_entries[index].m_entry;
+		out = _entries[index].entry;
 		return true;
 	}
 
