@@ -11,9 +11,6 @@
 ///////////////////////////
 void Level1()
 {
-	// Load all objects for Level1
-	std::vector<IGameObject*> gameObjects;
-
 	// Change the camera zoom for this level
 	g_Engine->GetActiveCamera()->SetZoomFactor(0.45f);
 
@@ -21,13 +18,26 @@ void Level1()
 	// Create Objects
 	/////////////////////
 	#pragma region ObjectCreation
+	// Player objects vector
+	std::vector<IGameObject*> playerObjects;
+
 	// Create player
 	Player* pTemp = g_Engine->GetFactory()->CreateObject<Player>();
 	if (pTemp)
-		gameObjects.push_back(pTemp);
+		playerObjects.push_back(pTemp);
 	else
 		debug << "\tFailed to create a 'Player' in Level1 load function" << std::endl;
 
+	// Set player objects
+	g_Manager->SetGameObjects("Player", playerObjects);
+
+	// Get a global reference to the player
+	g_Engine->SetPlayer(pTemp);
+
+
+	// Item objects vector
+	//std::vector<IGameObject*> itemObjects;
+	playerObjects.clear();
 
 	// Create Key
 	DungeonKey *pTemp3 = g_Engine->GetFactory()->CreateObject<DungeonKey>();
@@ -40,7 +50,7 @@ void Level1()
 		pTemp3->Initialize(posX, posY, rotationInRadians);
 
 		// Add initialized object to vector
-		gameObjects.push_back(pTemp3);
+		playerObjects.push_back(pTemp3);
 	}
 	else
 		debug << "\tFailed to create a 'DungeonKey' in Level1 load function" << std::endl;
@@ -56,11 +66,17 @@ void Level1()
 		pTemp4->Initialize(posX, posY, rotationInRadians);
 
 		// Add initialized object to vector
-		gameObjects.push_back(pTemp4);
+		playerObjects.push_back(pTemp4);
 	}
 	else
 		debug << "\tFailed to create a 'Chest' in Level1 load function" << std::endl;
 
+	// Set item objects
+	g_Manager->SetGameObjects("Item", playerObjects);
+
+	playerObjects.clear();
+	// Static objects vector
+	//std::vector<IGameObject*>
 	// Create a barrell
 	StaticObject *pTemp5 = g_Engine->GetFactory()->CreateObject<StaticObject>();
 	if (pTemp5)
@@ -73,14 +89,14 @@ void Level1()
 			16, 16, 1, 0, 0, 0, 0, "barrell.png");
 
 		// Add initialized object to vector
-		gameObjects.push_back(pTemp5);
+		playerObjects.push_back(pTemp5);
 	}
 	else
 		debug << "\tFailed to create a 'StaticObject - Barrell' in Level1 load function" << std::endl;
-#pragma endregion 
 
-	// Get a global reference to the player
-	g_Engine->SetPlayer(pTemp);
+	g_Manager->SetGameObjects("Static", playerObjects);
+	
+#pragma endregion 
 
 	/* 
 		THIS IS VERY IMPORTANT FOR LOADING UI OBJECTS 
@@ -97,11 +113,6 @@ void Level1()
 	// Load in the UI for this level
 	//////////////////////////////////
 	g_Engine->GetUIManager()->LoadUI(UI_LEVELS::STANDARD_GAMEPLAY_UI);
-
-	//////////////////////////////////////
-	// Set the game objects for the level
-	//////////////////////////////////////
-	g_Manager->SetGameObjects(gameObjects);
 }
 
 
@@ -130,7 +141,7 @@ void Level_MainMenu()
 	//////////////////////////////////////
 	// Set the game objects for the level
 	//////////////////////////////////////
-	g_Manager->SetGameObjects(gameObjects);
+	g_Manager->SetGameObjects("None", gameObjects);
 }
 
 
@@ -139,7 +150,7 @@ GameManager::GameManager()
 	endProgram = false;
 	gameOver = false;			
 	_frameInterval = DEFAULT_FPS;	// Set default fps
-	GameObjects.clear();			// Clear vector of GameObjects
+	_gameObjects.clear();			// Clear map of vectors of GameObjects
 
 	// Set tile manager pointer to nullptr
 	_tileManager = nullptr;
@@ -266,16 +277,19 @@ void GameManager::Update(float deltaTime)
 	g_Engine->GetUIManager()->Update(deltaTime);
 	g_Engine->GetBackgroundManager()->Update(deltaTime);
 	g_Engine->GetDebugger()->Update(deltaTime);
-	g_Engine->GetPhysicsManager()->Update(deltaTime, GameObjects);
+	//g_Engine->GetPhysicsManager()->Update(deltaTime, GameObjects);
 
 	///////////////////////////////
 	// Manage game object updates
 	///////////////////////////////
-	for (goIt = GameObjects.begin(); goIt != GameObjects.end(); ++goIt)
+	for (_mIt = _gameObjects.begin(); _mIt != _gameObjects.end(); ++_mIt)
 	{
-		(*goIt)->Update(deltaTime);
+		for (_goIt = (*_mIt).second.begin(); _goIt != (*_mIt).second.end(); ++_goIt)
+		{
+			(*_goIt)->Update(deltaTime);
+		}
 	}
-
+	
 	// Update player movement flags
 	_tileManager->UpdatePlayerFlags();
 
@@ -308,22 +322,25 @@ void GameManager::Game_Render()
 
 		// Render the renderable game objects
 		IRenderableObject *pTemp = nullptr;
-		for (goIt = GameObjects.begin(); goIt != GameObjects.end(); ++goIt)
+		for (_mIt = _gameObjects.begin(); _mIt != _gameObjects.end(); ++_mIt)
 		{
-			/*
-				Attempt to cast each object into an IRenderableObject.
-				This will ensure that it is a child of IRenderableObject
-				and is therefore capable of calling Render()
-			*/
-			pTemp = dynamic_cast<IRenderableObject*>((*goIt));
-		
-			if (pTemp)
-				pTemp->Render();
+			for (_goIt = (*_mIt).second.begin(); _goIt != (*_mIt).second.end(); ++_goIt)
+			{
+				/*
+					Attempt to cast each object into an IRenderableObject.
+					This will ensure that it is a child of IRenderableObject
+					and is therefore capable of calling Render()
+				*/
+				pTemp = dynamic_cast<IRenderableObject*>((*_goIt));
 
-			// Reset temp pointer
-			pTemp = nullptr;
+				if (pTemp)
+					pTemp->Render();
+
+				// Reset temp pointer
+				pTemp = nullptr;
+			}
 		}
-
+		
 		// Call engine manager render functions
 		g_Engine->GetUIManager()->Render();
 		g_Engine->GetInputManager()->Render();
@@ -373,8 +390,7 @@ void GameManager::HandleEvent(IEvent *e)
 		// Break out of all game loops and shutdown
 		gameOver = true;
 		endProgram = true;
-	}
-		
+	}	
 }
 
 
@@ -391,27 +407,26 @@ void GameManager::Game_End()
 //////////////////////
 // Utility Functions
 //////////////////////
-void GameManager::SetGameObjects(std::vector<IGameObject*> levelObjects)
+void GameManager::SetGameObjects(std::string key, std::vector<IGameObject*> &levelObjects)
 {
-	// Deallocate any memory before switching to the new vector
-	for (goIt = GameObjects.begin(); goIt != GameObjects.end();)
-	{
-		delete (*goIt);
-		goIt = GameObjects.erase(goIt);
-	}
-
 	// Shallow copy the vector to preserve the pointers
-	GameObjects = levelObjects;
+	_gameObjects[key] = levelObjects;
 }
 
 
 void GameManager::PurgeGameObjects()
 {
-	// Deallocate any memory before switching to the new vector
-	for (goIt = GameObjects.begin(); goIt != GameObjects.end();)
+	// Ensure that the map of vectors is empty
+	for (_mIt = _gameObjects.begin(); _mIt != _gameObjects.end();)
 	{
-		delete (*goIt);
-		goIt = GameObjects.erase(goIt);
+		for (_goIt = (*_mIt).second.begin(); _goIt != (*_mIt).second.end();)
+		{
+			delete (*_goIt);
+			_goIt = (*_mIt).second.erase(_goIt);
+		}
+
+		// Erase element in map
+		_mIt = _gameObjects.erase(_mIt);
 	}
 }
 

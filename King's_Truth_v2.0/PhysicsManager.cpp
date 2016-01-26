@@ -35,87 +35,89 @@ namespace Smoke
 
 	void PhysicsManager::Update(float deltaTime, std::vector<IGameObject*> objects)
 	{
-		// Load all object's colliders into QuadTree
-		std::vector<IGameObject*>::iterator goIt;
-		_collisionTree->Clear();
-		for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
-		{
-			// Cast objects to determine type, insert their colliders into tree
-			if ((*goIt)->tag == "Player")
-			{
-				Player *pTemp = dynamic_cast<Player*>((*goIt));
-				if (pTemp)
-				{
-					Collider collider = pTemp->GetHitbox();
-					_collisionTree->Insert(collider);
-				}
-			}
-			else if ((*goIt)->tag == "Item")
-			{
-				IItem *pTemp = dynamic_cast<IItem*>((*goIt));
-				if (pTemp)
-				{
-					Collider collider = pTemp->hitBox;
-					_collisionTree->Insert(collider);
-				}
-			}
-		}
-
-		/*
-			Go through each object, determine the objects it could possibly
-			collide with and then check for collision
-		*/
-		std::vector<Collider> collidableObjects;
-		std::vector<Collider>::iterator colIt;
-		for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
-		{
-			// Clear the temp vector
-			collidableObjects.clear();
-
-			// Cast objects to determine type, insert their colliders into tree
-			if ((*goIt)->tag == "Player")
-			{
-				Player *pTemp = dynamic_cast<Player*>((*goIt));
-				if (pTemp)
-				{
-					Collider collider = pTemp->GetHitbox();
-
-					// Store all objects that object being checked can collide with
-					_collisionTree->Retrieve(collidableObjects, collider);
-
-					// Check collision against each collidable
-					for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
-					{
-						// Check for collision
-						if (CheckCollision(collider, (*colIt)))
-						{
-							// Dispatch a collision event...
-						}
-					}
-				}
-			}
-			else if ((*goIt)->tag == "Item")
-			{
-				IItem *pTemp = dynamic_cast<IItem*>((*goIt));
-				if (pTemp)
-				{
-					Collider collider = pTemp->hitBox;
-
-					// Store all objects that object being checked can collide with
-					_collisionTree->Retrieve(collidableObjects, collider);
-
-					// Check collision against each collidable
-					for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
-					{
-						// Check for collision
-						if (CheckCollision(collider, (*colIt)))
-						{
-							// Dispatch a collision event...
-						}
-					}
-				}
-			}		
-		}
+		#pragma region OldCode
+		//// Load all object's colliders into QuadTree
+		//std::vector<IGameObject*>::iterator goIt;
+		//_collisionTree->Clear();
+		//for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
+		//{
+		//	// Cast objects to determine type, insert their colliders into tree
+		//	if ((*goIt)->tag == "Player")
+		//	{
+		//		Player *pTemp = dynamic_cast<Player*>((*goIt));
+		//		if (pTemp)
+		//		{
+		//			Collider collider = pTemp->GetHitbox();
+		//			_collisionTree->Insert(collider);
+		//		}
+		//	}
+		//	else if ((*goIt)->tag == "Item")
+		//	{
+		//		IItem *pTemp = dynamic_cast<IItem*>((*goIt));
+		//		if (pTemp)
+		//		{
+		//			Collider collider = pTemp->hitBox;
+		//			_collisionTree->Insert(collider);
+		//		}
+		//	}
+		//}
+		//
+		///*
+		//	Go through each object, determine the objects it could possibly
+		//	collide with and then check for collision
+		//*/
+		//std::vector<Collider> collidableObjects;
+		//std::vector<Collider>::iterator colIt;
+		//for (goIt = objects.begin(); goIt != objects.end(); ++goIt)
+		//{
+		//	// Clear the temp vector
+		//	collidableObjects.clear();
+		//
+		//	// Cast objects to determine type, insert their colliders into tree
+		//	if ((*goIt)->tag == "Player")
+		//	{
+		//		Player *pTemp = dynamic_cast<Player*>((*goIt));
+		//		if (pTemp)
+		//		{
+		//			Collider collider = pTemp->GetHitbox();
+		//
+		//			// Store all objects that object being checked can collide with
+		//			_collisionTree->Retrieve(collidableObjects, collider);
+		//
+		//			// Check collision against each collidable
+		//			for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
+		//			{
+		//				// Check for collision
+		//				if (CheckCollision(collider, (*colIt)))
+		//				{
+		//					// Dispatch a collision event...
+		//				}
+		//			}
+		//		}
+		//	}
+		//	else if ((*goIt)->tag == "Item")
+		//	{
+		//		IItem *pTemp = dynamic_cast<IItem*>((*goIt));
+		//		if (pTemp)
+		//		{
+		//			Collider collider = pTemp->hitBox;
+		//
+		//			// Store all objects that object being checked can collide with
+		//			_collisionTree->Retrieve(collidableObjects, collider);
+		//
+		//			// Check collision against each collidable
+		//			for (colIt = collidableObjects.begin(); colIt != collidableObjects.end(); ++colIt)
+		//			{
+		//				// Check for collision
+		//				if (CheckCollision(collider, (*colIt)))
+		//				{
+		//					// Dispatch a collision event...
+		//				}
+		//			}
+		//		}
+		//	}		
+		//}
+#pragma endregion
 	}
 
 
@@ -127,7 +129,7 @@ namespace Smoke
 		// Temp RECT to store collision area
 		RECT collisionArea;
 
-//		#pragma region CastObjects
+		//		#pragma region CastObjects
 //		// Cast m_Object to correct type to access its collider
 //		if (m_Object->tag == "Player")
 //		{

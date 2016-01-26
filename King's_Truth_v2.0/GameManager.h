@@ -24,6 +24,9 @@ enum LEVELS
 	LEVEL_ONE = 1,
 };
 
+// Typedef std::vector<IGameObject*> for easier syntax
+typedef std::vector<IGameObject*> GameObjects;
+
 ////////////////////////
 // Game Manager class 
 ////////////////////////
@@ -31,10 +34,11 @@ class GameManager : public IGameObject
 {
 private:
 	unsigned int _frameInterval;
-	std::vector<IGameObject*>GameObjects;
-	std::vector<IGameObject*>::iterator goIt;
-	TileManager *_tileManager;
-	Camera2D *_camera;
+	std::map<std::string, GameObjects> _gameObjects;		// Map to hold homogenous vectors of specific object types
+	std::map<std::string, GameObjects>::iterator _mIt;		// Map iterator
+	std::vector<IGameObject*>::iterator _goIt;				// Sub-vector iterator
+	TileManager *_tileManager;								// Tile manager pointer to handle maps
+	Camera2D *_camera;										// Camera to control user's viewpoint
 
 	/*
 		Keeps track of the currently active level, so that we can go back into
@@ -96,7 +100,7 @@ public:
 	//////////////////////
 	// Utility functions
 	//////////////////////
-	void SetGameObjects(std::vector<IGameObject*> levelObjects);
+	void SetGameObjects(std::string key, std::vector<IGameObject*> &levelObjects);
 	void PurgeGameObjects();
 
 	//////////////////////////////

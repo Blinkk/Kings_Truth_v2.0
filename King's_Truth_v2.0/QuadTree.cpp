@@ -30,8 +30,6 @@ namespace Smoke
 			do not delete the pointers it contains as they are 
 			still being used in the GameManager
 		*/
-		// Clear the vector
-		_objects.clear();
 
 		// Call each node's Clear() method and delete nodes
 		for (int i = 0; i < 4; ++i)
