@@ -8,6 +8,12 @@ namespace Smoke
 		_currentNodeLevel = nodeLevel;
 		_nodeBounds = nodeBounds;
 
+		// Reset index
+		_currentIndex = 0;
+
+		// Initialize array
+		_objects = new Collider[MAX_OBJECTS];
+
 		// Initialize sub-nodes to nullptr
 		for (int i = 0; i < 4; ++i)
 		{
@@ -26,10 +32,14 @@ namespace Smoke
 	void QuadTree::Clear()
 	{
 		/*
-			Note: We only clear the vector of its elements, but 
-			do not delete the pointers it contains as they are 
-			still being used in the GameManager
+			Note: We only delete the pointer to the array, not the pointers
+			that it holds because there are still needed elsewhere
 		*/
+		if (_objects)
+		{
+			delete[] _objects;
+			_objects = nullptr;
+		}
 
 		// Call each node's Clear() method and delete nodes
 		for (int i = 0; i < 4; ++i)
@@ -87,14 +97,17 @@ namespace Smoke
 		}
 
 		// Once appropriate node level is reached, insert the collider into the array for this node
-		_objects.push_back(collider);
+		_objects[_currentIndex] = collider;
+
+		// Increment index
+		++_currentIndex;
 
 		/*
 			If the MAX_OBJECTS for this node has been reached, but the 
 			MAX_NODE_LEVEL has not, split the node and distribute colliders
 			into the new nodes.
 		*/
-		if (_objects.size() > MAX_OBJECTS && _currentNodeLevel < MAX_NODE_LEVEL) 
+		if ((_currentIndex + 1) > MAX_OBJECTS && _currentNodeLevel < MAX_NODE_LEVEL) 
 		{
 			// Ensure nodes are NULL, then call Split() method
 			if (_nodes[0] == nullptr) 
@@ -103,16 +116,16 @@ namespace Smoke
 			}
 
 			int i = 0;
-			while (i < _objects.size()) 
+			while (i < (_currentIndex + 1)) 
 			{
-				int index = GetIndex(_objects.at(i));
+				int index = GetIndex(_objects[i]);
 				if (index != -1) 
 				{
 					// Insert the collider into new node at specified index
-					_nodes[index]->Insert(_objects.at(i));
+					_nodes[index]->Insert(_objects[i]);
 
-					// Remove element from this node
-					_objects.pop_back();
+					// Remove the element from the array
+					std::remove(_objects[0], _objects[_currentIndex + 1], _objects[i]);
 				}
 				else 
 				{
@@ -133,7 +146,10 @@ namespace Smoke
 		}
 
 		// Get all objects that the collider could collide with
-		returnObjects.swap(_objects);
+		for (int i = 0; i < (_currentIndex + 1); ++i)
+		{
+			returnObjects.push_back(_objects[i]);
+		}
 	}
 
 

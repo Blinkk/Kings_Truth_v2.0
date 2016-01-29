@@ -14,7 +14,7 @@ using namespace Smoke;
 
 class IEntity : public IGameObject, public IRenderableObject
 {
-protected:
+public:
 	unsigned int _health;
 
 	// Animation

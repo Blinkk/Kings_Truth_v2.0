@@ -30,6 +30,14 @@ namespace Smoke
 		*/
 		std::string tag;
 
+		/*
+			To avoid instantiating/destorying game objects during
+			runtime, all objects will be pooled at the start of the
+			level and be updated/rendered based on their "active" status.
+			Then all objects can be released simultaneously at end of level.
+		*/
+		bool active;
+
 		// Determines how the object uses information received from events
 		virtual void HandleEvent(IEvent*) = 0;
 

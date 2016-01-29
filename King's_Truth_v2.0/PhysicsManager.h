@@ -1,6 +1,7 @@
 #ifndef PHYSICSMANAGER_H
 #define PHYSICSMANAGER_H
 #include "QuadTree.h"
+#include "IGameObject.h"
 
 namespace Smoke
 {
@@ -26,7 +27,7 @@ namespace Smoke
 		~PhysicsManager();
 
 		bool Initialize();
-		void Update(float deltaTime, std::vector<IGameObject*>);
+		void Update(float deltaTime, std::vector<IGameObject*> gameObjects);
 		void Shutdown();
 
 		// Checks collision between (main object & collidable object)

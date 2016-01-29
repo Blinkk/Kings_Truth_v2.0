@@ -13,8 +13,8 @@ namespace Smoke
 		const unsigned int MAX_NODE_LEVEL = 5;		// Max num of node levels
 
 		unsigned int _currentNodeLevel;				// Current node level
-		std::vector<Collider> _objects;				// Vector of object colliders to check
-		std::vector<Collider>::iterator _cIt;		// Collider vector iterator
+		unsigned int _currentIndex;					// Current index in array
+		Collider* _objects;							// Dynamic array of object colliders to check
 		QuadTree* _nodes[4];						// Array of node pointers
 		RECT _nodeBounds;							// Bounds that node encapsulates
 
@@ -29,7 +29,7 @@ namespace Smoke
 
 		void Clear();								// Erase all elements in entire tree
 		void Split();								// Split node into smaller sub-sections (ie. expand the tree)
-		void Insert(Collider collider);				// Insert object into tree 
+		void Insert(Collider collider);			// Insert object into tree 
 
 		// Retrieves all objects that are likely to collide with the object passed to it
 		void Retrieve(std::vector<Collider> &returnObjects, Collider collider);
